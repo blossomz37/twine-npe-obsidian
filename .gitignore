@@ -130,3 +130,11 @@ htmlcov/
 .temp/
 *.bak
 *.backup
+
+# ====================
+# Project Directories
+# ====================
+# Generated content and cached API responses
+# (matches CACHE_DIR and OUTPUT_DIR in sample.env)
+.cache/
+output/
