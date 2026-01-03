@@ -27,6 +27,34 @@
 
 ---
 
+## Local Quick Start (New Project)
+
+```bash
+# Navigate to your project folder
+cd [project-name]
+
+# Initialize a new git repository
+git init
+
+# Set up environment variables
+cp sample.env .env
+# Edit .env with your API keys
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Stage all files for commit
+git add .
+
+# Make your first commit
+git commit -m "Initial commit"
+
+# Run the project
+python main.py
+```
+
+---
+
 ## Remote Quick Start (Optional)
 
 ```bash
