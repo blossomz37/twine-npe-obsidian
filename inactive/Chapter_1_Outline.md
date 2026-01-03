@@ -4,7 +4,7 @@
 
 ### 1. Opening Hook
 
-- **POV & Tense:** Mark Gray – First-Person Present
+- **POV & Tense:** Freddy Gray – First-Person Present
 
 - **Setting & Time Placement:** Starlight Cove Diner, late-night shift (11:43 PM), tide-pool boardwalk visible through large windows, calm seaside night.
 
@@ -12,7 +12,7 @@
 
 > “The last coffee cup clinks onto the tray just as the boardwalk lights flicker and the tide-pool outside the window shivers green-blue.”
 
-- **Primary Characters Present:** Mark Gray
+- **Primary Characters Present:** Freddy Gray
 
 - **Secondary/Peripheral Characters Present:** Diner cook (side character), a lone late-night patron
 
@@ -22,17 +22,17 @@
 
 - **Chapter Goal / Purpose:**
 
-- Introduce Mark, his new life in Starlight Cove and his diner.
+- Introduce Freddy, his new life in Starlight Cove and his diner.
 
 - Establish the human world and routine.
 
 - Introduce the tide-pool and boardwalk setting, hint at something unusual beneath the waves.
 
-- Begin building the emotional baseline: Mark’s longing for belonging, his solace in the diner.
+- Begin building the emotional baseline: Freddy’s longing for belonging, his solace in the diner.
 
 - **Stakes Introduced or Altered:**
 
-- Mark fears he may still be “just passing through”—his sense of not belonging.
+- Freddy fears he may still be “just passing through”—his sense of not belonging.
 
 - The tide-pool’s glow subtly flickers (foreshadowing monster/guardian presence).
 
@@ -42,17 +42,17 @@
 
 - **Key Interaction(s) & Choreography:**
 
-- Mark cleans up the late-night shift: wipes counters, glances out at the boardwalk beyond the glass windows, hears the ocean’s hush.
+- Freddy cleans up the late-night shift: wipes counters, glances out at the boardwalk beyond the glass windows, hears the ocean’s hush.
 
 - He steps out onto the boardwalk after closing, carrying a towel, to breathe sea-salt air and check the tide-pool’s surface.
 
 - He notices footprints in the wet stones by the tide-pool—fresh, large, not quite human. He crouches and inspects.
 
-- Diner cook calls him back inside for final lock­up; Mark hesitates, curiosity tugging him back to the rocks.
+- Diner cook calls him back inside for final lock­up; Freddy hesitates, curiosity tugging him back to the rocks.
 
 - **Dialogue or Internal Monologue Pointers:**
 
-- Mark’s internal thought: “I moved here for peace—but tonight something watches.”
+- Freddy’s internal thought: “I moved here for peace—but tonight something watches.”
 
 - Cook: “Don’t stay out too long, sea breeze bites tonight.”
 
@@ -62,7 +62,7 @@
 
 - **Emotional Shift / Character Revelation:**
 
-- Mark realises he’s not just the diner owner—he’s a stakeholder in this town’s night-rhythm.
+- Freddy realises he’s not just the diner owner—he’s a stakeholder in this town’s night-rhythm.
 
 - His attraction to the mysterious tide-pool presence begins (curiosity + slight thrill).
 
@@ -86,7 +86,7 @@
 
 - **Action Moment:**
 
-- Mark stands on the boardwalk edge, towel slung over his shoulder, when the tide-pool’s glow suddenly dims (fade-wave moment).
+- Freddy stands on the boardwalk edge, towel slung over his shoulder, when the tide-pool’s glow suddenly dims (fade-wave moment).
 
 - He leans over, and a large arm breaks the water line for a beat—then disappears under the surface.
 
@@ -96,7 +96,7 @@
 
 - **Effect on Characters / Relationship:**
 
-- Mark is jolted from comfort into unknown: his safe world may hide something other.
+- Freddy is jolted from comfort into unknown: his safe world may hide something other.
 
 - The monster/guardian world is introduced to him, setting up curiosity and tension.
 
@@ -104,7 +104,7 @@
 
 - The tide-pool sanctuary may be under stress—footprints + fade-wave hint at disturbance.
 
-- Mark’s new life is not as quiet as he hoped; his diner is near a boundary he does not yet understand.
+- Freddy’s new life is not as quiet as he hoped; his diner is near a boundary he does not yet understand.
 
 ### 4. Chapter Metadata
 
@@ -114,7 +114,7 @@
 
 - **Romantic Beat Category:** Phase 1 – Setup
 
-- **Which Character(s) Drive POV:** Mark
+- **Which Character(s) Drive POV:** Freddy
 
 - **Linked Story-Bible Sections:**
 
@@ -122,7 +122,7 @@
 
 - Monster/Creature Lore → Guardian anatomy, tide-pool glow
 
-- Characters → Mark Gray profile
+- Characters → Freddy Gray profile
 
 - Plot Overview (Kishōtenketsu Act 1)
 
@@ -134,7 +134,7 @@
 
 - [ ] Describe tide-pool glow with bioluminescent effect, hint of arms under water without revealing fully.
 
-- [ ] Establish Mark’s emotional baseline: longing for home, fresh start, belonging.
+- [ ] Establish Freddy’s emotional baseline: longing for home, fresh start, belonging.
 
 - [ ] Set boardwalk and tide-pool setting visually and atmospherically.
 

@@ -4,7 +4,7 @@ The last coffee cup clinks onto the tray just as the boardwalk lights flicker an
 
 I pause, dishrag in hand, and watch the water through the salt-streaked glass. The glow pulses once—twice—then settles back into its usual shimmer, the kind tourists assume is just bioluminescent plankton catching the moon. I know better now. Or at least, I'm starting to suspect there's more to it than marine biology can explain.
 
-"Mark, you gonna stand there all night staring at seaweed, or you gonna help me lock up?"
+"Freddy, you gonna stand there all night staring at seaweed, or you gonna help me lock up?"
 
 Marcus's voice pulls me back to the warm amber interior of the Starlight Cove Diner. My diner. The thought still feels strange, even three months in—like borrowed clothing I haven't quite grown into yet.
 
@@ -104,7 +104,7 @@ Unless it doesn't want to be noticed.
 
 The thought sends a shiver down my spine, but it's not entirely fear. There's something else there. Curiosity. Wonder. The same feeling I had when I first saw this place and thought, *Yes. This is where I'm supposed to be.*
 
-"Mark!"
+"Freddy!"
 
 I jolt upright, nearly losing my footing on the slick rock. Marcus is standing at the top of the stairs, silhouetted against the boardwalk lights.
 

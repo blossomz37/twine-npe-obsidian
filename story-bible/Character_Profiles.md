@@ -2,7 +2,7 @@
 
 👤 Main Characters
 
-MC1 – Mark Gray
+MC1 – Freddy Gray
 
     •	Role in story: Human protagonist, late-night diner owner at Starlight Cove, romance lead.
 
@@ -46,11 +46,11 @@ MC1 – Mark Gray
 
     •	Character Arc (start → change → end):
 
-    •	Start: Mark is satisfied with switching to a quiet life, but emotionally closed.
+    •	Start: Freddy is satisfied with switching to a quiet life, but emotionally closed.
 
     •	Change: Through his bond with Kai (the guardian monster), he accepts that his ordinary can hold extraordinary love.
 
-    •	End: Mark stands firmly in his role—loved, belonging, and anchoring the monster and town together.
+    •	End: Freddy stands firmly in his role—loved, belonging, and anchoring the monster and town together.
 
     •	Relationship(s) to other characters:
 
@@ -62,7 +62,7 @@ MC1 – Mark Gray
 
     •	Voice / POV Notes:
 
-    •	Alternate first-person present with Kai. Mark’s chapters focus on human perspective, everyday details, emotional longing.
+    •	Alternate first-person present with Kai. Freddy’s chapters focus on human perspective, everyday details, emotional longing.
 
     •	Additional Notes:
 
@@ -116,13 +116,13 @@ MC2 – Kai (Tide-Pool Guardian)
 
     •	Start: Kai is solitary and wary, protecting from distance.
 
-    •	Change: Through his relationship with Mark, he allows emotional intimacy, acknowledges his need for human connection.
+    •	Change: Through his relationship with Freddy, he allows emotional intimacy, acknowledges his need for human connection.
 
-    •	End: Kai embraces his dual nature—guardian + lover + member of community—allowing Mark and the town in.
+    •	End: Kai embraces his dual nature—guardian + lover + member of community—allowing Freddy and the town in.
 
     •	Relationship(s) to other characters:
 
-    •	Mark Gray – (romantic partner; protector → equal partner)
+    •	Freddy Gray – (romantic partner; protector → equal partner)
 
     •	Thalos – (antagonist predator from past)
 
@@ -182,7 +182,7 @@ MC2 – Kai (Tide-Pool Guardian)
 
     •	To Kai – former fellow guardian turned enemy; embodies past Kai can’t undo.
 
-    •	To Mark – threat to everything Mark trusts in: diner, town, monster-lover.
+    •	To Freddy – threat to everything Freddy trusts in: diner, town, monster-lover.
 
     •	Additional Notes:
 
@@ -202,21 +202,21 @@ MC2 – Kai (Tide-Pool Guardian)
 
     •	Key Traits: Quiet wisdom, gentle humour, protectiveness of town and outsider.
 
-    •	Relevance to story: He becomes Mark’s confidant, provides myth-lore, supports the couple.
+    •	Relevance to story: He becomes Freddy’s confidant, provides myth-lore, supports the couple.
 
 [Name] – Café Cook / Best Friend (Male, 28)
 
-    •	Role: Works at Starlight Cove Diner with Mark, single, chips in with humour and loyalty.
+    •	Role: Works at Starlight Cove Diner with Freddy, single, chips in with humour and loyalty.
 
     •	Appearance: Spiky blond hair, tattoo of wave-crest, always testing new late-night specials.
 
-    •	Key Traits: Light-hearted, pragmatic, protective of Mark.
+    •	Key Traits: Light-hearted, pragmatic, protective of Freddy.
 
     •	Relevance to story: Provides levity, helps human MC navigate monster-world, spotlights diner community.
 
 [Name] – Local Teen Visitor (Non-binary, 17)
 
-    •	Role: Curious about tide-pools, helps Mark spot unusual sea-signs; unknowingly aids Kai.
+    •	Role: Curious about tide-pools, helps Freddy spot unusual sea-signs; unknowingly aids Kai.
 
     •	Appearance: Short teal-dye hair, sketchbook with tide-pool drawings.
 
@@ -228,19 +228,19 @@ MC2 – Kai (Tide-Pool Guardian)
 
 🔄 Relationship Map
 
-    •	Mark ↔ Kai:
+    •	Freddy ↔ Kai:
 
     •	Dynamics: Human curiosity meets monster’s silent vigil; initial fear→protective trust→romantic intimacy.
 
-    •	Conflict arc: Mark’s fear of otherness vs Kai’s fear of vulnerability.
+    •	Conflict arc: Freddy’s fear of otherness vs Kai’s fear of vulnerability.
 
-    •	Key turning point: When Kai reveals his nature and Mark chooses him anyway.
+    •	Key turning point: When Kai reveals his nature and Freddy chooses him anyway.
 
-    •	Mark ↔ Town Elder:
+    •	Freddy ↔ Town Elder:
 
     •	Mentor support, human anchor in town lore.
 
-    •	Mark ↔ Café Cook:
+    •	Freddy ↔ Café Cook:
 
     •	Friend bond, safe space, humour and normalcy.
 
@@ -260,9 +260,9 @@ MC2 – Kai (Tide-Pool Guardian)
 
 Character	Start State	Key Turning Point	End State
 
-Mark Gray	Emotionally closed, rebuilding life	First moonlit sighting of Kai; diner treads water in quiet town	Emotionally open, anchored in love and community
+Freddy Gray	Emotionally closed, rebuilding life	First moonlit sighting of Kai; diner treads water in quiet town	Emotionally open, anchored in love and community
 
-Kai (Guardian)	Solitary, burdened by guilt, detached	Trusting Mark and letting him into the tide-pool grotto, confronting Thalos	Guardian + lover + part of community, dual nature embraced
+Kai (Guardian)	Solitary, burdened by guilt, detached	Trusting Freddy and letting him into the tide-pool grotto, confronting Thalos	Guardian + lover + part of community, dual nature embraced
 
 Thalos	Predator confident in mission	Realises emotional bond between human & guardian is stronger than brute power	Withdrawn or defeated, legacy challenged
 

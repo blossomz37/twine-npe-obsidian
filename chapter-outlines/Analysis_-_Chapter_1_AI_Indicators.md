@@ -70,7 +70,7 @@ While the text successfully constructs a conventional chapter opening, it exhibi
 
 *   **Inconsistent character development:** Not applicable within a single chapter. Characterization is presented as a static block of information.
 
-*   **Plot holes and inconsistencies:** A minor potential inconsistency is addressed directly in the text. Leo leaves, but then is close enough to call out to Mark moments later. The narrator immediately speculates, "He’s probably realized he left his keys." This kind of immediate, rationalizing patch for a minor plot contrivance can be a marker of AI generation.
+*   **Plot holes and inconsistencies:** A minor potential inconsistency is addressed directly in the text. Leo leaves, but then is close enough to call out to Freddy moments later. The narrator immediately speculates, "He’s probably realized he left his keys." This kind of immediate, rationalizing patch for a minor plot contrivance can be a marker of AI generation.
 
 *   **Handling of time and setting:** The progression of time is linear and clearly documented ("11:43 PM"). The setting is established with exhaustive detail, functioning as a central element of the narrative, which is characteristic of the genre but also a focus of descriptive LLMs.
 

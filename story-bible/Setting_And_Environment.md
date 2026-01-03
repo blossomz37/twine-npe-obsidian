@@ -32,13 +32,13 @@
 
 - **Role in Story:**  
 
-  The setting becomes more than backdrop—it’s a threshold between human and monster worlds. The diner is safe-space for Mark; the tide-pool grotto is Kai’s realm. Their relationship unfolds where those spaces overlap.
+  The setting becomes more than backdrop—it’s a threshold between human and monster worlds. The diner is safe-space for Freddy; the tide-pool grotto is Kai’s realm. Their relationship unfolds where those spaces overlap.
 
 ## 🌊 Secondary / Supporting Locations  
 
 - **Name & Description #1:** Boardwalk Rock-Outcrop  
 
-  - **Significance:** The place where Mark first glimpses the monster’s silhouette; where human and monster worlds meet visually.  
+  - **Significance:** The place where Freddy first glimpses the monster’s silhouette; where human and monster worlds meet visually.  
 
   - **Key Scenes:** First visual encounter; moon-walk conversation; erosion/footprint discovery.  
 
@@ -46,7 +46,7 @@
 
   - **Significance:** Hidden entrance to the grotto under tide-pool; accessed at low tide.  
 
-  - **Key Scenes:** Mark follows; Kai retreats; threat approaches via cave mouth; intimate moments near dripping walls.  
+  - **Key Scenes:** Freddy follows; Kai retreats; threat approaches via cave mouth; intimate moments near dripping walls.  
 
 - *(Add more as needed: e.g., Late-Night Diner Kitchen, Town Square under moon, Tide-Pool Edge Bench)*
 
@@ -126,7 +126,7 @@
 
 - **Movement / Travel Paths:**  
 
-  - Mark walks from diner back-door across boardwalk to tide-pool bench; Kai swims from grotto into tide-pool, climbs hidden steps to boardwalk edge; predator threat enters via surf cave entrance at high tide.
+  - Freddy walks from diner back-door across boardwalk to tide-pool bench; Kai swims from grotto into tide-pool, climbs hidden steps to boardwalk edge; predator threat enters via surf cave entrance at high tide.
 
 ## ✅ Checklist / Task Items for This Section  
 

@@ -16,7 +16,7 @@
 
 > A shard of moonlight catches the spire-crest on my back and I realise I’m not alone in the water.
 
-- **Primary Characters Present:** Kai and Mark
+- **Primary Characters Present:** Kai and Freddy
 
 - **Peripheral Characters Present:** None (town asleep, the grotto quiet)
 
@@ -26,7 +26,7 @@
 
 - **Chapter Goal / Purpose:**
 
-- The emotional barrier breaks: Kai and Mark fully converge body and soul.
+- The emotional barrier breaks: Kai and Freddy fully converge body and soul.
 
 - Monster/human physicality explored richly.
 
@@ -36,7 +36,7 @@
 
 - **Stakes Introduced or Raised:**
 
-- If the monster body frightens Mark, the emotional fallout could fracture their trust.
+- If the monster body frightens Freddy, the emotional fallout could fracture their trust.
 
 - If the monster/human physical union tips off town or predator, exposure risk rises.
 
@@ -44,19 +44,19 @@
 
 - **Key Interactions / Choreography:**
 
-- Mark steps into the tide-pool water; the sea-salt chills his ankles, bioluminescent suckers glow under Kai’s arms.
+- Freddy steps into the tide-pool water; the sea-salt chills his ankles, bioluminescent suckers glow under Kai’s arms.
 
-- Kai closes the distance: his arms wrap around Mark’s waist, the glow along his arms warm and pulsing.
+- Kai closes the distance: his arms wrap around Freddy’s waist, the glow along his arms warm and pulsing.
 
-- Dialogue/Pull: Mark breathes, “You’re… so much more than I imagined.” Kai’s voice rumbles like the tide: “And you’re more human than I dared hope.”
+- Dialogue/Pull: Freddy breathes, “You’re… so much more than I imagined.” Kai’s voice rumbles like the tide: “And you’re more human than I dared hope.”
 
-- Sensory detail: the taste of sea-salt on Mark’s lips; the softness of Kai’s mantle crest as he shifts form; the faint sound of wave-drag in the grotto.
+- Sensory detail: the taste of sea-salt on Freddy’s lips; the softness of Kai’s mantle crest as he shifts form; the faint sound of wave-drag in the grotto.
 
-- Physical novelty: Kai’s human-form fingers trace the ridges of the spire-crest on his back; Mark’s hand lingers over a glowing sucker-ring.
+- Physical novelty: Kai’s human-form fingers trace the ridges of the spire-crest on his back; Freddy’s hand lingers over a glowing sucker-ring.
 
 - Intimacy progression: They shed outer protections (clothes, emotional walls); physical contact deepens—kiss becomes slower, lingered, electric.
 
-- Emotional beats: Mark allows himself to feel awe and desire; Kai allows himself to crave softness, humanity, connection instead of solitary duty.
+- Emotional beats: Freddy allows himself to feel awe and desire; Kai allows himself to crave softness, humanity, connection instead of solitary duty.
 
 - **World/Creature Lore Tie-In:**
 
@@ -74,7 +74,7 @@
 
 - Fully intimate: Explore bodies, sensations, monster/human differences with sensational detail—arms enveloping, glove of sea-glow on skin, human skin warm against cool mantle.
 
-- But anchored in emotion: make sure vulnerabilities are present (Kai’s fear of harming Mark; Mark’s fear of overwhelming monster).
+- But anchored in emotion: make sure vulnerabilities are present (Kai’s fear of harming Freddy; Freddy’s fear of overwhelming monster).
 
 - Consent and mutual care explicit: “Are you sure?” “Yes.” Then they move together.
 
@@ -88,13 +88,13 @@
 
 - **Cliffhanger Sentence:**
 
-> I hold Mark close, but when I look up, a shadow larger than the tide-pool’s entrance breaches our world—and my arms freeze.
+> I hold Freddy close, but when I look up, a shadow larger than the tide-pool’s entrance breaches our world—and my arms freeze.
 
 - **Effect on MCs & Relationship:**
 
 - Their physical union has bound them emotionally; now they face a threat together.
 
-- Mark is fully present in monster world; Kai realises he must protect not just the grotto, but his human.
+- Freddy is fully present in monster world; Kai realises he must protect not just the grotto, but his human.
 
 - **New Stakes Raised:**
 
@@ -116,7 +116,7 @@
 
 - Monster/Creature Lore → Arms, spire-crest, sucker-glow
 
-- Characters → Mark & Kai profiles
+- Characters → Freddy & Kai profiles
 
 - Plot Overview (Kishōtenketsu Act 3)
 

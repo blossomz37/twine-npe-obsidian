@@ -8,7 +8,7 @@ _(Duplicate this for each chapter: Chapter 1 → Chapter 18 + Epilogue)_
 
 ### 1. Opening Hook
 
-- **POV & Tense:** (e.g., MC1 – Mark – 1st person present)
+- **POV & Tense:** (e.g., MC1 – Freddy – 1st person present)
 
 - **Setting & Time Placement:** (e.g., Late-night shift at Starlight Cove Diner, tide-pool bench, 1:15 am)
 
@@ -32,7 +32,7 @@ _(Duplicate this for each chapter: Chapter 1 → Chapter 18 + Epilogue)_
 
 - **Key Interaction(s) & Choreography:**
 
-- Scene beats: (e.g., “Mark wipes coffee cup… notices footprints in tide-pool water.”)
+- Scene beats: (e.g., “Freddy wipes coffee cup… notices footprints in tide-pool water.”)
 
 - Dialogue or internal monologue pointers:
 
