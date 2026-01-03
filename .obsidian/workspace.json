@@ -230,6 +230,9 @@
   },
   "active": "79ad812667ddae1a",
   "lastOpenFiles": [
+    "Project_Starter_Kit_2025_01_03/examples/md-to-docx/output/~$mple-criticmarkup.docx",
+    "Project_Starter_Kit_2025_01_03/examples/md-to-docx/output/sample-criticmarkup.docx",
+    "Project_Starter_Kit_2025_01_03/examples/md-to-docx/input/sample-criticmarkup.md",
     "Project_Starter_Kit_2025_01_03/examples/md-to-docx/sample-criticmarkup.md",
     "Project_Starter_Kit_2025_01_03/examples/md-to-docx/sample-markdown copy.md",
     "Project_Starter_Kit_2025_01_03/examples/md-to-docx/sample-markdown.md",
@@ -245,7 +248,6 @@
     "Project_Starter_Kit_2025_01_03/examples/md-to-docx/convert_batch.py",
     "Project_Starter_Kit_2025_01_03/examples/md-to-docx/convert.py",
     "Project_Starter_Kit_2025_01_03/examples/md-to-docx/README.md",
-    "Project_Starter_Kit_2025_01_03/examples/md-to-docx",
     "Project_Starter_Kit_2025_01_03/docs/antigravity/sample.workflow.word-count.md",
     "Project_Starter_Kit_2025_01_03/docs/antigravity/sample.workflow.task-complete.md",
     "Project_Starter_Kit_2025_01_03/docs/antigravity/sample.workflow.smart-commit.md",
@@ -263,8 +265,6 @@
     "Project_Starter_Kit_2025_01_03/sample.README.md",
     "Project_Starter_Kit_2025_01_03/sample.README_SIMPLE.md",
     "Project_Starter_Kit_2025_01_03/sample.gitignore.md",
-    "Project_Starter_Kit_2025_01_03/sample.env.md",
-    "Project_Starter_Kit_2025_01_03/docs/sample.workflow.word-count.md",
-    "Project_Starter_Kit_2025_01_03/docs/sample.workflow.task-complete.md"
+    "Project_Starter_Kit_2025_01_03/sample.env.md"
   ]
 }

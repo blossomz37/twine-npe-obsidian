@@ -21,8 +21,9 @@
 
 # ----- Settings (edit these) -----
 
-INPUT_FILE = "sample-criticmarkup.md"              # Your markdown file
-OUTPUT_FILE = "output/sample-criticmarkup.docx"    # Where to save the Word doc
+INPUT_FILE = "input/sample-criticmarkup.md"     # Your markdown file
+OUTPUT_FILE = "output/sample-criticmarkup.docx" # Where to save the Word doc
+KEEP_BRACES = True                               # Keep {++, {--, etc. visible
 
 # ----- The code -----
 
@@ -34,30 +35,30 @@ from docx import Document
 from docx.shared import RGBColor, Pt
 from docx.enum.text import WD_COLOR_INDEX
 
-# CriticMarkup patterns
+# CriticMarkup patterns - captures the full syntax including braces
 PATTERNS = {
-    'addition': (r'\{\+\+(.+?)\+\+\}', '⟦ADD:{}⟧'),
-    'deletion': (r'\{--(.+?)--\}', '⟦DEL:{}⟧'),
-    'substitution': (r'\{~~(.+?)~>(.+?)~~\}', '⟦DEL:{}⟧⟦ADD:{}⟧'),
-    'comment': (r'\{>>(.+?)<<\}', '⟦COM:{}⟧'),
-    'highlight': (r'\{==(.+?)==\}', '⟦HLT:{}⟧'),
+    'addition': r'(\{\+\+.+?\+\+\})',
+    'deletion': r'(\{--.+?--\})',
+    'substitution': r'(\{~~.+?~>.+?~~\})',
+    'comment': r'(\{>>.+?<<\})',
+    'highlight': r'(\{==.+?==\})',
 }
 
 # Marker pattern for post-processing
-MARKER_PATTERN = re.compile(r'⟦(ADD|DEL|COM|HLT):(.+?)⟧')
+MARKER_PATTERN = re.compile(r'⟦(ADD|DEL|SUB|COM|HLT):(.+?)⟧')
 
 
 def preprocess_criticmarkup(text):
     """Replace CriticMarkup with markers that survive Pandoc."""
     
-    # Handle substitution first (has two capture groups)
-    sub_pattern, sub_replace = PATTERNS['substitution']
-    text = re.sub(sub_pattern, lambda m: f'⟦DEL:{m.group(1)}⟧⟦ADD:{m.group(2)}⟧', text, flags=re.DOTALL)
+    # Handle substitution (keep both old and new together)
+    text = re.sub(PATTERNS['substitution'], lambda m: f'⟦SUB:{m.group(0)}⟧', text, flags=re.DOTALL)
     
-    # Handle other patterns
-    for name, (pattern, replacement) in PATTERNS.items():
-        if name != 'substitution':
-            text = re.sub(pattern, lambda m: replacement.format(m.group(1)), text, flags=re.DOTALL)
+    # Handle other patterns - wrap with markers but keep original syntax
+    text = re.sub(PATTERNS['addition'], lambda m: f'⟦ADD:{m.group(0)}⟧', text, flags=re.DOTALL)
+    text = re.sub(PATTERNS['deletion'], lambda m: f'⟦DEL:{m.group(0)}⟧', text, flags=re.DOTALL)
+    text = re.sub(PATTERNS['comment'], lambda m: f'⟦COM:{m.group(0)}⟧', text, flags=re.DOTALL)
+    text = re.sub(PATTERNS['highlight'], lambda m: f'⟦HLT:{m.group(0)}⟧', text, flags=re.DOTALL)
     
     return text
 
@@ -75,8 +76,13 @@ def apply_run_formatting(run, marker_type):
         run.font.color.rgb = RGBColor(255, 0, 0)  # Red
         run.font.strike = True
         
+    elif marker_type == 'SUB':
+        # Purple text for substitutions
+        run.font.color.rgb = RGBColor(128, 0, 128)  # Purple
+        run.font.underline = True
+        
     elif marker_type == 'COM':
-        # Yellow highlight, italic
+        # Yellow highlight, italic, gray text
         run.font.highlight_color = WD_COLOR_INDEX.YELLOW
         run.font.italic = True
         run.font.color.rgb = RGBColor(128, 128, 128)  # Gray
