@@ -56,7 +56,7 @@ What in the world…?
 
 A shiver runs through me that has nothing to do with the cold. A local prank? Some kid with novelty monster feet? It doesn’t feel like a prank. There’s a sense of purpose to the prints, a path leading from the deepest part of the tide-pool to the edge of the rocks, then stopping. As if something walked out of the water and stood here for a moment before wading back in.
 
-“Elliot! You lockin’ up for good or you planning on sleeping out there?”
+“Mark! You lockin’ up for good or you planning on sleeping out there?”
 
 Leo’s voice, calling from the front of the diner, makes me jump. He’s probably realized he left his keys.
 

@@ -10,7 +10,7 @@
 
 - **High-Concept Elevator Pitch (1-2 sentences):**
 
-When café owner Elliot Gray opens his late-night diner in a quiet seaside town, he never expects to stumble into a moonlit tide-pool guardian — a sea-creature monster named Kai who watches the cove. As storms roll in and secrets surface, their unexpected bond could become the sanctuary both of them desperately need.
+When café owner Mark Gray opens his late-night diner in a quiet seaside town, he never expects to stumble into a moonlit tide-pool guardian — a sea-creature monster named Kai who watches the cove. As storms roll in and secrets surface, their unexpected bond could become the sanctuary both of them desperately need.
 
 - **Tagline:** Moonlight, tide-pools, and an otherworldly protector—love finds a home by the sea.
 
@@ -60,7 +60,7 @@ When café owner Elliot Gray opens his late-night diner in a quiet seaside town,
 
 - **Tone Keywords:** warm, gentle heat, moonlit, seaside breeze, safe home, found family, protector devotion
 
-- **POV & Narrative Style:** Dual First-Person Present (Elliot and Kai alternate)
+- **POV & Narrative Style:** Dual First-Person Present (Mark and Kai alternate)
 
 - **Heat Level:** Moderate (comfortable intimate scenes that satisfy romance readers, with novelty monster/human physicality, but without overt horror or extreme angst)
 
@@ -82,27 +82,27 @@ When café owner Elliot Gray opens his late-night diner in a quiet seaside town,
 
 - **Back-Blurb Draft (short version):**
 
-> When Elliot opens his late-night diner at Starlight Cove, he doesn’t expect the mysterious guardian of the tide-pool to show up — or that the sea-creature will become his protector. Kai has kept the waters safe for centuries, but a storm from his past is rising. Together, can these two build home under moonlit waves and protect what matters?
+> When Mark opens his late-night diner at Starlight Cove, he doesn’t expect the mysterious guardian of the tide-pool to show up — or that the sea-creature will become his protector. Kai has kept the waters safe for centuries, but a storm from his past is rising. Together, can these two build home under moonlit waves and protect what matters?
 
 - **Back-Blurb Draft (medium version):**
 
-> Elliot Gray left the city for a fresh start and opened his dream: the Starlight Cove Diner. Late-night shifts, sea-salt air, and the hush of the tide-pool become his daily rhythm—until he meets Kai. Kai is the silent, powerful guardian of the cove’s waters, a creature of moonlit tides with a haunted past.
+> Mark Gray left the city for a fresh start and opened his dream: the Starlight Cove Diner. Late-night shifts, sea-salt air, and the hush of the tide-pool become his daily rhythm—until he meets Kai. Kai is the silent, powerful guardian of the cove’s waters, a creature of moonlit tides with a haunted past.
 
-> When an ancient predator from Kai’s heritage returns to claim a sea-artifact buried beneath the waves, Elliot and Kai must choose: hide or fight. But Kai has never let anyone in, and Elliot has never loved someone so impossible to hold. Can they trust each other—and their small seaside town—to become the home they both need?
+> When an ancient predator from Kai’s heritage returns to claim a sea-artifact buried beneath the waves, Mark and Kai must choose: hide or fight. But Kai has never let anyone in, and Mark has never loved someone so impossible to hold. Can they trust each other—and their small seaside town—to become the home they both need?
 
 - **Back-Blurb Draft (long version):**
 
-> Elliot Gray thought his hardest shift would be his first night alone at the Starlight Cove Diner. Then a shadow emerged at the tide-pool behind the boardwalk.
+> Mark Gray thought his hardest shift would be his first night alone at the Starlight Cove Diner. Then a shadow emerged at the tide-pool behind the boardwalk.
 
 > Kai, the guardian of the waters, has watched over the cove for centuries. He chose solitude after his brood was shattered by betrayal. He never expected a human to cross his tide-pool—let alone to stir something in his arms, his heart, his hidden life.
 
-> Late-night coffee and sea-salt breeze become a quiet sanctuary. But when Thalos, the predator from Kai’s past, rises to claim a sacred sea-artifact—and the town’s safe waters become ground zero—Elliot and Kai’s growing bond is tested. The diner’s lights flicker, the tide retreats, and the sea guardian must decide: flee again or fight for the human who has already stolen his heart.
+> Late-night coffee and sea-salt breeze become a quiet sanctuary. But when Thalos, the predator from Kai’s past, rises to claim a sacred sea-artifact—and the town’s safe waters become ground zero—Mark and Kai’s growing bond is tested. The diner’s lights flicker, the tide retreats, and the sea guardian must decide: flee again or fight for the human who has already stolen his heart.
 
 > Cozy meets deep-sea myth in this MM monster romance full of moonlit solace, found family in a seaside town, and the bravery to love the impossible.
 
 - **Cover Design Notes:**
 
-- Visual elements: Moon-lit boardwalk, tide-pool shimmer, silhouette of one human figure (Elliot) and one sea-creature figure (Kai) perhaps half human form, embrace or reaching hands.
+- Visual elements: Moon-lit boardwalk, tide-pool shimmer, silhouette of one human figure (Mark) and one sea-creature figure (Kai) perhaps half human form, embrace or reaching hands.
 
 - Colour palette: Deep teal/navy sea-green (night tide), moon-silver highlights, warm diner-light amber accent.
 

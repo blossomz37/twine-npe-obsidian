@@ -36,7 +36,7 @@
 
 - *Definition & Notes:* Bioluminescent rings or spots along the arms/suckers of the guardian’s sea-form arms; glow intensifies under moonlight.
 
-- *Usage/Story Link:* Visual cue: when Kai’s protective mode activates or when he helps Elliot, his arms glow subtly.
+- *Usage/Story Link:* Visual cue: when Kai’s protective mode activates or when he helps Mark, his arms glow subtly.
 
 **Mantle crest**
 
@@ -54,7 +54,7 @@
 
 - *Definition & Notes:* A poetic term for the guardian’s arms when they emerge from the tide-pool to touch the human world; reaching across boundary.
 
-- *Usage/Story Link:* Emotional/romantic metaphor: Kai’s “appendage-reach” for Elliot symbolizes crossing the divide.
+- *Usage/Story Link:* Emotional/romantic metaphor: Kai’s “appendage-reach” for Mark symbolizes crossing the divide.
 
 **Tide-pool grotto**
 

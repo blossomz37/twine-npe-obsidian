@@ -4,17 +4,17 @@
 
 Use the following fields in the MC profiles to prepare for spicy scenes:
 
-For Elliot Gray (Human MC)
+For Mark Gray (Human MC)
 
     •	Sensual Trigger Points / Pleasure Spots: (e.g., the warmth of a diner lamp on his skin, the brush of sea-salt mist on his neck, the light of bioluminescent arms on his back)
 
-    •	Physical + Emotional Reaction to Monster’s Body: (e.g., when Kai’s arms glow, Elliot feels a soft electrical thrill down his spine; when Kai’s “mantle crest” shifts in sea-form, Elliot’s breath catches)
+    •	Physical + Emotional Reaction to Monster’s Body: (e.g., when Kai’s arms glow, Mark feels a soft electrical thrill down his spine; when Kai’s “mantle crest” shifts in sea-form, Mark’s breath catches)
 
-    •	Comfort Zone vs. Edge: Elliot is comfortable in human world (warm diner, familiar smells) but edge is when monster world invades his safe space (arms reaching from water, bioluminescent glow).
+    •	Comfort Zone vs. Edge: Mark is comfortable in human world (warm diner, familiar smells) but edge is when monster world invades his safe space (arms reaching from water, bioluminescent glow).
 
-    •	Intimacy Goal: Elliot wants to feel safe, seen, cherished — so his spicy scenes should reflect his letting go of control and accepting otherness.
+    •	Intimacy Goal: Mark wants to feel safe, seen, cherished — so his spicy scenes should reflect his letting go of control and accepting otherness.
 
-    •	Monster Sensory Contrast: What in Kai’s body is new/different to Elliot? (cool-wet skin, subtle suckers, bioluminescent trace, strong arms, sea-salt taste).
+    •	Monster Sensory Contrast: What in Kai’s body is new/different to Mark? (cool-wet skin, subtle suckers, bioluminescent trace, strong arms, sea-salt taste).
 
 For Kai (Monster MC)
 
@@ -34,11 +34,11 @@ For Kai (Monster MC)
 
 Add these fields into your Character section so spicy scenes are baked into their arcs:
 
-    •	Heat-Level Comfort Zone: (e.g., Elliot = comfortable with moderate heat; Kai = cautious about physical intimacy but curious)
+    •	Heat-Level Comfort Zone: (e.g., Mark = comfortable with moderate heat; Kai = cautious about physical intimacy but curious)
 
     •	Monster/Human Physical Novelty to Explore: (list 3-5 unique touches e.g., “bioluminescent arms,” “mantle crest under moon,” “sea-salt taste on skin,” “appendage-reach across tide-pool”)
 
-    •	Emotional/Physical Trigger for First Time: (What specific scene or moment leads them to let go—for example: Elliot alone at late-night shift, sees Kai emerge in moonlight and feels pull; Kai realises his arms glow when Elliot touches his shoulder…)
+    •	Emotional/Physical Trigger for First Time: (What specific scene or moment leads them to let go—for example: Mark alone at late-night shift, sees Kai emerge in moonlight and feels pull; Kai realises his arms glow when Mark touches his shoulder…)
 
     •	Intimacy Milestones:
 
@@ -56,11 +56,11 @@ Add these fields into your Character section so spicy scenes are baked into thei
 
 🎯 Example Snippets to Work Into The Profile
 
-    •	Elliot’s detail: “He’s never felt another’s arms feel so vast and warm — and the faint glow of Kai’s hands against his skin sends a shiver through him he can’t name.”
+    •	Mark’s detail: “He’s never felt another’s arms feel so vast and warm — and the faint glow of Kai’s hands against his skin sends a shiver through him he can’t name.”
 
-    •	Kai’s detail: “When Kai’s mantle crest dips under moon-drift, Elliot’s fingertips trace its ridge, and for a moment Kai forgets the tide-pool’s duty and only feels the human’s breath.”
+    •	Kai’s detail: “When Kai’s mantle crest dips under moon-drift, Mark’s fingertips trace its ridge, and for a moment Kai forgets the tide-pool’s duty and only feels the human’s breath.”
 
-    •	Heat milestone note: “Chapter 12 – Level 3: Moonlit tide-pool grotto scene. Bioluminescent arms, sea-salt taste, human and guardian release tension together; afterwards the waves hush and Elliot falls asleep wrapped in Kai’s arms.”
+    •	Heat milestone note: “Chapter 12 – Level 3: Moonlit tide-pool grotto scene. Bioluminescent arms, sea-salt taste, human and guardian release tension together; afterwards the waves hush and Mark falls asleep wrapped in Kai’s arms.”
 
 ⸻
 

@@ -16,13 +16,13 @@
 
 | **Spire-crest** | A shell-like ridge or fin-crest on the guardian’s back (sea-form) visible in moonlit tide-pool water. | Creature detail: use to describe Kai’s sea-creature anatomy, helping human MC recognise “his monster”. |
 
-| **Sucker-glow** | Bioluminescent rings or spots along the arms/suckers of the guardian’s sea-form arms; glow intensifies under moonlight. | Visual cue: when Kai’s protective mode activates or when he helps Elliot, his arms glow subtly. |
+| **Sucker-glow** | Bioluminescent rings or spots along the arms/suckers of the guardian’s sea-form arms; glow intensifies under moonlight. | Visual cue: when Kai’s protective mode activates or when he helps Mark, his arms glow subtly. |
 
 | **Mantle crest** | The muscular mantle structure housing the guardian’s vital organs and signalling transformation. Adapted from cephalopod anatomy (mantle) [oai_citation:0‡HowStuffWorks](https://animals.howstuffworks.com/marine-life/octopus1.htm?utm_source=chatgpt.com) | Used when describing transformation from sea-creature to humanoid form of Kai. |
 
 | **Arms (vs tentacles)** | In cephalopod anatomy a key distinction: octopuses have arms (with suckers along full length), tentacles differ. [oai_citation:1‡SCDNR](https://www.dnr.sc.gov/marine/sertc/Featured%20Species%20O%20vulgaris.pdf?utm_source=chatgpt.com) | Use consistent term “arms” when describing Kai’s appendages; avoids mis-labeling with “tentacles”. |
 
-| **Appendage-reach** | A poetic term for the guardian’s arms when they emerge from the tide-pool to touch the human world; reaching across boundary. | Emotional/romantic metaphor: Kai’s “appendage-reach” for Elliot symbolizes crossing the divide. |
+| **Appendage-reach** | A poetic term for the guardian’s arms when they emerge from the tide-pool to touch the human world; reaching across boundary. | Emotional/romantic metaphor: Kai’s “appendage-reach” for Mark symbolizes crossing the divide. |
 
 | **Tide-pool grotto** | The sub-surfaced cave & rock-basin where sea-water pools at low tide and the guardian resides; part of Starlight Cove geography. [oai_citation:2‡Wikipedia](https://en.wikipedia.org/wiki/Tide_pool?utm_source=chatgpt.com) | Location anchor: use when describing setting, scenes of mystery and bond development. |
 

@@ -26,13 +26,13 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 > "The last coffee cup clinks onto the tray just as the boardwalk lights flicker and the tide-pool outside the window shivers green-blue."
 
-**Issue:** Strong anchor beat, but "shivers green-blue" personifies without grounding in Elliot's perception or reaction.
+**Issue:** Strong anchor beat, but "shivers green-blue" personifies without grounding in Mark's perception or reaction.
 
 **Fix:**
 
-> "The last coffee cup clinks onto the tray. Outside, the boardwalk lights flicker, and Elliot catches movement in the tide-pool—a shimmer of green-blue that makes him pause mid-reach."
+> "The last coffee cup clinks onto the tray. Outside, the boardwalk lights flicker, and Mark catches movement in the tide-pool—a shimmer of green-blue that makes him pause mid-reach."
 
-**Transformation Applied:** `agency_first_sensory_framing` — Elliot's action (pause mid-reach) tethers the visual to his body and awareness.
+**Transformation Applied:** `agency_first_sensory_framing` — Mark's action (pause mid-reach) tethers the visual to his body and awareness.
 
 ---
 
@@ -84,7 +84,7 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 ---
 
-### **Elliot's Self-Doubt (Paragraph 10)**
+### **Mark's Self-Doubt (Paragraph 10)**
 
 **Current:**
 
@@ -122,13 +122,13 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 > "By day, it's a simple wonder: shallow pools teeming with starfish, anemones, and scuttling crabs, a spot for kids to poke and prod while parents snap photos. But at night, especially under a waxing moon like tonight, it's something else entirely. The water shimmers with a soft, bioluminescent glow, green-blue specks dancing just under the surface like submerged stars."
 
-**Issue:** Static description lacking Elliot's present-moment reaction. "Something else entirely" tells instead of shows.
+**Issue:** Static description lacking Mark's present-moment reaction. "Something else entirely" tells instead of shows.
 
 **Fix:**
 
-> "By day, kids poke at starfish in the pools while parents snap photos. But tonight the water glows—green-blue specks drifting beneath the surface, brighter than algae should be. Elliot leans over the railing, watching them pulse and fade like breath."
+> "By day, kids poke at starfish in the pools while parents snap photos. But tonight the water glows—green-blue specks drifting beneath the surface, brighter than algae should be. Mark leans over the railing, watching them pulse and fade like breath."
 
-**Transformation Applied:** `sensory_balancer` + `motif_tracker` — Condensed; added Elliot's action (leans, watches); introduced motif (breath = pulse).
+**Transformation Applied:** `sensory_balancer` + `motif_tracker` — Condensed; added Mark's action (leans, watches); introduced motif (breath = pulse).
 
 ---
 
@@ -144,7 +144,7 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 > "His gaze drifts to the rocks below. The tide's pulled back, exposing flat stones that should be smooth. They're not. Footprints—huge, deep, still holding water that glints like poured silver. His pulse kicks."
 
-**Transformation Applied:** `agency_first_sensory_framing` — Elliot's gaze triggers discovery; physical reaction (pulse kicks) externalizes surprise.
+**Transformation Applied:** `agency_first_sensory_framing` — Mark's gaze triggers discovery; physical reaction (pulse kicks) externalizes surprise.
 
 ---
 
@@ -154,7 +154,7 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 > "They're huge—easily twice the size of my boot, pressed deep into the stone as if by something heavy, deliberate. The shape is all wrong: longer than a human foot, with a broad spread and an impossibly high arch. Four toe impressions, not five, ending in blunt, rounded tips without any sign of claws or nails. No tread marks, no shoe patterns—just these raw, organic indents, trailing from the deepest part of the tide-pool to the edge of the rocks, then stopping abruptly."
 
-**Issue:** Over-detailed; reads like a naturalist's field notes instead of Elliot's racing thoughts.
+**Issue:** Over-detailed; reads like a naturalist's field notes instead of Mark's racing thoughts.
 
 **Fix:**
 
@@ -170,13 +170,13 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 > "For a single, heart-stopping beat, a large arm breaks the surface of the water. It's not human, not fish—something sleek and powerful, shimmering with a faint, internal teal light that traces patterns along its length. Faint rings glow along it, like bioluminescent suckers catching the moonlight, reaching not toward me but grasping at the fading glow before slipping back under with barely a ripple. Gone. The water smooths to stillness, the light extinguished. My breath catches in my throat as the tide-pool surface pulses—and then the glow vanishes, leaving only darkness and the echo of something watching."
 
-**Issue:** Strong visual, but over-described. Final line repeats information (glow vanishes twice). "Echo of something watching" tells instead of showing Elliot's physical response.
+**Issue:** Strong visual, but over-described. Final line repeats information (glow vanishes twice). "Echo of something watching" tells instead of showing Mark's physical response.
 
 **Fix:**
 
-> "An arm breaks the surface. Sleek, massive, shimmering teal—patterns of light tracing its length like living circuitry. Rings pulse along it, bioluminescent suckers grasping at the fading glow. Then it's gone. Barely a ripple. Elliot's breath stops. The water stills. The light dies. He waits, heart thudding, but nothing rises again. Only the hush of the tide—and the certainty that something beneath is watching back."
+> "An arm breaks the surface. Sleek, massive, shimmering teal—patterns of light tracing its length like living circuitry. Rings pulse along it, bioluminescent suckers grasping at the fading glow. Then it's gone. Barely a ripple. Mark's breath stops. The water stills. The light dies. He waits, heart thudding, but nothing rises again. Only the hush of the tide—and the certainty that something beneath is watching back."
 
-**Transformation Applied:** `echo_closer` + `tone_filter` — Condensed; fragmented for urgency; ended with Elliot's body (breath stops, heart thuds) + sensory inversion (he watches → it watches).
+**Transformation Applied:** `echo_closer` + `tone_filter` — Condensed; fragmented for urgency; ended with Mark's body (breath stops, heart thuds) + sensory inversion (he watches → it watches).
 
 ---
 
@@ -186,7 +186,7 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 **Problem:** Paragraphs 7–11 (backstory, Leo's exit, internal doubt) stall momentum between the opening hook and the boardwalk descent.
 
-**Solution:** Compress backstory into sensory triggers; weave Leo's exit into Elliot's cleaning ritual; cut repetitive introspection.
+**Solution:** Compress backstory into sensory triggers; weave Leo's exit into Mark's cleaning ritual; cut repetitive introspection.
 
 **Example Restructure:**
 
@@ -194,7 +194,7 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 2. Leo's exit (condensed).
 
-3. Elliot cleans; scar-reflection triggers *brief* city memory (3 sentences max).
+3. Mark cleans; scar-reflection triggers *brief* city memory (3 sentences max).
 
 4. Outside to boardwalk (immediate sensory shift).
 
@@ -208,7 +208,7 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 **Fix:**
 
-- **Clock echo:** When Elliot returns inside after seeing the arm, the clock's ticking feels louder—time no longer settling, but counting down.
+- **Clock echo:** When Mark returns inside after seeing the arm, the clock's ticking feels louder—time no longer settling, but counting down.
 
 - **Glow progression:** 
 
@@ -230,7 +230,7 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 **Fix:**
 
-> "Leo claps his shoulder, fingers pressing just long enough that Elliot glances up. 'Seriously. Don't stay out too long.' The door jingles shut before Elliot can answer."
+> "Leo claps his shoulder, fingers pressing just long enough that Mark glances up. 'Seriously. Don't stay out too long.' The door jingles shut before Mark can answer."
 
 **Effect:** Leo's concern becomes action, not exposition. The unanswered moment adds weight.
 
@@ -254,7 +254,7 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 - ❌ "warm hug," "cool embrace," "liquid silver"
 
-**Fixes:** Replace metaphors with **Elliot's body response** or **causality**.
+**Fixes:** Replace metaphors with **Mark's body response** or **causality**.
 
 ---
 
@@ -262,7 +262,7 @@ Chapter 1 demonstrates **solid structural foundation** and **effective character
 
 ### **Romance Weaver:**
 
-Chapter 1 has no Kai POV or direct interaction. This is acceptable for intro, but **Elliot's attraction cues are absent**. When the arm appears, his reaction is curiosity/fear—no hint of fascination that seeds romance.
+Chapter 1 has no Kai POV or direct interaction. This is acceptable for intro, but **Mark's attraction cues are absent**. When the arm appears, his reaction is curiosity/fear—no hint of fascination that seeds romance.
 
 **Add (Closing Beat):**
 
@@ -292,7 +292,7 @@ Current emotional arc:
 
 |------------|-----------|------------|
 
-| `descriptive_discipline` | Over-personification; passive atmosphere | Rewrite Paragraphs 12–13; ground in Elliot's body |
+| `descriptive_discipline` | Over-personification; passive atmosphere | Rewrite Paragraphs 12–13; ground in Mark's body |
 
 | `reflection_synthesizer` | Backstory dump (Para 7) | Fragment into sensory-triggered memory; cut 60% |
 
@@ -306,7 +306,7 @@ Current emotional arc:
 
 | `dialogue_optimizer` | Leo's exit lacks subtext gesture | Rewrite with unanswered concern |
 
-| `echo_closer` | Glow mentioned twice at end | Consolidate; end with Elliot's pulse, not description |
+| `echo_closer` | Glow mentioned twice at end | Consolidate; end with Mark's pulse, not description |
 
 ---
 
@@ -344,7 +344,7 @@ Complete the list
 
    - Enhance Leo's exit with physical subtext.
 
-   - Add romance seed (Elliot's attraction-curiosity to the arm).
+   - Add romance seed (Mark's attraction-curiosity to the arm).
 
 3. **Low Priority (Polish):**
 

@@ -10,17 +10,17 @@
 
 - **Short Summary (3-5 sentences):**  
 
-  Elliot Gray moves to Starlight Cove to start fresh, running a late-night diner near a moonlit tide-pool. Kai, the sea-creature guardian, watches the cove and maintains its magic—but his solitary life is interrupted when Elliot notices strange lights in the water. As their connection deepens, a predator from Kai’s past emerges to claim the sacred sea-artifact and threatens both the tide-pool sanctuary and the small town. Elliot and Kai must face that threat together, accept each other’s worlds, and build a home where monster and human belong.
+  Mark Gray moves to Starlight Cove to start fresh, running a late-night diner near a moonlit tide-pool. Kai, the sea-creature guardian, watches the cove and maintains its magic—but his solitary life is interrupted when Mark notices strange lights in the water. As their connection deepens, a predator from Kai’s past emerges to claim the sacred sea-artifact and threatens both the tide-pool sanctuary and the small town. Mark and Kai must face that threat together, accept each other’s worlds, and build a home where monster and human belong.
 
 ## 🧱 Four-Act Structure  
 
 ### 1. Ki (Introduction)  
 
-- **Goal of this act:** Introduce the world, the characters (Elliot & Kai), establish status quo and baseline emotional states.  
+- **Goal of this act:** Introduce the world, the characters (Mark & Kai), establish status quo and baseline emotional states.  
 
 - **What readers should learn:**  
 
-  - Elliot’s arrival in the town and diner life.  
+  - Mark’s arrival in the town and diner life.  
 
   - The tide-pool, the seaside setting, the hint of monster presence.  
 
@@ -28,7 +28,7 @@
 
 - **Major Scenes / Beats:**  
 
-  1. Elliot’s first late-night shift at the diner, looking out at the tide-pool.  
+  1. Mark’s first late-night shift at the diner, looking out at the tide-pool.  
 
   2. First visual glimpse of Kai at the boardwalk rock outcrop.  
 
@@ -36,7 +36,7 @@
 
 - **Establishing Stakes (soft):**  
 
-  - Elliot fears he’s just passing through, lacks belonging.  
+  - Mark fears he’s just passing through, lacks belonging.  
 
   - Kai fears exposure and loss.  
 
@@ -48,7 +48,7 @@
 
 - **What readers should witness:**  
 
-  - Elliot and Kai spending more shared moments (diner + tide‐pool).  
+  - Mark and Kai spending more shared moments (diner + tide‐pool).  
 
   - Moments of trust, small reveals (monster anatomy hints, human curiosity).  
 
@@ -56,15 +56,15 @@
 
 - **Major Scenes / Beats:**  
 
-  1. Late-night diner quiet night; Elliot works while Kai helps unseen.  
+  1. Late-night diner quiet night; Mark works while Kai helps unseen.  
 
   2. Moonlit walk on boardwalk; conversation between human and guardian.  
 
-  3. Elliot exploring the sea-cave stairway and sensing deeper world beneath.  
+  3. Mark exploring the sea-cave stairway and sensing deeper world beneath.  
 
 - **Emerging Question/Unsettled Tension:**  
 
-  - What if Kai’s secret becomes known to Elliot?  
+  - What if Kai’s secret becomes known to Mark?  
 
   - What if the tide-pool’s glow fades again (an omen)?  
 
@@ -78,13 +78,13 @@
 
   - The predator Thalos reappears, targeting the sea-artifact.  
 
-  - Kai’s identity and past become exposed to Elliot or the town.  
+  - Kai’s identity and past become exposed to Mark or the town.  
 
   - The sanctuary shows signs of destabilising (fade-wave).  
 
 - **Effect of the twist on characters/world:**  
 
-  - Elliot must reconcile his feelings for Kai with the monster’s past and threat.  
+  - Mark must reconcile his feelings for Kai with the monster’s past and threat.  
 
   - Kai must choose to fight or hide; his sanctuary is under real threat.  
 
@@ -96,7 +96,7 @@
 
   2. Thalos emerges; confrontation in sea-cave; human meddles.  
 
-  3. Elliot and Kai have major intimate scene (Level 3 heat) followed immediately by threat realisation.  
+  3. Mark and Kai have major intimate scene (Level 3 heat) followed immediately by threat realisation.  
 
 - **Turning Point Impact:**  
 
@@ -104,7 +104,7 @@
 
   - The sanctuary is now active battleground; stakes climb.  
 
-  - Monster/human dynamic shifts—Elliot is fully in, Kai can’t go back to solitude.
+  - Monster/human dynamic shifts—Mark is fully in, Kai can’t go back to solitude.
 
 ### 4. Ketsu (Conclusion / Reconciliation)  
 
@@ -112,7 +112,7 @@
 
 - **What resolution looks like:**  
 
-  - Elliot and Kai stand together, protecting their home and each other.  
+  - Mark and Kai stand together, protecting their home and each other.  
 
   - The tide-pool sanctuary stabilised; the town accepts monster presence.  
 
@@ -124,11 +124,11 @@
 
   2. Community scene: diner after the battle, boardwalk festival, moon-tide gathering acknowledges guardian.  
 
-  3. Epilogue: Elliot and Kai in the tide-pool grotto, avenir scene of future together.  
+  3. Epilogue: Mark and Kai in the tide-pool grotto, avenir scene of future together.  
 
 - **Final Emotional Pay-off:**  
 
-  - Belonging: Elliot knows he’s home.  
+  - Belonging: Mark knows he’s home.  
 
   - Acceptance: Kai is loved for his monster nature and human heart.  
 
@@ -136,7 +136,7 @@
 
 ## 🌟 Conflict & Stakes Summary  
 
-- **Internal Stakes (MC1):** Elliot risks vulnerability and possibly being harmed by monster world; must let himself matter.  
+- **Internal Stakes (MC1):** Mark risks vulnerability and possibly being harmed by monster world; must let himself matter.  
 
 - **Internal Stakes (MC2):** Kai risks losing his protector life or the human he’s grown to love; must trust someone else.  
 

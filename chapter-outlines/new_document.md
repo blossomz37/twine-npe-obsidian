@@ -1,18 +1,18 @@
-The last coffee cup clinks onto the tray. Elliot glances up—the boardwalk lights flicker, and for an instant, a flash of green-blue unsettles the tide-pool outside. Then it’s gone.
+The last coffee cup clinks onto the tray. Mark glances up—the boardwalk lights flicker, and for an instant, a flash of green-blue unsettles the tide-pool outside. Then it’s gone.
 
 11:43 PM. The vintage clock on the wall—a ship’s wheel from the previous owner—ticks steadily, its rhythm syncing with the distant hush of waves. It’s a sound that has learned to breathe with the sea, marking hours that settle rather than pass.
 
 “That’s the last of ‘em, boss,” Leo calls from behind the counter, wiping his hands on a graying towel. Flour streaks his cheek like war paint, and his blond hair sticks up in damp spikes from the kitchen’s heat. He’s grinning, an easy smile that cuts through the late-night quiet. “Old Man Hemlock nursed that coffee for a solid hour. Pretty sure he was trying to set a new land-speed record for dawdling.”
 
-Elliot manages a tired chuckle as he balances the tray. “He earned it. He was our only customer after ten.”
+Mark manages a tired chuckle as he balances the tray. “He earned it. He was our only customer after ten.”
 
 Mr. Hemlock pauses at the door, offering a final, deliberate nod before his cane taps a gentle rhythm on the worn floor. The bell above the door jingles, a cheerful, fading note that leaves behind the diner’s familiar symphony: the gurgle of the cooling coffee machine, the hum of the pie fridge, and the endless, soft crush of waves against the shore.
 
 Leo tosses his towel into a hamper. “Pancake people tomorrow. They’ll descend at dawn demanding their syrup fix. You good to lock up?”
 
-“Go on,” Elliot says, rinsing the cups. The warm water is a soothing contrast to the chill seeping through the glass. “I’ll handle it. Just don’t forget your keys this time.”
+“Go on,” Mark says, rinsing the cups. The warm water is a soothing contrast to the chill seeping through the glass. “I’ll handle it. Just don’t forget your keys this time.”
 
-Leo laughs, rubbing the back of his neck. “Hey, that was one time! Okay, twice.” He unties his apron, folding it over a stool. The wave-crest tattoo on his forearm flexes, a dark curl against his skin. He claps Elliot’s shoulder, his fingers pressing just long enough that Elliot glances up. “Seriously,” Leo says, quieter now. “Don’t stay out too long.” The door jingles shut before Elliot can answer.
+Leo laughs, rubbing the back of his neck. “Hey, that was one time! Okay, twice.” He unties his apron, folding it over a stool. The wave-crest tattoo on his forearm flexes, a dark curl against his skin. He claps Mark’s shoulder, his fingers pressing just long enough that Mark glances up. “Seriously,” Leo says, quieter now. “Don’t stay out too long.” The door jingles shut before Mark can answer.
 
 The silence that returns is deeper, layered. He moves through his closing ritual on autopilot, the familiar tasks a balm for the restless parts of his mind. Wiping counters until they gleam under the amber lights. Refilling shakers, the whisper of salt a tiny secret between his fingers. Stacking mugs, their ceramic warmth like a handshake from an old friend.
 
@@ -22,13 +22,13 @@ He flips the sign to ‘CLOSED’ and locks the front door, the key turning with
 
 The door swings open. Cold hits his face—salt-sharp, biting through the coffee warmth still clinging to his shirt. Goosebumps prickle his neck. He pulls the flannel tighter, breath misting in the air, and steps onto the boardwalk. He breathes deep, letting the sea-air settle the earlier doubts. Out here, under the stars, the diner feels real. Solid. His. A small, genuine smile touches his lips.
 
-The boardwalk stretches out, its string lights casting long, wavering shadows. Below, in a basin of dark basalt, lies the Cove-heart. By day, kids crouch here poking at starfish while parents hover with phones. But tonight the pools glow—green-blue light drifting beneath the surface, brighter than algae has any right to be. Elliot leans over the railing. The specks pulse like breath. Like something alive is exhaling light. The old-timers spin tales of "arms in the moon-water," legends he’d dismissed as local color.
+The boardwalk stretches out, its string lights casting long, wavering shadows. Below, in a basin of dark basalt, lies the Cove-heart. By day, kids crouch here poking at starfish while parents hover with phones. But tonight the pools glow—green-blue light drifting beneath the surface, brighter than algae has any right to be. Mark leans over the railing. The specks pulse like breath. Like something alive is exhaling light. The old-timers spin tales of "arms in the moon-water," legends he’d dismissed as local color.
 
 His gaze drifts to the rocks below. The tide's pulled back, leaving wet stone that should be smooth. It's not. Dark shapes pressed into algae—still holding water that glints like mercury. His pulse kicks. Footprints.
 
 Slinging a cleaning towel over his shoulder, he descends the short stairs, his boots crunching on loose pebbles. The air down here is cooler, heavier, the scent of brine mingled with the earthy tang of exposed seaweed. He crouches. Twice the size of his boot. Four toes—not five. No claws, no tread, just smooth indents pressed deep enough to still hold seawater. They trail from the tide-pool's center to the rock edge, then stop. He crouches lower, fingertips hovering an inch above the nearest print. Cold seeps through his jeans. A thrill runs through him, not quite fear, but something close—excitement laced with unease.
 
-“Elliot! You lockin’ up for good?” Leo’s voice booms from the diner’s front, making him jump. He must have circled back again.
+“Mark! You lockin’ up for good?” Leo’s voice booms from the diner’s front, making him jump. He must have circled back again.
 
 “Just a minute!” he calls, his voice thinner than he’d like.
 
@@ -38,7 +38,7 @@ The diner's light spills out behind him, a safe square of amber. Ahead, the Cove
 
 An arm breaks the surface.
 
-Massive, sleek, shimmering teal—patterns of light tracing its length like living circuitry. Bioluminescent rings pulse along it, reaching toward the fading glow, then slipping back under without a ripple. Elliot’s breath stops. It had been—he searches for the word—*beautiful*. Unsettling, yes, impossible, but undeniably, dangerously beautiful. His fingers curl against the railing, and he wonders—just for a heartbeat—what it would feel like to reach back.
+Massive, sleek, shimmering teal—patterns of light tracing its length like living circuitry. Bioluminescent rings pulse along it, reaching toward the fading glow, then slipping back under without a ripple. Mark’s breath stops. It had been—he searches for the word—*beautiful*. Unsettling, yes, impossible, but undeniably, dangerously beautiful. His fingers curl against the railing, and he wonders—just for a heartbeat—what it would feel like to reach back.
 
 The water stills. The glow dies.
 

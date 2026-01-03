@@ -54,21 +54,21 @@
 
 - **Short Back-Blurb (≈ 50–70 words):**
 
-> When Elliot opens his late-night diner at Starlight Cove, he doesn’t expect the mysterious guardian of the tide-pool to show up—or that the sea-creature will become his protector. Kai has kept the waters safe for centuries, but a storm from his past is rising. Together, can these two build home under moonlit waves and protect what matters?
+> When Mark opens his late-night diner at Starlight Cove, he doesn’t expect the mysterious guardian of the tide-pool to show up—or that the sea-creature will become his protector. Kai has kept the waters safe for centuries, but a storm from his past is rising. Together, can these two build home under moonlit waves and protect what matters?
 
 - **Medium Back-Blurb (≈ 120–150 words):**
 
-> Elliot Gray left the city for a fresh start and opened his dream: the Starlight Cove Diner. Late-night shifts, sea-salt air, and the hush of the tide-pool become his daily rhythm—until he meets Kai.
+> Mark Gray left the city for a fresh start and opened his dream: the Starlight Cove Diner. Late-night shifts, sea-salt air, and the hush of the tide-pool become his daily rhythm—until he meets Kai.
 
-> Kai is the silent, powerful guardian of the cove’s waters, a creature of moonlit tides with a haunted past. When an ancient predator from Kai’s heritage returns to claim a sea-artifact buried beneath the waves, Elliot and Kai must choose: hide or fight. But Kai has never let anyone in, and Elliot has never loved someone so impossible to hold. Can they trust each other—and their small seaside town—to become the home they both need?
+> Kai is the silent, powerful guardian of the cove’s waters, a creature of moonlit tides with a haunted past. When an ancient predator from Kai’s heritage returns to claim a sea-artifact buried beneath the waves, Mark and Kai must choose: hide or fight. But Kai has never let anyone in, and Mark has never loved someone so impossible to hold. Can they trust each other—and their small seaside town—to become the home they both need?
 
 - **Long Back-Blurb (≈ 200–250 words):**
 
-> Elliot Gray thought his hardest shift would be his first night alone at the Starlight Cove Diner. Then a shadow emerged at the tide-pool behind the boardwalk.
+> Mark Gray thought his hardest shift would be his first night alone at the Starlight Cove Diner. Then a shadow emerged at the tide-pool behind the boardwalk.
 
 > Kai, the guardian of the waters, has watched over the cove for centuries. He chose solitude after his brood was shattered by betrayal. He never expected a human to cross his tide-pool—let alone to stir something in his arms, his heart, his hidden life.
 
-> Late-night coffee and sea-salt breeze become a quiet sanctuary. But when Thalos, the predator from Kai’s past, rises to claim a sacred sea-artifact—and the town’s safe waters become ground zero—Elliot and Kai’s growing bond is tested. The diner’s lights flicker, the tide retreats, and the sea guardian must decide: flee again or fight for the human who has already stolen his heart.
+> Late-night coffee and sea-salt breeze become a quiet sanctuary. But when Thalos, the predator from Kai’s past, rises to claim a sacred sea-artifact—and the town’s safe waters become ground zero—Mark and Kai’s growing bond is tested. The diner’s lights flicker, the tide retreats, and the sea guardian must decide: flee again or fight for the human who has already stolen his heart.
 
 > Cozy meets deep-sea myth in this MM monster romance full of moonlit solace, found family in a seaside town, and the bravery to love the impossible.
 
@@ -78,13 +78,13 @@
 
 - **Elevator Pitch (1-2 sentences):**
 
-> Café owner Elliot Gray meets Kai—an otherworldly tide-pool guardian—and when a past predator returns to claim the hidden sea-artifact, love becomes the only thing standing between monster and human and home.
+> Café owner Mark Gray meets Kai—an otherworldly tide-pool guardian—and when a past predator returns to claim the hidden sea-artifact, love becomes the only thing standing between monster and human and home.
 
 ### 🌴 Beach-Read Snippet
 
 Grab your towel, your iced drink, and this one-go bedtime read.
 
-In the moon-lit seaside town of Starlight Cove, café owner Elliot Gray hopes for a fresh start beneath the waves. He never expects to meet the tide-pool guardian watching the cove—and neither does the guardian expect to feel something so human. Quiet nights turn electric when Kai’s bioluminescent arms brush the boardwalk and a predator from his past rises from the depths.
+In the moon-lit seaside town of Starlight Cove, café owner Mark Gray hopes for a fresh start beneath the waves. He never expects to meet the tide-pool guardian watching the cove—and neither does the guardian expect to feel something so human. Quiet nights turn electric when Kai’s bioluminescent arms brush the boardwalk and a predator from his past rises from the depths.
 
 Deep-sea myth meets small-town comfort in this cozy MM monster romance. Perfect for sand, surf, and surrender.
 
@@ -94,7 +94,7 @@ Deep-sea myth meets small-town comfort in this cozy MM monster romance. Perfect 
 
 Moonlight. Tide-pools. A forbidden protector. A fault-line romance.
 
-Elliot runs a diner by the sea. Kai protects a secret beneath it. When the guardian’s monster past resurfaces, Elliot must ask himself: Can I love what I don’t fully understand?
+Mark runs a diner by the sea. Kai protects a secret beneath it. When the guardian’s monster past resurfaces, Mark must ask himself: Can I love what I don’t fully understand?
 
 Midnight at Starlight Cove — Dive into a monster/human MM romance where found-family, seaside nights, and heart-pounding heat collide.
 
@@ -108,7 +108,7 @@ Midnight at Starlight Cove — Dive into a monster/human MM romance where found-
 
 - Moon-lit boardwalk and tide-pool in background
 
-- Two figures: human (Elliot) and monster guardian (Kai) in subtle embrace or reaching hands
+- Two figures: human (Mark) and monster guardian (Kai) in subtle embrace or reaching hands
 
 - Bioluminescent glow (teal/sea-green) from tide-pool and monster’s arms
 
@@ -146,7 +146,7 @@ Midnight at Starlight Cove — Dive into a monster/human MM romance where found-
 
 - **Reader Engagement Strategy:**
 
-- Newsletter sign-up promise: “Free mini-novella: Tide-Pool Nights (Elliot & Kai side-story)”
+- Newsletter sign-up promise: “Free mini-novella: Tide-Pool Nights (Mark & Kai side-story)”
 
 - Social media: Share behind-the-scenes creature-lore art, vibe clips of diner + tide-pool
 

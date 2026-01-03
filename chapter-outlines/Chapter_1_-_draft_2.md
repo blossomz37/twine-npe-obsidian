@@ -18,7 +18,7 @@ Leo tosses his towel into the hamper with a flourish. “Pancake people tomorrow
 
 I shake my head, setting the tray down by the sink. “Nah, go on. You've earned your escape. I'll handle the rest. Just don't forget your keys this time—last week you circled back twice.”
 
-He laughs, rubbing the back of his neck. “Hey, that was one time! Okay, twice. But who's counting?” He unties his apron, folding it neatly over the back of a stool. Leo's been with me since day one, a local kid in his late twenties with a tattoo of a wave crest peeking out from his sleeve and an endless supply of bad puns. He's more than a cook; he's the first real friend I've made here, the one who showed me how to tweak the grill for perfect late-night specials and warned me about the autumn storms that batter the boardwalk. Without him, this place would feel a lot emptier. “Seriously, though, Elliot—don't push yourself. You've been pulling doubles all week. The diner's not gonna float away if you call it a night early.”
+He laughs, rubbing the back of his neck. “Hey, that was one time! Okay, twice. But who's counting?” He unties his apron, folding it neatly over the back of a stool. Leo's been with me since day one, a local kid in his late twenties with a tattoo of a wave crest peeking out from his sleeve and an endless supply of bad puns. He's more than a cook; he's the first real friend I've made here, the one who showed me how to tweak the grill for perfect late-night specials and warned me about the autumn storms that batter the boardwalk. Without him, this place would feel a lot emptier. “Seriously, though, Mark—don't push yourself. You've been pulling doubles all week. The diner's not gonna float away if you call it a night early.”
 
 “I know, I know.” I start rinsing the cups, the warm water a soothing contrast to the chill seeping in from outside. “But it's quiet like this. Gives me time to think. Besides, if I don't refill these shakers, tomorrow's breakfast rush will be a saltless disaster.”
 
@@ -44,7 +44,7 @@ The air down here is cooler, heavier, the scent of brine sharper, mingled with t
 
 My mind races. A prank? Some kid with oversized novelty feet, messing around after dark? But who would come out here this late, and why? An animal? Seals don't leave prints like this—too structured, too purposeful. I trace the edge of one with my finger, the stone slick and cool, the depression still holding a shallow pool of seawater that reflects the moon. A thrill runs through me, not quite fear, but something close—excitement laced with unease. This isn't just odd; it's a crack in the quiet facade of my new life. The Cove-heart, with its glowing specks hinting at hidden depths, suddenly feels like it's holding secrets I wasn't meant to find.
 
-“Elliot! You lockin’ up for good or you planning on sleeping out there?”
+“Mark! You lockin’ up for good or you planning on sleeping out there?”
 
 Leo's voice booms from the diner's front, startling me upright. Damn, he must've forgotten something after all. I stand, brushing damp grit from my hands, my heart thudding a little harder.
 

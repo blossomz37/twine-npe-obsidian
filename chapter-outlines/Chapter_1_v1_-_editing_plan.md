@@ -28,15 +28,15 @@ Chapter 1 establishes a **promising foundation** with strong atmosphere and clea
 
 **DIAGNOSIS:**
 
-Strong anchor beat undermined by false personification ("shivers green-blue"). The tide-pool acts autonomously rather than being perceived through Elliot's awareness.
+Strong anchor beat undermined by false personification ("shivers green-blue"). The tide-pool acts autonomously rather than being perceived through Mark's awareness.
 
 **PRESCRIPTION:**
 
-> "The last coffee cup clinks onto the tray. Elliot glances up—the boardwalk lights flicker, and something moves in the tide-pool outside. Green-blue. Gone."
+> "The last coffee cup clinks onto the tray. Mark glances up—the boardwalk lights flicker, and something moves in the tide-pool outside. Green-blue. Gone."
 
 **APPLIED MODULES:** `agency_first_sensory_framing` + `sensory_balancer`
 
-**EFFECT:** Elliot's glance anchors the visual; fragmented rhythm creates immediacy.
+**EFFECT:** Mark's glance anchors the visual; fragmented rhythm creates immediacy.
 
 ---
 
@@ -68,7 +68,7 @@ Good sensory anchor (dishrag in hand), but "I know better now" tells reader conc
 
 **DIAGNOSIS:**
 
-Simile ("borrowed clothing") is serviceable but generic. Misses opportunity for tactile grounding specific to Elliot's experience.
+Simile ("borrowed clothing") is serviceable but generic. Misses opportunity for tactile grounding specific to Mark's experience.
 
 **PRESCRIPTION:**
 
@@ -120,7 +120,7 @@ Simile ("borrowed clothing") is serviceable but generic. Misses opportunity for 
 
 ---
 
-### **§6: Elliot's Self-Doubt Spiral**
+### **§6: Mark's Self-Doubt Spiral**
 
 **LINE:**
 
@@ -172,7 +172,7 @@ Four rhetorical questions in a row stall momentum. Over-written introspection la
 
 **PRESCRIPTION:**
 
-> "By day, kids crouch here poking at starfish while parents hover with phones. But tonight the pools glow—green-blue light drifting beneath the surface, brighter than algae has any right to be. Elliot leans over the railing. The specks pulse like breath. Like something alive is exhaling light."
+> "By day, kids crouch here poking at starfish while parents hover with phones. But tonight the pools glow—green-blue light drifting beneath the surface, brighter than algae has any right to be. Mark leans over the railing. The specks pulse like breath. Like something alive is exhaling light."
 
 **APPLIED MODULES:** `motif_tracker` (breath) + `sensory_balancer` + `tone_filter`
 
@@ -188,7 +188,7 @@ Four rhetorical questions in a row stall momentum. Over-written introspection la
 
 **DIAGNOSIS:**
 
-"Something catches the light wrong" is vague mood-setting. Strengthen by showing *what* Elliot sees before naming it.
+"Something catches the light wrong" is vague mood-setting. Strengthen by showing *what* Mark sees before naming it.
 
 **PRESCRIPTION:**
 
@@ -228,11 +228,11 @@ Six descriptive clauses in one paragraph; reads like field notes. **Cut 50%.**
 
 **DIAGNOSIS:**
 
-Strong visual, but **lacks Elliot's emotional/physical reaction beyond "heart-stopping."** Missing romance seed—no hint of fascination/attraction that will drive later intimacy.
+Strong visual, but **lacks Mark's emotional/physical reaction beyond "heart-stopping."** Missing romance seed—no hint of fascination/attraction that will drive later intimacy.
 
 **PRESCRIPTION:**
 
-> "An arm breaks the surface. Massive, sleek, shimmering teal—patterns of light tracing its length like living circuitry. Bioluminescent rings pulse along it, reaching toward the glow, then slipping back under without a ripple. Elliot's breath stops. It had been—he searches for the word—*beautiful*. Unsettling, yes, impossible, but undeniably, dangerously beautiful. His fingers curl against the railing, and he wonders—just for a heartbeat—what it would feel like to reach back."
+> "An arm breaks the surface. Massive, sleek, shimmering teal—patterns of light tracing its length like living circuitry. Bioluminescent rings pulse along it, reaching toward the glow, then slipping back under without a ripple. Mark's breath stops. It had been—he searches for the word—*beautiful*. Unsettling, yes, impossible, but undeniably, dangerously beautiful. His fingers curl against the railing, and he wonders—just for a heartbeat—what it would feel like to reach back."
 
 **APPLIED MODULES:** `romance_weaver` + `echo_closer` + `tone_filter`
 
@@ -248,11 +248,11 @@ Strong visual, but **lacks Elliot's emotional/physical reaction beyond "heart-st
 
 **DIAGNOSIS:**
 
-Redundant (glow vanishes twice in final para); "echo of something watching" tells instead of showing Elliot's awareness.
+Redundant (glow vanishes twice in final para); "echo of something watching" tells instead of showing Mark's awareness.
 
 **PRESCRIPTION:**
 
-> "The water stills. The glow dies. Elliot waits—breath held, heart thudding against his ribs—but nothing rises again. Only the hush of the tide. And the certainty, cold as seawater on stone, that something beneath the surface is watching him back."
+> "The water stills. The glow dies. Mark waits—breath held, heart thudding against his ribs—but nothing rises again. Only the hush of the tide. And the certainty, cold as seawater on stone, that something beneath the surface is watching him back."
 
 **APPLIED MODULES:** `echo_closer` + `agency_first_sensory_framing`
 
@@ -346,7 +346,7 @@ Redundant (glow vanishes twice in final para); "echo of something watching" tell
 
 **REVISION:**
 
-> "Marcus claps his shoulder, fingers pressing just long enough that Elliot glances up. 'Seriously,' Marcus says, quieter now. 'Don't stay out too long.' The door jingles shut before Elliot can answer."
+> "Marcus claps his shoulder, fingers pressing just long enough that Mark glances up. 'Seriously,' Marcus says, quieter now. 'Don't stay out too long.' The door jingles shut before Mark can answer."
 
 **MODULE:** `dialogue_optimizer` (gesture insertion + unanswered moment)
 
