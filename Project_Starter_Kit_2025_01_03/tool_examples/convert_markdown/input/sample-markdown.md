@@ -148,4 +148,4 @@ pandoc sample.md --reference-doc=template.docx -o styled-output.docx
 ---
 
 *This sample was created to demonstrate the power of Markdown and Pandoc for authors.*
-<!--This is a hiddent text comment-->
+<!--This is a hidden text comment-->

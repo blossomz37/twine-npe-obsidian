@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CriticMarkup Document</title>
+    
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #333;
+}
+.critic-add {
+    color: #008000;
+    text-decoration: underline;
+}
+.critic-del {
+    color: #ff0000;
+    text-decoration: line-through;
+}
+.critic-comment {
+    color: #0066cc;
+}
+.critic-highlight {
+    background-color: #ffff00;
+}
+.critic-braces {
+    color: #666;
+}
+</style>
+
+</head>
+<body>
+<h1>CriticMarkup Sample</h1>
+<p>This sample demonstrates <strong>CriticMarkup</strong> — supported by Pandoc for conversion to DOCX.</p>
+<hr />
+<h1>Part 1: CriticMarkup</h1>
+<p>CriticMarkup is a syntax for editorial markup. Pandoc can process these with the right settings.</p>
+<h2>Additions</h2>
+<p><span class="critic-braces">{++</span><span class="critic-add">This text was added.</span><span class="critic-braces">++}</span></p>
+<p>Example in context:
+The quick brown fox <span class="critic-braces">{++</span><span class="critic-add">quickly</span><span class="critic-braces">++}</span> jumps over the lazy dog.</p>
+<h2>Deletions</h2>
+<p><span class="critic-braces">{--</span><span class="critic-del">This text was deleted.</span><span class="critic-braces">--}</span></p>
+<p>Example in context:
+The quick <span class="critic-braces">{--</span><span class="critic-del">slow</span><span class="critic-braces">--}</span> brown fox jumps over the lazy dog.</p>
+<h2>Substitutions</h2>
+<p><span class="critic-braces">{~~</span><span class="critic-del">old text</span><span class="critic-braces">~&gt;</span><span class="critic-add">new text</span><span class="critic-braces">~~}</span></p>
+<p>Example in context:
+She walked <span class="critic-braces">{~~</span><span class="critic-del">slowly</span><span class="critic-braces">~&gt;</span><span class="critic-add">quickly</span><span class="critic-braces">~~}</span> through the garden.</p>
+<h2>Comments</h2>
+<p><span class="critic-braces">{&gt;&gt;</span><span class="critic-comment">COMMENT:This is a comment from the editor.</span><span class="critic-braces">&lt;&lt;}</span></p>
+<p>Example in context:
+The protagonist entered the room.<span class="critic-braces">{&gt;&gt;</span><span class="critic-comment">COPY EDIT:Consider adding more sensory details here.</span><span class="critic-braces">&lt;&lt;}</span></p>
+<h2>Highlights</h2>
+<p><span class="critic-braces">{==</span><span class="critic-highlight">This text is highlighted for attention.</span><span class="critic-braces">==}</span></p>
+<p>Example in context:
+The key clue was hidden in <span class="critic-braces">{==</span><span class="critic-highlight">the third paragraph of the letter</span><span class="critic-braces">==}</span>.</p>
+<hr />
+<h1>Part 2: Combined Example — Editing a Manuscript</h1>
+<p>Here's how an editor might use CriticMarkup on a manuscript:</p>
+<hr />
+<h2>Chapter 1: The Arrival</h2>
+<p><span class="critic-braces">{--</span><span class="critic-del">It was a dark and stormy night.</span><span class="critic-braces">--}</span><span class="critic-braces">{++</span><span class="critic-add">Lightning split the sky as rain hammered the windows.</span><span class="critic-braces">++}</span><span class="critic-braces">{&gt;&gt;</span><span class="critic-comment">COPY EDIT:Replaced cliché opening with more vivid imagery.</span><span class="critic-braces">&lt;&lt;}</span></p>
+<p>Sarah <span class="critic-braces">{~~</span><span class="critic-del">walked</span><span class="critic-braces">~&gt;</span><span class="critic-add">strode</span><span class="critic-braces">~~}</span> into the manor, her coat dripping onto the marble floor. <span class="critic-braces">{==</span><span class="critic-highlight">The butler was nowhere to be seen.</span><span class="critic-braces">==}</span><span class="critic-braces">{&gt;&gt;</span><span class="critic-comment">CLUE:This becomes important in Chapter 5.</span><span class="critic-braces">&lt;&lt;}</span></p>
+<p>"Hello?" she called out. <span class="critic-braces">{++</span><span class="critic-add">Her voice echoed through the empty halls.</span><span class="critic-braces">++}</span></p>
+<p><span class="critic-braces">{--</span><span class="critic-del">She felt scared.</span><span class="critic-braces">--}</span><span class="critic-braces">{++</span><span class="critic-add">She tightened her grip on the blanket as shadows danced in the flickering candlelight.</span><span class="critic-braces">++}</span><span class="critic-braces">{&gt;&gt;</span><span class="critic-comment">COPY EDIT:Show, don't tell.</span><span class="critic-braces">&lt;&lt;}</span></p>
+<hr />
+<h1>Conversion Notes</h1>
+<p>To convert this file with proper CriticMarkup formatting, use:</p>
+<pre><code class="language-bash">python convert_with_critic.py
+</code></pre>
+<p>This applies color-coded formatting:
+- <strong>Additions</strong> → Green text, underlined
+- <strong>Deletions</strong> → Red text, strikethrough<br />
+- <strong>Substitutions</strong> → Red strikethrough → Green underline
+- <strong>Comments</strong> → Yellow highlight, gray italic
+- <strong>Highlights</strong> → Yellow background</p>
+<hr />
+<p><em>This sample demonstrates CriticMarkup for editorial annotations.</em>
+&lt;!--This is a hiddent text comment&gt;</p>
+</body>
+</html>

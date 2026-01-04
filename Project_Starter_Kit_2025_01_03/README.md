@@ -54,6 +54,15 @@ A ready-to-use template for AI-powered projects. Whether you're building with Ch
 | `sample.workflow.smart-commit.md` | Workflow | Organize commits by related changes |
 | `sample.workflow.task-complete.md` | Workflow | Commit work after finishing a task |
 | `sample.workflow.word-count.md` | Workflow | Count words in manuscript files |
+| `sample.workflow.create-conversion-script.md` | Workflow | Create file converters using examples |
+
+### 🛠️ Tool Examples (in `tool_examples/`)
+
+| Folder | What It Contains |
+|--------|------------------|
+| `convert_markdown/` | Markdown → DOCX/HTML converters with CriticMarkup support |
+
+See `tool_examples/convert_markdown/PROJECT_IDEAS.md` for ideas on creating your own tools!
 
 ---
 
