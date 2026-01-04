@@ -1,4 +1,4 @@
-# Markdown Formatting Showcase
+# CriticMarkup Sample
 
 This sample demonstrates **CriticMarkup** — supported by Pandoc for conversion to DOCX.
 

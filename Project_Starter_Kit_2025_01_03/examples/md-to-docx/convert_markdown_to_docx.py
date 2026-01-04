@@ -14,8 +14,8 @@
 
 # ----- Settings (edit these) -----
 
-INPUT_FILE = "sample.md"           # Your markdown file
-OUTPUT_FILE = "output/sample.docx" # Where to save the Word doc
+INPUT_FILE = "input/sample-markdown.md"         # Your markdown file
+OUTPUT_FILE = "output/sample-markdown.docx" # Where to save the Word doc
 
 # ----- The conversion -----
 
