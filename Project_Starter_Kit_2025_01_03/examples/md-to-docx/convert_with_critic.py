@@ -10,12 +10,12 @@
 # - Pandoc installed (brew install pandoc)
 # - pip install pypandoc python-docx
 #
-# CRITICMARKUP SYNTAX:
-# {++addition++}     → Green text, underlined
-# {--deletion--}     → Red text, strikethrough
-# {~~old~>new~~}     → Red strikethrough → Green underline
-# {>>comment<<}      → Yellow highlight, italic
-# {==highlight==}    → Yellow background
+# CRITICMARKUP SYNTAX (braces stay visible, content gets formatted):
+# {++addition++}     → {++ plain, addition green underlined, ++} plain
+# {--deletion--}     → {-- plain, deletion red strikethrough, --} plain
+# {~~old~>new~~}     → old red strikethrough, new green underlined
+# {>>comment<<}      → {>> plain, comment yellow+italic, <<} plain
+# {==highlight==}    → {== plain, highlight yellow bg, ==} plain
 #
 # ============================================
 
@@ -23,7 +23,6 @@
 
 INPUT_FILE = "input/sample-criticmarkup.md"     # Your markdown file
 OUTPUT_FILE = "output/sample-criticmarkup.docx" # Where to save the Word doc
-KEEP_BRACES = True                               # Keep {++, {--, etc. visible
 
 # ----- The code -----
 
@@ -35,30 +34,50 @@ from docx import Document
 from docx.shared import RGBColor, Pt
 from docx.enum.text import WD_COLOR_INDEX
 
-# CriticMarkup patterns - captures the full syntax including braces
+# CriticMarkup patterns - capture braces and content separately
 PATTERNS = {
-    'addition': r'(\{\+\+.+?\+\+\})',
-    'deletion': r'(\{--.+?--\})',
-    'substitution': r'(\{~~.+?~>.+?~~\})',
-    'comment': r'(\{>>.+?<<\})',
-    'highlight': r'(\{==.+?==\})',
+    # Captures: (open_brace, content, close_brace)
+    'addition': re.compile(r'(\{\+\+)(.+?)(\+\+\})', re.DOTALL),
+    'deletion': re.compile(r'(\{--)(.+?)(--\})', re.DOTALL),
+    # Substitution: (open, old, arrow, new, close)
+    'substitution': re.compile(r'(\{~~)(.+?)(~>)(.+?)(~~\})', re.DOTALL),
+    'comment': re.compile(r'(\{>>)(.+?)(<<\})', re.DOTALL),
+    'highlight': re.compile(r'(\{==)(.+?)(==\})', re.DOTALL),
 }
 
-# Marker pattern for post-processing
-MARKER_PATTERN = re.compile(r'⟦(ADD|DEL|SUB|COM|HLT):(.+?)⟧')
+# Marker types for post-processing
+# Format: ⟦TYPE:content⟧ where TYPE indicates formatting to apply
+MARKER_RE = re.compile(r'⟦(PLAIN|ADD|DEL|COM|HLT):(.+?)⟧')
 
 
 def preprocess_criticmarkup(text):
     """Replace CriticMarkup with markers that survive Pandoc."""
     
-    # Handle substitution (keep both old and new together)
-    text = re.sub(PATTERNS['substitution'], lambda m: f'⟦SUB:{m.group(0)}⟧', text, flags=re.DOTALL)
+    # Handle substitution first (most complex)
+    # {~~old~>new~~} → ⟦PLAIN:{~~⟧⟦DEL:old⟧⟦PLAIN:~>⟧⟦ADD:new⟧⟦PLAIN:~~}⟧
+    def sub_repl(m):
+        return f'⟦PLAIN:{m.group(1)}⟧⟦DEL:{m.group(2)}⟧⟦PLAIN:{m.group(3)}⟧⟦ADD:{m.group(4)}⟧⟦PLAIN:{m.group(5)}⟧'
+    text = PATTERNS['substitution'].sub(sub_repl, text)
     
-    # Handle other patterns - wrap with markers but keep original syntax
-    text = re.sub(PATTERNS['addition'], lambda m: f'⟦ADD:{m.group(0)}⟧', text, flags=re.DOTALL)
-    text = re.sub(PATTERNS['deletion'], lambda m: f'⟦DEL:{m.group(0)}⟧', text, flags=re.DOTALL)
-    text = re.sub(PATTERNS['comment'], lambda m: f'⟦COM:{m.group(0)}⟧', text, flags=re.DOTALL)
-    text = re.sub(PATTERNS['highlight'], lambda m: f'⟦HLT:{m.group(0)}⟧', text, flags=re.DOTALL)
+    # Handle addition: {++content++} → ⟦PLAIN:{++⟧⟦ADD:content⟧⟦PLAIN:++}⟧
+    def add_repl(m):
+        return f'⟦PLAIN:{m.group(1)}⟧⟦ADD:{m.group(2)}⟧⟦PLAIN:{m.group(3)}⟧'
+    text = PATTERNS['addition'].sub(add_repl, text)
+    
+    # Handle deletion: {--content--} → ⟦PLAIN:{--⟧⟦DEL:content⟧⟦PLAIN:--}⟧
+    def del_repl(m):
+        return f'⟦PLAIN:{m.group(1)}⟧⟦DEL:{m.group(2)}⟧⟦PLAIN:{m.group(3)}⟧'
+    text = PATTERNS['deletion'].sub(del_repl, text)
+    
+    # Handle comment: {>>content<<} → ⟦PLAIN:{>>⟧⟦COM:content⟧⟦PLAIN:<<}⟧
+    def com_repl(m):
+        return f'⟦PLAIN:{m.group(1)}⟧⟦COM:{m.group(2)}⟧⟦PLAIN:{m.group(3)}⟧'
+    text = PATTERNS['comment'].sub(com_repl, text)
+    
+    # Handle highlight: {==content==} → ⟦PLAIN:{==⟧⟦HLT:content⟧⟦PLAIN:==}⟧
+    def hlt_repl(m):
+        return f'⟦PLAIN:{m.group(1)}⟧⟦HLT:{m.group(2)}⟧⟦PLAIN:{m.group(3)}⟧'
+    text = PATTERNS['highlight'].sub(hlt_repl, text)
     
     return text
 
@@ -66,7 +85,11 @@ def preprocess_criticmarkup(text):
 def apply_run_formatting(run, marker_type):
     """Apply Word formatting based on marker type."""
     
-    if marker_type == 'ADD':
+    if marker_type == 'PLAIN':
+        # No formatting, just plain text
+        pass
+        
+    elif marker_type == 'ADD':
         # Green text, underlined
         run.font.color.rgb = RGBColor(0, 128, 0)  # Green
         run.font.underline = True
@@ -76,16 +99,9 @@ def apply_run_formatting(run, marker_type):
         run.font.color.rgb = RGBColor(255, 0, 0)  # Red
         run.font.strike = True
         
-    elif marker_type == 'SUB':
-        # Purple text for substitutions
-        run.font.color.rgb = RGBColor(128, 0, 128)  # Purple
-        run.font.underline = True
-        
     elif marker_type == 'COM':
-        # Yellow highlight, italic, gray text
-        run.font.highlight_color = WD_COLOR_INDEX.YELLOW
-        run.font.italic = True
-        run.font.color.rgb = RGBColor(128, 128, 128)  # Gray
+        # Medium blue text, no background
+        run.font.color.rgb = RGBColor(0, 102, 204)  # Medium blue
         
     elif marker_type == 'HLT':
         # Yellow background highlight
@@ -106,11 +122,11 @@ def process_paragraph(paragraph):
     # Parse and rebuild with formatting
     last_end = 0
     
-    for match in MARKER_PATTERN.finditer(full_text):
+    for match in MARKER_RE.finditer(full_text):
         # Add text before the marker (plain)
         before_text = full_text[last_end:match.start()]
         if before_text:
-            run = paragraph.add_run(before_text)
+            paragraph.add_run(before_text)
         
         # Add the marked text with formatting
         marker_type = match.group(1)

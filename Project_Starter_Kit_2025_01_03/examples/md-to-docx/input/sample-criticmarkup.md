@@ -55,11 +55,11 @@ Here's how an editor might use CriticMarkup on a manuscript:
 
 {--It was a dark and stormy night.--}{++Lightning split the sky as rain hammered the windows.++}{>>COPY EDIT:Replaced cliché opening with more vivid imagery.<<}
 
-Sarah {~~walked~>strode~~} into the manor, her coat dripping onto the marble floor. {==The butler was nowhere to be seen.==}{>>LINE EDIT:This becomes important in Chapter 5.<<}
+Sarah {~~walked~>strode~~} into the manor, her coat dripping onto the marble floor. {==The butler was nowhere to be seen.==}{>>CLUE:This becomes important in Chapter 5.<<}
 
 "Hello?" she called out. {++Her voice echoed through the empty halls.++}
 
-{--She felt scared.--}{++A chill ran down her spine as shadows danced in the flickering candlelight.++}{>>COPY EDIT:Show, don't tell.<<}
+{--She felt scared.--}{++She tightened her grip on the blanket as shadows danced in the flickering candlelight.++}{>>COPY EDIT:Show, don't tell.<<}
 
 ---
 

@@ -1,6 +1,6 @@
 # Markdown Formatting Showcase
 
-This sample demonstrates **Standard Markdown**, **Notion-Friendly Markdown**, and **CriticMarkup** — all supported by Pandoc for conversion to DOCX.
+This sample demonstrates **Standard Markdown**, and **Notion-Friendly Markdown** — all supported by Pandoc for conversion to DOCX.
 
 ---
 
@@ -128,75 +128,11 @@ In Markdown export: These become plain text or links.
 
 ---
 
-# Part 3: CriticMarkup
-
-CriticMarkup is a syntax for editorial markup. Pandoc can process these with the right settings.
-
-## Additions
-
-{++This text was added.++}
-
-Example in context:
-The quick brown fox {++quickly++} jumps over the lazy dog.
-
-## Deletions
-
-{--This text was deleted.--}
-
-Example in context:
-The quick {--slow--} brown fox jumps over the lazy dog.
-
-## Substitutions
-
-{~~old text~>new text~~}
-
-Example in context:
-She walked {~~slowly~>quickly~~} through the garden.
-
-## Comments
-
-{>>This is a comment from the editor.<<}
-
-Example in context:
-The protagonist entered the room.{>>Consider adding more sensory details here.<<}
-
-## Highlights
-
-{==This text is highlighted for attention.==}
-
-Example in context:
-The key clue was hidden in {==the third paragraph of the letter==}.
-
----
-
-# Part 4: Combined Example — Editing a Manuscript
-
-Here's how an editor might use CriticMarkup on a manuscript:
-
----
-
-## Chapter 1: The Arrival
-
-{--It was a dark and stormy night.--}{++Lightning split the sky as rain hammered the windows.++}{>>Replaced cliché opening with more vivid imagery.<<}
-
-Sarah {~~walked~>strode~~} into the manor, her coat dripping onto the marble floor. {==The butler was nowhere to be seen.==}{>>This becomes important in Chapter 5.<<}
-
-"Hello?" she called out. {++Her voice echoed through the empty halls.++}
-
-{--She felt scared.--}{++A chill ran down her spine as shadows danced in the flickering candlelight.++}{>>Show, don't tell.<<}
-
----
-
 # Pandoc Conversion Notes
 
 ## Basic Conversion
 ```bash
 pandoc sample.md -o sample.docx
-```
-
-## With CriticMarkup Support
-```bash
-pandoc sample.md --track-changes=all -o sample.docx
 ```
 
 ## From Notion Export
