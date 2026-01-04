@@ -46,7 +46,7 @@ This sample demonstrates **Standard Markdown**, and **Notion-Friendly Markdown**
 
 [Link to Google](https://google.com)
 
-![Alt text for image](image.png)
+![Alt text for image](input/image.png)
 
 ## Blockquotes
 
@@ -148,3 +148,4 @@ pandoc sample.md --reference-doc=template.docx -o styled-output.docx
 ---
 
 *This sample was created to demonstrate the power of Markdown and Pandoc for authors.*
+<!--This is a hiddent text comment-->

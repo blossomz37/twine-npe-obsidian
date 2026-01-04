@@ -39,6 +39,7 @@ blockquote { border-left: 4px solid #ddd; margin: 0; padding-left: 16px; color: 
 table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
 th { background: #f4f4f4; }
+del { color: #ff0000; text-decoration: line-through; }
 </style>
 """
 
@@ -63,6 +64,9 @@ try:
     # Handle strikethrough manually since markdown lib doesn't support it
     import re
     html_body = re.sub(r'~~(.+?)~~', r'<del>\1</del>', html_body)
+    
+    # Fix image paths (input/file.png → ../input/file.png for output folder)
+    html_body = re.sub(r'src="input/', r'src="../input/', html_body)
     
     # Wrap in full HTML document
     html = f"""<!DOCTYPE html>

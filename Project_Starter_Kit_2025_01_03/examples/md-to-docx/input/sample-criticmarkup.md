@@ -81,3 +81,4 @@ This applies color-coded formatting:
 ---
 
 *This sample demonstrates CriticMarkup for editorial annotations.*
+<!--This is a hiddent text comment>
