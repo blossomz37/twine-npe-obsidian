@@ -35,7 +35,53 @@ A ready-to-use template for AI-powered projects. Whether you're building with Ch
 |--------|---------|
 | `.cache/` | Cached API responses |
 | `output/` | Generated content |
-| `.agent/` | Antigravity rules & workflows |
+| `.agent/` | Antigravity rules & workflows (see below) |
+
+### 🤖 Installed Antigravity Files (in `.agent/`)
+
+These are ready to use — no setup needed:
+
+**Rules** (`.agent/rules/`):
+| File | What It Does |
+|------|--------------|
+| `explain-before-doing.md` | AI explains approach before making changes |
+
+**Workflows** (`.agent/workflows/`):
+| File | Trigger | What It Does |
+|------|---------|--------------|
+| `help.md` | `/help` | List available workflows |
+| `create-conversion-script.md` | `/create-conversion-script` | Create file converters using examples |
+
+> **Using a different AI assistant?**
+> 
+> This starter kit uses Antigravity's `.agent/` folder structure. Other AI tools use different conventions:
+> 
+> ---
+> 
+> **VS Code Copilot** uses `.github/agents/` with `*.agent.md` files:
+> 1. Create `.github/agents/` folder
+> 2. Copy workflows there and rename to `*.agent.md`
+> 3. Add metadata at top: `name`, `description`, `tools`
+> 
+> 📚 Docs: [VS Code Copilot Customization](https://code.visualstudio.com/docs/copilot/copilot-customization)
+> 
+> Ask your AI: "Help me convert `.agent/workflows/` to VS Code's `.github/agents/` format"
+> 
+> ---
+> 
+> **Claude Code** uses `CLAUDE.md` at project root + Skills folders:
+> 1. Create `CLAUDE.md` at project root with project info
+> 2. For workflows, create a Skills folder with `SKILL.md`:
+>    ```
+>    skills/
+>      create-conversion-script/
+>        SKILL.md    ← Contains instructions
+>    ```
+> 3. Claude auto-detects relevant skills — no trigger commands needed
+> 
+> 📚 Docs: [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | [Skills Examples](https://github.com/anthropics/skills)
+> 
+> Ask your AI: "Help me convert `.agent/` content to Claude Code's CLAUDE.md and Skills format"
 
 ### 📖 Documentation (in `docs/`)
 
