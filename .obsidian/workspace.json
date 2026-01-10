@@ -189,45 +189,6 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "fedf12c0db29dcab",
-    "type": "floating",
-    "children": [
-      {
-        "id": "efd853b5d23fe522",
-        "type": "window",
-        "children": [
-          {
-            "id": "71d172847ccf0153",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "63c8a52db0c9fdee",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://publish.obsidian.md/git-doc/Integration+with+other+tools",
-                    "title": "Integration with other tools - Git Documentation - Obsidian Publish",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "Integration with other tools - Git Documentation - Obsidian Publish"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 233,
-        "y": 40,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "79ad812667ddae1a",
   "lastOpenFiles": [
     "Project_Starter_Kit_2025_01_03.zip",
