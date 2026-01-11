@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene Videos Test - Midnight at Starlight Cove</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(180deg, #0a1628 0%, #1a2744 50%, #0d1b2a 100%);
+      min-height: 100vh;
+      color: #e8f1f8;
+      font-family: 'Georgia', serif;
+      padding: 2rem;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #9dd9f3;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .scene-card {
+      background: rgba(26, 39, 68, 0.8);
+      border: 1px solid #2d4a6f;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .scene-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(93, 168, 211, 0.3);
+    }
+    
+    .scene-card video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .scene-info {
+      padding: 1rem;
+    }
+    
+    .scene-name {
+      font-size: 1.1rem;
+      color: #5fa8d3;
+      margin-bottom: 0.25rem;
+    }
+    
+    .scene-desc {
+      font-size: 0.9rem;
+      color: #9bb8d3;
+    }
+    
+    .error {
+      color: #ff6b6b;
+      font-size: 0.85rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Scene Videos Test</h1>
+  
+  <div class="grid">
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_1.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 1: Ki - Freddy Arrives</div>
+        <div class="scene-desc">Diner window, tide-pool glowing beyond</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_2.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 2: Ki - First Sighting</div>
+        <div class="scene-desc">Kai on rocks, moonlit shimmer</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_3.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 3: Ki - Kai Routine</div>
+        <div class="scene-desc">Kai at tide-pool, guardian ritual</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_4.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 4: Shō - Quiet Night</div>
+        <div class="scene-desc">Objects moving, coffee offering</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_5.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 5: Shō - Moonlit Walk</div>
+        <div class="scene-desc">Two figures, hands almost touching</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_6.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 6: Shō - Sea Cave</div>
+        <div class="scene-desc">Bioluminescent stairway descent</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_7.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 7: Ten - Fade Wave</div>
+        <div class="scene-desc">Flickering tide-pool, claw marks</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_8.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 8: Ten - Thalos Emerges</div>
+        <div class="scene-desc">Monster rising, Kai transforms</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_9.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 9: Ten - Intimacy & Threat</div>
+        <div class="scene-desc">Grotto embrace, Shell pulsing</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_10.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 10: Ketsu - Stand Together</div>
+        <div class="scene-desc">Battle scene, "I fight for home"</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_11.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 11: Ketsu - Defeated</div>
+        <div class="scene-desc">Shell blazing, Kai collapses</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_12.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 12: Ketsu - Community</div>
+        <div class="scene-desc">Festival, acceptance</div>
+      </div>
+    </div>
+    
+    <div class="scene-card">
+      <video autoplay muted loop playsinline>
+        <source src="../videos/scene_13.mp4" type="video/mp4">
+      </video>
+      <div class="scene-info">
+        <div class="scene-name">Scene 13: Epilogue</div>
+        <div class="scene-desc">Restored grotto, HEA</div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Add error handling for videos that fail to load
+    document.querySelectorAll('video').forEach(video => {
+      video.addEventListener('error', function() {
+        this.parentElement.innerHTML = '<div style="padding: 2rem; text-align: center; color: #ff6b6b;">Video not found</div>';
+      });
+    });
+  </script>
+</body>
+</html>
