@@ -52,17 +52,17 @@ Midnight at Starlight Cove
 
 /* Video settings */
 <<set $videosEnabled to true>>
-<<set $videoPath to "videos/">>
+<<set $videoPath to "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/">>
 
 /* Image settings */
 <<set $imagesEnabled to true>>
-<<set $imagePath to "passage-images/">>
+<<set $imagePath to "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/">>
 
 :: SceneVideo [widget nobr]
-<<widget "scenevideo">><<set _vid to $args[0]>><<if $videosEnabled and $sceneVideos[_vid]>><<run (function(vid) { $(document).one(':passageend', function(ev) { var container = document.createElement('div'); container.className = 'scene-video-container'; var video = document.createElement('video'); video.className = 'scene-video'; video.autoplay = true; video.muted = true; video.loop = true; video.playsInline = true; video.src = '/Users/carlo/Twine_1/twine_obsidian/Midnight_At_Starlight_Cove_2025_10_26/videos/' + vid + '.mp4'; container.appendChild(video); var passage = document.getElementById('passage-' + ev.passage.title.replace(/\s+/g, '-')); if (!passage) passage = document.querySelector('.passage'); if (passage) passage.appendChild(container); }); })(_vid); >><</if>><</widget>>
+<<widget "scenevideo">><<set _vid to $args[0]>><<if $videosEnabled and $sceneVideos[_vid]>><<run (function(vid) { $(document).one(':passageend', function(ev) { var container = document.createElement('div'); container.className = 'scene-video-container'; var video = document.createElement('video'); video.className = 'scene-video'; video.autoplay = true; video.muted = true; video.loop = true; video.playsInline = true; video.src = 'https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/' + vid + '.mp4'; container.appendChild(video); var passage = document.getElementById('passage-' + ev.passage.title.replace(/\s+/g, '-')); if (!passage) passage = document.querySelector('.passage'); if (passage) passage.appendChild(container); }); })(_vid); >><<endif>><<endwidget>>
 
 :: PassageImage [widget nobr]
-<<widget "passageimage">><<set _img to $args[0]>><<if $imagesEnabled>><<run (function(img) { $(document).one(':passageend', function(ev) { var container = document.createElement('div'); container.className = 'passage-image-container'; var image = document.createElement('img'); image.className = 'passage-image'; image.src = '/Users/carlo/Twine_1/twine_obsidian/Midnight_At_Starlight_Cove_2025_10_26/twine/passage-images/' + img + '.png'; image.alt = 'Scene illustration'; container.appendChild(image); var passage = document.getElementById('passage-' + ev.passage.title.replace(/\s+/g, '-')); if (!passage) passage = document.querySelector('.passage'); if (passage) passage.insertBefore(container, passage.firstChild); }); })(_img); >><</if>><</widget>>
+<<widget "passageimage">><<set _img to $args[0]>><<if $imagesEnabled>><<run (function(img) { $(document).one(':passageend', function(ev) { var container = document.createElement('div'); container.className = 'passage-image-container'; var image = document.createElement('img'); image.className = 'passage-image'; image.src = 'https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/' + img + '.png'; image.alt = 'Scene illustration'; container.appendChild(image); var passage = document.getElementById('passage-' + ev.passage.title.replace(/\s+/g, '-')); if (!passage) passage = document.querySelector('.passage'); if (passage) passage.insertBefore(container, passage.firstChild); }); })(_img); >><<endif>><<endwidget>>
 
 :: StoryCaption
 <div class="npe-dashboard">
