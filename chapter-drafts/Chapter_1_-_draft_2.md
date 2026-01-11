@@ -1,0 +1,65 @@
+# Chapter 1 – “Late-Night Shift”
+
+The last coffee cup clinks onto the tray just as the boardwalk lights flicker and the tide-pool outside the window shivers green-blue.
+
+It's a small sound, but in the quiet of the diner, it lands like the final note of a song I've been humming all evening. 11:43 PM. The vintage clock on the wall—shaped like a ship's wheel, a relic from the previous owner—ticks steadily, its rhythm syncing with the distant hush of waves rolling in. It's become my anchor here, that clock, marking the hours in a way that feels less like time passing and more like time settling into place. Another shift wrapping up, another step toward making this life my own.
+
+“That’s the last of ‘em, boss,” Leo says from behind the counter, wiping his hands on a towel that's seen better days. His blond hair sticks up in sweaty spikes, like he's been wrestling dough demons in the kitchen, and there's a fresh smudge of flour across his cheek. But he's grinning, that easy, infectious smile of his that makes even the longest nights feel manageable. “Old Man Hemlock nursed that last coffee for a solid hour. I swear, if slow-sipping were an Olympic sport, he'd take gold. Think he was trying to set a new land-speed record for dawdling?”
+
+I chuckle, the sound low and tired but genuine, as I balance the tray on my hip. “He earned it. He was our only customer after ten. Besides, where else is he gonna go? The boardwalk's not exactly hopping this late.”
+
+Mr. Hemlock, the lone late-night patron, pauses at the door to give us a final, deliberate nod. He's a fixture here—seventy-something, with a salt-and-pepper beard that looks like it's been sculpted by the sea wind itself. His cane taps a gentle rhythm on the worn wooden floor as he shuffles out into the night, the little bell above the door jingling like a cheerful afterthought. The sound echoes in the sudden hush, leaving just me, Leo, and the diner's familiar symphony: the gurgle of the coffee machine cooling down, the faint hum of the pie fridge in the corner, and beyond the large plate-glass windows, the endless, soft crush of waves against the rocky shore.
+
+It's a far cry from the life I bolted from six months ago. Back in the city, my days were a blur of fluorescent-lit offices, endless deadlines, and the screech of subway brakes that seemed to echo the frantic pounding in my chest. I was a graphic designer, churning out logos and layouts for clients who never remembered my name, pulling all-nighters that left me hollow-eyed and hollow inside. The scar at my left temple—faint now, silvery under my dark hair—is from one of those marathons, a slip in the studio kitchen after seventy-two hours without real sleep. I hit the counter edge hard enough to see stars, and in that dizzy moment, I realized I was done. The city wasn't just wearing me down; it was erasing me.
+
+So I packed up, sold what I could, and followed a whim to Starlight Cove—a dot on a map that promised quiet tides and a fresh start. I bought this diner on a shoestring budget, poured every last dime into it, and now it's my lifeline. If it fails... well, let's just say the stakes feel higher than just money. It's my shot at belonging somewhere, at building something that doesn't vanish with the next project deadline. The aroma of fresh coffee and baked goods clings to everything here, a comforting haze that grounds me. Even the faint scent of sea salt drifting in through the vents reminds me why I chose this place: peace, rhythm, a chance to breathe.
+
+Leo tosses his towel into the hamper with a flourish. “Pancake people tomorrow. They descend like locusts at dawn, demanding their syrup fix. You sure you're good to lock up? I can stick around if you need.”
+
+I shake my head, setting the tray down by the sink. “Nah, go on. You've earned your escape. I'll handle the rest. Just don't forget your keys this time—last week you circled back twice.”
+
+He laughs, rubbing the back of his neck. “Hey, that was one time! Okay, twice. But who's counting?” He unties his apron, folding it neatly over the back of a stool. Leo's been with me since day one, a local kid in his late twenties with a tattoo of a wave crest peeking out from his sleeve and an endless supply of bad puns. He's more than a cook; he's the first real friend I've made here, the one who showed me how to tweak the grill for perfect late-night specials and warned me about the autumn storms that batter the boardwalk. Without him, this place would feel a lot emptier. “Seriously, though, Freddy—don't push yourself. You've been pulling doubles all week. The diner's not gonna float away if you call it a night early.”
+
+“I know, I know.” I start rinsing the cups, the warm water a soothing contrast to the chill seeping in from outside. “But it's quiet like this. Gives me time to think. Besides, if I don't refill these shakers, tomorrow's breakfast rush will be a saltless disaster.”
+
+He snorts. “Fair point. Alright, I'm out. Don't stay out too long, sea breeze bites tonight.” He claps me on the shoulder—a solid, brotherly gesture that lingers just a second longer than usual, like he's checking if I'm really okay—before heading for the door. The bell jingles again, and then it's just me.
+
+The silence deepens, wrapping around the diner like a fog rolling off the cove. It's not an empty quiet; it's layered, alive with the tick of the clock, the distant creak of the boardwalk sign swaying in the wind, and the faint, rhythmic lap of water against stone. I move through my routine on autopilot, the tasks a ritual that calms the restless parts of me. Wipe the counters until the Formica gleams under the warm amber lights. Refill the salt and pepper shakers, the grains whispering as they pour. Stack the clean mugs, their ceramic warmth pressing into my palms like a handshake from an old friend. Each motion ties me here, to this town, to the life I'm piecing together.
+
+But some nights, the quiet amplifies the doubts. Am I really building roots, or am I still that city guy, just passing through? The diner's doing okay—steady locals like Hemlock, a trickle of tourists drawn by the seaside vibe—but one bad month could sink it. And me with it. I glance at my reflection in the window, the scar half-hidden by tousled hair, and wonder if anyone here sees past the surface. If I belong, or if I'm just observing from behind this glass, like a visitor in my own story.
+
+Finishing up, I flip the sign to 'CLOSED' and lock the front door, the key turning with a satisfying click. My apartment is just next door, above the bakery, but the pull of the night air is stronger. I grab a cleaning towel from the hook by the back door—more habit than need—and step out onto the deck that connects directly to the boardwalk.
+
+The change is immediate, like stepping from a warm hug into a cool embrace. The air is damp and alive, thick with the tang of salt and wet stone, carrying hints of kelp and distant driftwood fires from somewhere down the coast. It prickles the back of my neck, raising goosebumps under my flannel shirt, and I breathe it in deep, letting it chase away the last of the diner's coffee-scented haze. The boardwalk stretches out like a lighted path, string lights casting long, wavering shadows on the weathered planks. My boots thud softly as I walk to the railing, overlooking what the locals call the Cove-heart—the tide-pool nestled in a basin of dark basalt rocks below.
+
+By day, it's a simple wonder: shallow pools teeming with starfish, anemones, and scuttling crabs, a spot for kids to poke and prod while parents snap photos. But at night, especially under a waxing moon like tonight, it's something else entirely. The water shimmers with a soft, bioluminescent glow, green-blue specks dancing just under the surface like submerged stars. The old-timers spin tales about it—algae quirks, they say, or ancient sea magic. I've heard whispers during the monthly Moon-Tide Gatherings, when folks stroll the boardwalk after midnight, lanterns bobbing, sharing stories of "arms in the moon-water." I always figured it was just local color, flavor for the tourists.
+
+Tonight, though, the glow feels different. Pulsing, almost breathing, brighter in spots then fading like a sigh. It draws my eye, holding it, as if the Cove-heart is whispering back to the diner's warm lights. I lean on the railing, the wood rough under my forearms, and let the sea breeze tousle my hair. Peace. That's what I came here for. But tonight, something watches. It's not paranoia; it's a prickle along my spine, an awareness that the night isn't as empty as it seems. The boardwalk lights flickered earlier, right as that last cup clinked—coincidence, maybe, but it lingers in my mind like an unfinished thought.
+
+My gaze drifts to the rocks below, exposed by the low tide. Something catches the light wrong. Down by the water's edge, on the flat, wet stones usually scoured clean by the waves, are footprints. Fresh ones, the displaced water still glistening in the depressions like liquid silver.
+
+Not possible. My pulse quickens, a mix of curiosity and that old city-bred wariness kicking in. I glance around the empty boardwalk—no one in sight, just the wind rustling a loose flyer on a nearby bench. The pull is too strong to ignore. Slinging the towel over my shoulder, I descend the short set of stairs from the boardwalk to the rocky shore, my boots crunching on loose pebbles.
+
+The air down here is cooler, heavier, the scent of brine sharper, mingled with the earthy tang of exposed seaweed. I crouch beside the prints, the damp cold seeping through my jeans to my knees. They're huge—easily twice the size of my boot, pressed deep into the stone as if by something heavy, deliberate. The shape is all wrong: longer than a human foot, with a broad spread and an impossibly high arch. Four toe impressions, not five, ending in blunt, rounded tips without any sign of claws or nails. No tread marks, no shoe patterns—just these raw, organic indents, trailing from the deepest part of the tide-pool to the edge of the rocks, then stopping abruptly. As if whatever made them emerged from the water, paused to look around, and slipped back in.
+
+My mind races. A prank? Some kid with oversized novelty feet, messing around after dark? But who would come out here this late, and why? An animal? Seals don't leave prints like this—too structured, too purposeful. I trace the edge of one with my finger, the stone slick and cool, the depression still holding a shallow pool of seawater that reflects the moon. A thrill runs through me, not quite fear, but something close—excitement laced with unease. This isn't just odd; it's a crack in the quiet facade of my new life. The Cove-heart, with its glowing specks hinting at hidden depths, suddenly feels like it's holding secrets I wasn't meant to find.
+
+“Freddy! You lockin’ up for good or you planning on sleeping out there?”
+
+Leo's voice booms from the diner's front, startling me upright. Damn, he must've forgotten something after all. I stand, brushing damp grit from my hands, my heart thudding a little harder.
+
+“Just a minute!” I call back, my voice thinner than I'd like, carried away by the breeze.
+
+I hesitate, eyes locked on the footprints. The curiosity tugs like a tide, urging me to stay, to poke further, like those kids in the daylight. But Leo's waiting, and the night feels bigger down here, closer to whatever lurks beneath the waves. With one last glance at the prints—memorizing their strange shape—I turn and climb back up the stairs, the wood creaking under my weight.
+
+Back on the boardwalk, Leo's gone again, the street empty save for a distant streetlamp buzzing faintly. I should head home, climb the stairs to my apartment, collapse into bed, and dismiss it all as fatigue playing tricks. Overactive imagination, too much coffee, the usual excuses. But I can't. The railing draws me back, the towel still slung over my shoulder like a forgotten prop.
+
+The diner's warm light spills out behind me, a safe square of amber against the cool darkness. Ahead, the Cove-heart's glow pulses once more—once, twice—a luminous heartbeat in the black water. Then, without warning, it dims. A fade-wave, the locals might call it if they believed the old stories: the light retreating like a living thing pulling back into itself. Bewildered, I lean further over the railing, squinting into the deepening shadows.
+
+That's when it happens.
+
+For a single, heart-stopping beat, a large arm breaks the surface of the water. It's not human, not fish—something sleek and powerful, shimmering with a faint, internal teal light that traces patterns along its length. Faint rings glow along it, like bioluminescent suckers catching the moonlight, reaching not toward me but grasping at the fading glow before slipping back under with barely a ripple.
+
+Gone. The water smooths to stillness, the light extinguished.
+
+My breath catches in my throat as the tide-pool surface pulses—and then the glow vanishes, leaving only darkness and the echo of something watching.
