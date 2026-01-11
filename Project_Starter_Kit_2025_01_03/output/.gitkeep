@@ -1,5 +1,0 @@
-# This file keeps the output directory in version control.
-# Git doesn't track empty directories, so this placeholder ensures the folder exists.
-# 
-# The output folder is used to store generated content (text, images, etc.).
-# Contents of this folder (except .gitkeep) are ignored via .gitignore.

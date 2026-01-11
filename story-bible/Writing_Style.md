@@ -160,7 +160,7 @@
 
 5. **Word Count:** Each chapter should be **1,500–3,500 words**, allowing space for deep character exploration, rich dialogue, and balanced pacing.
 
-[Instructions]
+<Instructions>
 
 1. Write each chapter following the **above guidelines**.
 
@@ -170,4 +170,4 @@
 
 4. Sustain a **subtle tone of foreboding** that keeps tension simmering beneath the surface.
 
-[/Instructions]
+</Instructions>

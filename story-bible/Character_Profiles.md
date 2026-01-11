@@ -192,7 +192,7 @@ MC2 – Kai (Tide-Pool Guardian)
 
 ⸻
 
-🧑‍🤝‍🧑 Supporting / Minor Characters
+> 🧑‍🤝‍🧑 Supporting / Minor Characters
 
 [Name] – Town Elder / Myth-Keeper (Male, 60s)
 
