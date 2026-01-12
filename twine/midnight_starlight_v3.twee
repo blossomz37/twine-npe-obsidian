@@ -1442,15 +1442,16 @@ body {
 #story {
   max-width: 42rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: clamp(8px, 2vw, 16px);
 }
 
-@media (min-width: 480px) {
-  #story { padding: 1.5rem; }
+#passages {
+  max-width: 100%;
 }
 
-@media (min-width: 720px) {
-  #story { padding: 2rem; }
+.passage {
+  padding-inline: clamp(8px, 3vw, 20px);
+  padding-block: clamp(8px, 2vw, 16px);
 }
 
 /* ═══════════════════════════════════════════════════════════════
