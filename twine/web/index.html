@@ -104,49 +104,184 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Midnight at Starlight Cove" startnode="5" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="B2A4C6D8-E0F2-4A6B-8C0D-2E4F6A8B0C2D" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
+	<tw-storydata name="Midnight at Starlight Cove" startnode="5" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="B2A4C6D8-E0F2-4A6B-8C0D-2E4F6A8B0C2D" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* ═══════════════════════════════════════════════════════════════
+   MIDNIGHT AT STARLIGHT COVE - Responsive Theme
+   Mobile-first, WCAG 3 compliant, Progressive Reveal
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Base Styles */
+body {
   background: linear-gradient(180deg, #0a1628 0%, #1a2744 50%, #0d1b2a 100%);
   color: #e8f1f8;
   font-family: 'Georgia', serif;
   line-height: 1.7;
+  min-height: 100vh;
 }
 
 #story {
-  max-width: 700px;
+  max-width: 42rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
-a {
-  color: #5fa8d3;
+@media (min-width: 480px) {
+  #story { padding: 1.5rem; }
+}
+
+@media (min-width: 720px) {
+  #story { padding: 2rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTON-STYLE CHOICES
+   ═══════════════════════════════════════════════════════════════ */
+.passage a {
+  display: inline-block;
+  color: #e8f1f8;
+  background: linear-gradient(135deg, #1a3a5c 0%, #0d2944 100%);
+  border: 1px solid #3d6a8f;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  min-height: 44px;
+  min-width: 44px;
   text-decoration: none;
-  border-bottom: 1px dotted #5fa8d3;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-a:hover {
+.passage a:hover {
+  background: linear-gradient(135deg, #2a5a8c 0%, #1a4a6c 100%);
+  border-color: #5fa8d3;
   color: #9dd9f3;
-  text-shadow: 0 0 8px rgba(93, 168, 211, 0.5);
+  box-shadow: 0 4px 16px rgba(93, 168, 211, 0.3);
+  transform: translateY(-1px);
 }
 
+.passage a:focus {
+  outline: 2px solid #5fa8d3;
+  outline-offset: 2px;
+}
+
+.passage a:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   COLLAPSIBLE MEDIA CAROUSEL
+   ═══════════════════════════════════════════════════════════════ */
+.media-carousel {
+  background: rgba(13, 27, 42, 0.8);
+  border: 1px solid #2d4a6f;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.media-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  color: #9dd9f3;
+  font-size: 0.95rem;
+  background: rgba(26, 58, 92, 0.5);
+  border-bottom: 1px solid transparent;
+  transition: background 0.2s;
+  list-style: none;
+}
+
+.media-toggle::-webkit-details-marker { display: none; }
+
+.media-toggle::before {
+  content: '▶';
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+
+.media-carousel[open] .media-toggle::before {
+  transform: rotate(90deg);
+}
+
+.media-toggle:hover {
+  background: rgba(45, 74, 111, 0.6);
+}
+
+.media-carousel[open] .media-toggle {
+  border-bottom-color: #2d4a6f;
+}
+
+.media-carousel-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Side-by-side on larger screens */
+@media (min-width: 600px) {
+  .media-carousel-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .media-item {
+    flex: 1 1 280px;
+    max-width: calc(50% - 0.375rem);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MEDIA ITEMS (Image & Video)
+   ═══════════════════════════════════════════════════════════════ */
+.media-item {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.passage-image,
+.scene-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.scene-video {
+  background: #000;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NPE DASHBOARD
+   ═══════════════════════════════════════════════════════════════ */
 .npe-dashboard {
   background: rgba(26, 39, 68, 0.8);
   border: 1px solid #2d4a6f;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   margin-bottom: 1rem;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 .axis-display {
   margin-top: 0.5rem;
-  font-size: 0.85em;
+  font-size: 0.8em;
   color: #9bb8d3;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   ENDINGS & STATS
+   ═══════════════════════════════════════════════════════════════ */
 .ending {
   text-align: center;
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 1.5rem;
   background: rgba(26, 39, 68, 0.6);
   border-radius: 12px;
 }
@@ -162,64 +297,48 @@ em, i {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Scene Video Styles
+   ACCESSIBILITY
    ═══════════════════════════════════════════════════════════════ */
-.scene-video-container {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+/* Reduced motion: hide autoplay indication */
+@media (prefers-reduced-motion: reduce) {
+  .scene-video {
+    opacity: 0.8;
+  }
 }
 
-.scene-video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+  .passage a {
+    border-width: 2px;
+    border-color: #fff;
+  }
 }
 
-/* Optional: Add subtle glow effect to match bioluminescent theme */
-.scene-video-container::after {
-  content: '';
+/* Focus visible for keyboard users */
+.passage a:focus-visible {
+  outline: 3px solid #5fa8d3;
+  outline-offset: 3px;
+}
+
+/* Skip link (add to StoryInterface if desired) */
+.skip-link {
   position: absolute;
-  bottom: 0;
+  top: -100px;
   left: 0;
-  right: 0;
-  height: 60px;
-  background: linear-gradient(transparent, rgba(10, 22, 40, 0.8));
-  pointer-events: none;
+  background: #5fa8d3;
+  color: #0a1628;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   Passage Image Styles
-   ═══════════════════════════════════════════════════════════════ */
-.passage-image-container {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.passage-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-
-/* Add glow effect matching video style */
-.passage-image-container::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background: linear-gradient(transparent, rgba(10, 22, 40, 0.8));
-  pointer-events: none;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryInit" tags="" position="25,25" size="100,100">/* ═══════════════════════════════════════════════════════════════
+.skip-link:focus {
+  top: 0;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="ending" color="purple"></tw-tag><tw-tag name="epilogue" color="red"></tw-tag><tw-tag name="widget" color="blue"></tw-tag><tw-tag name="revelation" color="green"></tw-tag><tw-passagedata pid="1" name="StoryInit" tags="" position="25,25" size="100,100">/* ═══════════════════════════════════════════════════════════════
    NPE Tension Axes
    ═══════════════════════════════════════════════════════════════ */
 &lt;&lt;set $belonging to 0&gt;&gt;
@@ -261,11 +380,66 @@ em, i {
 
 /* Video settings */
 &lt;&lt;set $videosEnabled to true&gt;&gt;
-&lt;&lt;set $videoPath to &quot;videos/&quot;&gt;&gt;
+&lt;&lt;set $videoPath to &quot;https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/&quot;&gt;&gt;
 
 /* Image settings */
 &lt;&lt;set $imagesEnabled to true&gt;&gt;
-&lt;&lt;set $imagePath to &quot;passage-images/&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="SceneVideo" tags="widget nobr" position="150,25" size="100,100">&lt;&lt;widget &quot;scenevideo&quot;&gt;&gt;&lt;&lt;set _vid to $args[0]&gt;&gt;&lt;&lt;if $videosEnabled and $sceneVideos[_vid]&gt;&gt;&lt;&lt;run (function(vid) { $(document).one(&#39;:passageend&#39;, function(ev) { var container = document.createElement(&#39;div&#39;); container.className = &#39;scene-video-container&#39;; var video = document.createElement(&#39;video&#39;); video.className = &#39;scene-video&#39;; video.autoplay = true; video.muted = true; video.loop = true; video.playsInline = true; video.src = &#39;videos/&#39; + vid + &#39;.mp4&#39;; container.appendChild(video); var passage = document.getElementById(&#39;passage-&#39; + ev.passage.title.replace(/\s+/g, &#39;-&#39;)); if (!passage) passage = document.querySelector(&#39;.passage&#39;); if (passage) passage.insertBefore(container, passage.firstChild); }); })(_vid); &gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="PassageImage" tags="widget nobr" position="275,25" size="100,100">&lt;&lt;widget &quot;passageimage&quot;&gt;&gt;&lt;&lt;set _img to $args[0]&gt;&gt;&lt;&lt;if $imagesEnabled&gt;&gt;&lt;div class=&quot;passage-image-container&quot;&gt;&lt;img class=&quot;passage-image&quot; src=&quot;passage-images/&lt;&lt;print _img&gt;&gt;.png&quot; alt=&quot;Scene illustration&quot;&gt;&lt;/div&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="" position="400,25" size="100,100">&lt;div class=&quot;npe-dashboard&quot;&gt;
+&lt;&lt;set $imagePath to &quot;https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="SceneVideo" tags="widget nobr" position="150,25" size="100,100">&lt;&lt;widget &quot;scenevideo&quot;&gt;&gt;&lt;&lt;set _vid to $args[0]&gt;&gt;&lt;&lt;if $videosEnabled and $sceneVideos[_vid]&gt;&gt;&lt;&lt;run (function(vid) { $(document).one(&#39;:passageend&#39;, function(ev) {
+  var carousel = document.querySelector(&#39;.media-carousel&#39;);
+  if (!carousel) {
+    carousel = document.createElement(&#39;details&#39;);
+    carousel.className = &#39;media-carousel&#39;;
+    var summary = document.createElement(&#39;summary&#39;);
+    summary.className = &#39;media-toggle&#39;;
+    summary.innerHTML = &#39;🎬 View Scene Media&#39;;
+    carousel.appendChild(summary);
+    var inner = document.createElement(&#39;div&#39;);
+    inner.className = &#39;media-carousel-inner&#39;;
+    carousel.appendChild(inner);
+    var passage = document.getElementById(&#39;passage-&#39; + ev.passage.title.replace(/\s+/g, &#39;-&#39;));
+    if (!passage) passage = document.querySelector(&#39;.passage&#39;);
+    if (passage) passage.insertBefore(carousel, passage.firstChild);
+  }
+  var inner = carousel.querySelector(&#39;.media-carousel-inner&#39;);
+  var container = document.createElement(&#39;div&#39;);
+  container.className = &#39;scene-video-container media-item&#39;;
+  var video = document.createElement(&#39;video&#39;);
+  video.className = &#39;scene-video&#39;;
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.controls = true;
+  video.preload = &#39;metadata&#39;;
+  video.src = &#39;https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/&#39; + vid + &#39;.mp4&#39;;
+  container.appendChild(video);
+  inner.appendChild(container);
+}); })(_vid); &gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;endwidget&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="PassageImage" tags="widget nobr" position="275,25" size="100,100">&lt;&lt;widget &quot;passageimage&quot;&gt;&gt;&lt;&lt;set _img to $args[0]&gt;&gt;&lt;&lt;if $imagesEnabled&gt;&gt;&lt;&lt;run (function(img) { $(document).one(&#39;:passageend&#39;, function(ev) {
+  var carousel = document.querySelector(&#39;.media-carousel&#39;);
+  if (!carousel) {
+    carousel = document.createElement(&#39;details&#39;);
+    carousel.className = &#39;media-carousel&#39;;
+    var summary = document.createElement(&#39;summary&#39;);
+    summary.className = &#39;media-toggle&#39;;
+    summary.innerHTML = &#39;🎬 View Scene Media&#39;;
+    carousel.appendChild(summary);
+    var inner = document.createElement(&#39;div&#39;);
+    inner.className = &#39;media-carousel-inner&#39;;
+    carousel.appendChild(inner);
+    var passage = document.getElementById(&#39;passage-&#39; + ev.passage.title.replace(/\s+/g, &#39;-&#39;));
+    if (!passage) passage = document.querySelector(&#39;.passage&#39;);
+    if (passage) passage.insertBefore(carousel, passage.firstChild);
+  }
+  var inner = carousel.querySelector(&#39;.media-carousel-inner&#39;);
+  var container = document.createElement(&#39;div&#39;);
+  container.className = &#39;passage-image-container media-item&#39;;
+  var image = document.createElement(&#39;img&#39;);
+  image.className = &#39;passage-image&#39;;
+  image.src = &#39;https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/&#39; + img + &#39;.png&#39;;
+  image.alt = &#39;Scene illustration&#39;;
+  image.loading = &#39;lazy&#39;;
+  container.appendChild(image);
+  inner.insertBefore(container, inner.firstChild);
+}); })(_img); &gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;endwidget&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="" position="400,25" size="100,100">&lt;div class=&quot;npe-dashboard&quot;&gt;
 &lt;strong&gt;Act:&lt;/strong&gt; $currentAct | &lt;strong&gt;Beat:&lt;/strong&gt; $currentBeat
 
 &lt;div class=&quot;axis-display&quot;&gt;
@@ -273,7 +447,7 @@ em, i {
 &#39;&#39;Revelation:&#39;&#39; $revelation/10 | &#39;&#39;Intimacy:&#39;&#39; $intimacy/15
 &#39;&#39;Threat:&#39;&#39; $threat/12 | &#39;&#39;Sanctuary:&#39;&#39; $sanctuary/10
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Start" tags="" position="525,25" size="100,100">&lt;img src=&quot;images/01_start.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Start" tags="" position="525,25" size="100,100">&lt;&lt;passageimage &quot;01_start&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 1&gt;&gt;
 &lt;&lt;set $currentAct to &quot;Ki&quot;&gt;&gt;
 
@@ -285,7 +459,7 @@ The diner sits at the edge of the boardwalk, its windows glowing amber against t
 
 And beyond it all—the tide-pool. Even from here, you swear you see it glow.
 
-[[Enter the diner|Ki Freddy Arrives]]</tw-passagedata><tw-passagedata pid="6" name="Ki Freddy Arrives" tags="ki" position="650,25" size="100,100">&lt;img src=&quot;images/02_ki_freddy_arrives.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Enter the diner|Ki Freddy Arrives]]</tw-passagedata><tw-passagedata pid="6" name="Ki Freddy Arrives" tags="ki" position="650,25" size="100,100">&lt;&lt;passageimage &quot;02_ki_freddy_arrives&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_1&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 3&gt;&gt;
 &lt;&lt;set $belonging += 1&gt;&gt;
@@ -306,7 +480,7 @@ You follow his gaze. The tide-pool glimmers beyond the glass, impossibly bright 
 
 [[Step outside to look at the tide-pool|Ki First Sighting]]
 [[Focus on learning the diner routine|Diner Settling]]
-&lt;&lt;if $loopAttempts[&quot;ki_doubt&quot;] &lt; 3&gt;&gt;[[This was a mistake—call someone back home|Ki Doubt Loop]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Ki Doubt Loop" tags="ki" position="775,25" size="100,100">&lt;img src=&quot;images/03_ki_doubt_loop.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;if $loopAttempts[&quot;ki_doubt&quot;] &lt; 3&gt;&gt;[[This was a mistake—call someone back home|Ki Doubt Loop]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Ki Doubt Loop" tags="ki" position="775,25" size="100,100">&lt;&lt;passageimage &quot;03_ki_doubt_loop&quot;&gt;&gt;
 &lt;&lt;set $loopAttempts[&quot;ki_doubt&quot;] += 1&gt;&gt;
 &lt;&lt;set $belonging -= 1&gt;&gt;
 
@@ -330,7 +504,7 @@ You pocket the phone. There&#39;s nothing back there for you anymore. The cook n
 [[Step outside to look at the tide-pool|Ki First Sighting]]
 [[Focus on learning the diner routine|Diner Settling]]
 [[Try calling again|Ki Doubt Loop]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Diner Settling" tags="ki" position="900,25" size="100,100">&lt;img src=&quot;images/04_diner_settling.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Diner Settling" tags="ki" position="900,25" size="100,100">&lt;&lt;passageimage &quot;04_diner_settling&quot;&gt;&gt;
 &lt;&lt;set $belonging += 1&gt;&gt;
 &lt;&lt;set $currentBeat to 4&gt;&gt;
 
@@ -340,7 +514,7 @@ It&#39;s quiet. It&#39;s simple. It&#39;s exactly what you needed.
 
 But your eyes keep drifting to the window. To the tide-pool&#39;s glow. To the empty rocks where that figure stood.
 
-[[Step outside when the shift ends|Ki First Sighting]]</tw-passagedata><tw-passagedata pid="9" name="Ki First Sighting" tags="ki" position="1025,25" size="100,100">&lt;img src=&quot;images/05_ki_first_sighting.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Step outside when the shift ends|Ki First Sighting]]</tw-passagedata><tw-passagedata pid="9" name="Ki First Sighting" tags="ki" position="1025,25" size="100,100">&lt;&lt;passageimage &quot;05_ki_first_sighting&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_2&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 6&gt;&gt;
 &lt;&lt;set $revelation += 2&gt;&gt;
@@ -370,7 +544,7 @@ Then he turns back to the water and walks toward the tide-pool with a grace that
 
 [[Follow him to the tide-pool|Ki Kai Routine]]
 [[Watch from the boardwalk, let him go|Ki Kai Routine Distant]]
-&lt;&lt;if $loopAttempts[&quot;first_sighting&quot;] &lt; 3&gt;&gt;[[Convince yourself it was nothing—go home|First Sighting Denial]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="First Sighting Denial" tags="ki" position="1150,25" size="100,100">&lt;img src=&quot;images/06_first_sighting_denial.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;if $loopAttempts[&quot;first_sighting&quot;] &lt; 3&gt;&gt;[[Convince yourself it was nothing—go home|First Sighting Denial]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="First Sighting Denial" tags="ki" position="1150,25" size="100,100">&lt;&lt;passageimage &quot;06_first_sighting_denial&quot;&gt;&gt;
 &lt;&lt;set $loopAttempts[&quot;first_sighting&quot;] += 1&gt;&gt;
 
 &lt;&lt;if $loopAttempts[&quot;first_sighting&quot;] == 1&gt;&gt;
@@ -393,7 +567,7 @@ You didn&#39;t come here to look away.
 [[Follow him to the tide-pool|Ki Kai Routine]]
 [[Watch from the boardwalk|Ki Kai Routine Distant]]
 [[Walk to your car|First Sighting Denial]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Ki Kai Routine Distant" tags="ki" position="25,150" size="100,100">&lt;img src=&quot;images/07_ki_kai_routine_distant.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Ki Kai Routine Distant" tags="ki" position="25,150" size="100,100">&lt;&lt;passageimage &quot;07_ki_kai_routine_distant&quot;&gt;&gt;
 &lt;&lt;set $trust += 1&gt;&gt;
 &lt;&lt;set $currentBeat to 8&gt;&gt;
 
@@ -407,7 +581,7 @@ Then, without looking back, he inclines his head. The smallest acknowledgment.
 
 As he slides into the water with impossible smoothness, you could swear you see his outline change—something larger, something other.
 
-[[Return to the diner, thinking|Sho Quiet Night]]</tw-passagedata><tw-passagedata pid="12" name="Ki Kai Routine" tags="ki" position="150,150" size="100,100">&lt;img src=&quot;images/08_ki_kai_routine.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Return to the diner, thinking|Sho Quiet Night]]</tw-passagedata><tw-passagedata pid="12" name="Ki Kai Routine" tags="ki" position="150,150" size="100,100">&lt;&lt;passageimage &quot;08_ki_kai_routine&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_3&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 9&gt;&gt;
 &lt;&lt;set $sanctuary to 10&gt;&gt;
@@ -432,7 +606,7 @@ It&#39;s not a question.
 [[&quot;Should I have?&quot;|Sho Quiet Night]]
 [[Say nothing—just watch|Sho Quiet Night Watch]]
 &lt;&lt;if $revelation &gt;= 3&gt;&gt;[[&quot;Show me what you really are&quot;|First Reveal]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $loopAttempts[&quot;kai_confront&quot;] &lt; 3&gt;&gt;[[Step back—you&#39;re not ready for this|Kai Routine Loop]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Kai Routine Loop" tags="ki" position="275,150" size="100,100">&lt;img src=&quot;images/09_kai_routine_loop.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;if $loopAttempts[&quot;kai_confront&quot;] &lt; 3&gt;&gt;[[Step back—you&#39;re not ready for this|Kai Routine Loop]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Kai Routine Loop" tags="ki" position="275,150" size="100,100">&lt;&lt;passageimage &quot;09_kai_routine_loop&quot;&gt;&gt;
 &lt;&lt;set $loopAttempts[&quot;kai_confront&quot;] += 1&gt;&gt;
 
 &lt;&lt;if $loopAttempts[&quot;kai_confront&quot;] == 1&gt;&gt;
@@ -457,7 +631,7 @@ You stop retreating. Because he&#39;s right. You didn&#39;t come here to run.
 [[&quot;Should I have run?&quot;|Sho Quiet Night]]
 [[Say nothing—just watch|Sho Quiet Night Watch]]
 [[Step back again|Kai Routine Loop]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="First Reveal" tags="ki revelation" position="400,150" size="100,100">&lt;img src=&quot;images/10_first_reveal.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="First Reveal" tags="ki revelation" position="400,150" size="100,100">&lt;&lt;passageimage &quot;10_first_reveal&quot;&gt;&gt;
 &lt;&lt;set $revelation += 2&gt;&gt;
 &lt;&lt;set $trust += 2&gt;&gt;
 &lt;&lt;set $intimacy += 1&gt;&gt;
@@ -484,7 +658,7 @@ You don&#39;t.
 
 &quot;Yes.&quot; His voice is deeper now, resonant with the tide. &quot;And you&#39;re Freddy. The one who doesn&#39;t look away.&quot;
 
-[[Continue|Sho Quiet Night]]</tw-passagedata><tw-passagedata pid="15" name="Sho Quiet Night Watch" tags="sho" position="525,150" size="100,100">&lt;img src=&quot;images/11_sho_quiet_night_watch.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Sho Quiet Night]]</tw-passagedata><tw-passagedata pid="15" name="Sho Quiet Night Watch" tags="sho" position="525,150" size="100,100">&lt;&lt;passageimage &quot;11_sho_quiet_night_watch&quot;&gt;&gt;
 &lt;&lt;set $trust += 1&gt;&gt;
 &lt;&lt;set $currentAct to &quot;Shō&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 11&gt;&gt;
@@ -499,7 +673,7 @@ Then he&#39;s gone—slipping into the water without a splash, his outline blurr
 
 You stand there for a long time after.
 
-[[Return to the diner|Sho Quiet Night]]</tw-passagedata><tw-passagedata pid="16" name="Sho Quiet Night" tags="sho" position="650,150" size="100,100">&lt;img src=&quot;images/12_sho_quiet_night.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Return to the diner|Sho Quiet Night]]</tw-passagedata><tw-passagedata pid="16" name="Sho Quiet Night" tags="sho" position="650,150" size="100,100">&lt;&lt;passageimage &quot;12_sho_quiet_night&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_4&quot;&gt;&gt;
 &lt;&lt;set $currentAct to &quot;Shō&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 12&gt;&gt;
@@ -525,7 +699,7 @@ On the seventh night, you brew an extra coffee and leave it on the back step, fa
 [[Say &quot;thank you&quot; aloud to the empty air|Sho Moonlit Walk]]
 [[Leave the coffee silently—let him come to you|Sho Moonlit Walk Silent]]
 &lt;&lt;if $loopAttempts[&quot;quiet_night&quot;] &lt; 3&gt;&gt;[[Pretend you didn&#39;t notice|Quiet Night Loop]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $trust &lt; 2&gt;&gt;[[Call Marcus to stay late with you|Cook Night]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Quiet Night Loop" tags="sho" position="775,150" size="100,100">&lt;img src=&quot;images/13_quiet_night_loop.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;if $trust &lt; 2&gt;&gt;[[Call Marcus to stay late with you|Cook Night]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Quiet Night Loop" tags="sho" position="775,150" size="100,100">&lt;&lt;passageimage &quot;13_quiet_night_loop&quot;&gt;&gt;
 &lt;&lt;set $loopAttempts[&quot;quiet_night&quot;] += 1&gt;&gt;
 
 &lt;&lt;if $loopAttempts[&quot;quiet_night&quot;] == 1&gt;&gt;
@@ -550,7 +724,7 @@ You set down the coffee.
 [[Say &quot;thank you&quot; aloud|Sho Moonlit Walk]]
 [[Leave the coffee silently|Sho Moonlit Walk Silent]]
 [[Keep pretending|Quiet Night Loop]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Cook Night" tags="sho" position="900,150" size="100,100">&lt;img src=&quot;images/14_cook_night.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Cook Night" tags="sho" position="900,150" size="100,100">&lt;&lt;passageimage &quot;14_cook_night&quot;&gt;&gt;
 &lt;&lt;set $belonging += 1&gt;&gt;
 
 You call Marcus. He shows up twenty minutes later with a six-pack of local beer and a bag of late-night tacos.
@@ -563,7 +737,7 @@ You don&#39;t tell him about the sliding mugs. The doors. The figure at the tide
 
 When he leaves, he pauses at the door. &quot;Whatever&#39;s out there—it&#39;s not bad. Just different. Town&#39;s full of different.&quot;
 
-[[Consider his words|Sho Moonlit Walk Silent]]</tw-passagedata><tw-passagedata pid="19" name="Sho Moonlit Walk" tags="sho" position="1025,150" size="100,100">&lt;img src=&quot;images/15_sho_moonlit_walk.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Consider his words|Sho Moonlit Walk Silent]]</tw-passagedata><tw-passagedata pid="19" name="Sho Moonlit Walk" tags="sho" position="1025,150" size="100,100">&lt;&lt;passageimage &quot;15_sho_moonlit_walk&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_5&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 18&gt;&gt;
 &lt;&lt;set $intimacy += 5&gt;&gt;
@@ -603,7 +777,7 @@ His hand brushes yours—accidental, or not. Your skin where he touched glows fa
 [[Reach for his hand deliberately|Almost Touch]]
 [[Tell him about your own past—the city, the breakdown|Freddy Opens]]
 &lt;&lt;if not $loopAttempts[&quot;moonlit_walk&quot;]&gt;&gt;&lt;&lt;set $loopAttempts[&quot;moonlit_walk&quot;] to 0&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $loopAttempts[&quot;moonlit_walk&quot;] &lt; 3&gt;&gt;[[Make an excuse to leave—this is too fast|Moonlit Walk Loop]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Sho Moonlit Walk Silent" tags="sho" position="1150,150" size="100,100">&lt;img src=&quot;images/16_sho_moonlit_walk_silent.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;if $loopAttempts[&quot;moonlit_walk&quot;] &lt; 3&gt;&gt;[[Make an excuse to leave—this is too fast|Moonlit Walk Loop]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Sho Moonlit Walk Silent" tags="sho" position="1150,150" size="100,100">&lt;&lt;passageimage &quot;16_sho_moonlit_walk_silent&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 18&gt;&gt;
 &lt;&lt;set $intimacy += 4&gt;&gt;
 &lt;&lt;set $trust += 2&gt;&gt;
@@ -624,7 +798,7 @@ Something shifts in his expression—not quite a smile, but close.
 
 You walk together in silence. The waves keep rhythm with your steps. His hand brushes yours. You don&#39;t pull away.
 
-[[Continue walking|Sho Sea Cave Silent]]</tw-passagedata><tw-passagedata pid="21" name="Moonlit Walk Loop" tags="sho" position="25,275" size="100,100">&lt;img src=&quot;images/17_moonlit_walk_loop.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue walking|Sho Sea Cave Silent]]</tw-passagedata><tw-passagedata pid="21" name="Moonlit Walk Loop" tags="sho" position="25,275" size="100,100">&lt;&lt;passageimage &quot;17_moonlit_walk_loop&quot;&gt;&gt;
 &lt;&lt;set $loopAttempts[&quot;moonlit_walk&quot;] += 1&gt;&gt;
 
 &lt;&lt;if $loopAttempts[&quot;moonlit_walk&quot;] == 1&gt;&gt;
@@ -648,7 +822,7 @@ You nod. You&#39;ll be here.
 &lt;&lt;else&gt;&gt;
 [[Stay a little longer|Sho Sea Cave Silent]]
 [[Make an excuse|Moonlit Walk Loop]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Almost Touch" tags="sho" position="150,275" size="100,100">&lt;img src=&quot;images/18_almost_touch.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Almost Touch" tags="sho" position="150,275" size="100,100">&lt;&lt;passageimage &quot;18_almost_touch&quot;&gt;&gt;
 &lt;&lt;set $intimacy += 2&gt;&gt;
 &lt;&lt;set $trust += 1&gt;&gt;
 
@@ -666,7 +840,7 @@ For a moment, he holds on. Then, gently, he pulls away.
 
 He doesn&#39;t finish. But when he walks you back to the diner, he stays closer than before.
 
-[[Continue|Sho Sea Cave]]</tw-passagedata><tw-passagedata pid="23" name="Freddy Opens" tags="sho" position="275,275" size="100,100">&lt;img src=&quot;images/19_freddy_opens.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Sho Sea Cave]]</tw-passagedata><tw-passagedata pid="23" name="Freddy Opens" tags="sho" position="275,275" size="100,100">&lt;&lt;passageimage &quot;19_freddy_opens&quot;&gt;&gt;
 &lt;&lt;set $trust += 2&gt;&gt;
 &lt;&lt;set $belonging += 1&gt;&gt;
 
@@ -684,7 +858,7 @@ You look at him—this impossible creature who guards a glowing tide-pool at mid
 
 His expression softens. &quot;Then we have something in common. I came here to hide. But I think—&quot; He glances at you. &quot;—I might be finding something else.&quot;
 
-[[Continue walking together|Sho Sea Cave]]</tw-passagedata><tw-passagedata pid="24" name="Sho Sea Cave" tags="sho" position="400,275" size="100,100">&lt;img src=&quot;images/20_sho_sea_cave.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue walking together|Sho Sea Cave]]</tw-passagedata><tw-passagedata pid="24" name="Sho Sea Cave" tags="sho" position="400,275" size="100,100">&lt;&lt;passageimage &quot;20_sho_sea_cave&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_6&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 24&gt;&gt;
 &lt;&lt;set $revelation += 1&gt;&gt;
@@ -713,7 +887,7 @@ You climb back up together. Side by side. His hand finds yours on the stairs.
 [[Ask what he&#39;s guarding—press gently|Artifact Hint]]
 [[Take his hand as you climb the stairs|Stair Intimacy]]
 &lt;&lt;if $loopAttempts[&quot;sea_cave&quot;] &lt; 3&gt;&gt;[[Try to go deeper without permission|Sea Cave Loop]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $revelation &gt;= 5&gt;&gt;[[&quot;Show me what you really are&quot;|Full Form Reveal]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Sho Sea Cave Silent" tags="sho" position="525,275" size="100,100">&lt;img src=&quot;images/21_sho_sea_cave_silent.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;if $revelation &gt;= 5&gt;&gt;[[&quot;Show me what you really are&quot;|Full Form Reveal]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Sho Sea Cave Silent" tags="sho" position="525,275" size="100,100">&lt;&lt;passageimage &quot;21_sho_sea_cave_silent&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 24&gt;&gt;
 &lt;&lt;set $revelation += 1&gt;&gt;
 &lt;&lt;set $intimacy += 2&gt;&gt;
@@ -727,7 +901,7 @@ One night, he takes you to the sea-cave stairway.
 
 The walls glow. Your breath catches.
 
-[[Continue|Ten Fade Wave]]</tw-passagedata><tw-passagedata pid="26" name="Sea Cave Loop" tags="sho" position="650,275" size="100,100">&lt;img src=&quot;images/22_sea_cave_loop.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Ten Fade Wave]]</tw-passagedata><tw-passagedata pid="26" name="Sea Cave Loop" tags="sho" position="650,275" size="100,100">&lt;&lt;passageimage &quot;22_sea_cave_loop&quot;&gt;&gt;
 &lt;&lt;set $loopAttempts[&quot;sea_cave&quot;] += 1&gt;&gt;
 
 &lt;&lt;if $loopAttempts[&quot;sea_cave&quot;] == 1&gt;&gt;
@@ -753,7 +927,7 @@ He exhales. Something in him relaxes.
 &lt;&lt;else&gt;&gt;
 [[Accept his pace|Ten Fade Wave]]
 [[Push deeper|Sea Cave Loop]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Artifact Hint" tags="sho" position="775,275" size="100,100">&lt;img src=&quot;images/23_artifact_hint.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Artifact Hint" tags="sho" position="775,275" size="100,100">&lt;&lt;passageimage &quot;23_artifact_hint&quot;&gt;&gt;
 &lt;&lt;set $revelation += 2&gt;&gt;
 
 &quot;What are you guarding?&quot; you ask softly.
@@ -772,7 +946,7 @@ He looks at you, decision in his eyes.
 
 His jaw tightens. &quot;Yes. Like him.&quot;
 
-[[Continue|Ten Fade Wave]]</tw-passagedata><tw-passagedata pid="28" name="Stair Intimacy" tags="sho" position="900,275" size="100,100">&lt;img src=&quot;images/24_stair_intimacy.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Ten Fade Wave]]</tw-passagedata><tw-passagedata pid="28" name="Stair Intimacy" tags="sho" position="900,275" size="100,100">&lt;&lt;passageimage &quot;24_stair_intimacy&quot;&gt;&gt;
 &lt;&lt;set $intimacy += 2&gt;&gt;
 
 You take his hand as you climb. His fingers tighten around yours—not quite human grip, but gentle.
@@ -785,7 +959,7 @@ At the top, in the open air, he doesn&#39;t let go.
 
 &quot;Tomorrow.&quot;
 
-[[Continue|Ten Fade Wave]]</tw-passagedata><tw-passagedata pid="29" name="Full Form Reveal" tags="sho revelation" position="1025,275" size="100,100">&lt;img src=&quot;images/25_full_form_reveal.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Ten Fade Wave]]</tw-passagedata><tw-passagedata pid="29" name="Full Form Reveal" tags="sho revelation" position="1025,275" size="100,100">&lt;&lt;passageimage &quot;25_full_form_reveal&quot;&gt;&gt;
 &lt;&lt;set $revelation += 3&gt;&gt;
 &lt;&lt;set $intimacy += 2&gt;&gt;
 &lt;&lt;set $trust += 2&gt;&gt;
@@ -814,7 +988,7 @@ When it&#39;s done, he towers above you. Alien. Ancient.
 
 He makes a sound that might be a laugh.
 
-[[Continue|Ten Fade Wave]]</tw-passagedata><tw-passagedata pid="30" name="Ten Fade Wave" tags="ten" position="1150,275" size="100,100">&lt;img src=&quot;images/26_ten_fade_wave.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Ten Fade Wave]]</tw-passagedata><tw-passagedata pid="30" name="Ten Fade Wave" tags="ten" position="1150,275" size="100,100">&lt;&lt;passageimage &quot;26_ten_fade_wave&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_7&quot;&gt;&gt;
 &lt;&lt;set $currentAct to &quot;Ten&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 30&gt;&gt;
@@ -844,7 +1018,7 @@ Kai goes very still.
 [[Go to him—whatever&#39;s coming, you face it together|Ten Thalos Emerges]]
 [[Ask who found him|Ten Thalos Emerges]]
 &lt;&lt;if $loopAttempts[&quot;fade_wave&quot;] &lt; 3&gt;&gt;[[Strengthen the wards first—delay the confrontation|Fade Wave Loop]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $trust &gt;= 8&gt;&gt;[[Wait—he&#39;ll tell you when he&#39;s ready|Freddy Finds Kai]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Fade Wave Loop" tags="ten" position="25,400" size="100,100">&lt;img src=&quot;images/27_fade_wave_loop.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;if $trust &gt;= 8&gt;&gt;[[Wait—he&#39;ll tell you when he&#39;s ready|Freddy Finds Kai]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Fade Wave Loop" tags="ten" position="25,400" size="100,100">&lt;&lt;passageimage &quot;27_fade_wave_loop&quot;&gt;&gt;
 &lt;&lt;set $loopAttempts[&quot;fade_wave&quot;] += 1&gt;&gt;
 
 &lt;&lt;if $loopAttempts[&quot;fade_wave&quot;] == 1&gt;&gt;
@@ -868,7 +1042,7 @@ Waves breaking //wrong//.
 &lt;&lt;else&gt;&gt;
 [[Try the wards again|Fade Wave Loop]]
 [[Face it now|Ten Thalos Emerges]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Freddy Finds Kai" tags="ten" position="150,400" size="100,100">&lt;img src=&quot;images/28_freddy_finds_kai.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Freddy Finds Kai" tags="ten" position="150,400" size="100,100">&lt;&lt;passageimage &quot;28_freddy_finds_kai&quot;&gt;&gt;
 &lt;&lt;set $trust += 2&gt;&gt;
 &lt;&lt;set $intimacy += 1&gt;&gt;
 
@@ -886,7 +1060,7 @@ He reaches for you. You take his hand.
 
 &quot;Together.&quot;
 
-[[Face what&#39;s coming|Ten Thalos Emerges]]</tw-passagedata><tw-passagedata pid="33" name="Ten Thalos Emerges" tags="ten" position="275,400" size="100,100">&lt;img src=&quot;images/29_ten_thalos_emerges.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Face what&#39;s coming|Ten Thalos Emerges]]</tw-passagedata><tw-passagedata pid="33" name="Ten Thalos Emerges" tags="ten" position="275,400" size="100,100">&lt;&lt;passageimage &quot;29_ten_thalos_emerges&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_8&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 33&gt;&gt;
 &lt;&lt;set $threat += 4&gt;&gt;
@@ -918,7 +1092,7 @@ But you see it now. All of it. What he is. What he&#39;s fighting for.
 [[Shout a distraction—draw Thalos&#39;s attention|Freddy Bait]]
 [[Run to get help from the town|Town Warning]]
 &lt;&lt;if $loopAttempts[&quot;thalos_emerges&quot;] &lt; 3&gt;&gt;[[Freeze—you can&#39;t process what you&#39;re seeing|Thalos Loop]]&lt;&lt;/if&gt;&gt;
-[[Run and don&#39;t look back|Freddy Abandons]]</tw-passagedata><tw-passagedata pid="34" name="Thalos Loop" tags="ten" position="400,400" size="100,100">&lt;img src=&quot;images/30_thalos_loop.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Run and don&#39;t look back|Freddy Abandons]]</tw-passagedata><tw-passagedata pid="34" name="Thalos Loop" tags="ten" position="400,400" size="100,100">&lt;&lt;passageimage &quot;30_thalos_loop&quot;&gt;&gt;
 &lt;&lt;set $loopAttempts[&quot;thalos_emerges&quot;] += 1&gt;&gt;
 
 &lt;&lt;if $loopAttempts[&quot;thalos_emerges&quot;] == 1&gt;&gt;
@@ -941,7 +1115,7 @@ You take it.
 [[Stay|Ten Intimacy And Threat]]
 [[Keep freezing|Thalos Loop]]
 [[Run|Freddy Abandons]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Freddy Abandons" tags="ten ending" position="525,400" size="100,100">&lt;img src=&quot;images/31_freddy_abandons.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Freddy Abandons" tags="ten ending" position="525,400" size="100,100">&lt;&lt;passageimage &quot;31_freddy_abandons&quot;&gt;&gt;
 &lt;&lt;set $trust -= 10&gt;&gt;
 &lt;&lt;set $belonging -= 5&gt;&gt;
 
@@ -957,7 +1131,7 @@ But you never stop to look.
 
 //THE END - Bad Ending//
 
-[[Start Over|Start]]</tw-passagedata><tw-passagedata pid="36" name="Freddy Bait" tags="ten" position="650,400" size="100,100">&lt;img src=&quot;images/32_freddy_bait.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Start Over|Start]]</tw-passagedata><tw-passagedata pid="36" name="Freddy Bait" tags="ten" position="650,400" size="100,100">&lt;&lt;passageimage &quot;32_freddy_bait&quot;&gt;&gt;
 &lt;&lt;set $threat += 1&gt;&gt;
 &lt;&lt;set $trust += 2&gt;&gt;
 
@@ -971,7 +1145,7 @@ He lunges—and Kai intercepts, tentacles clashing with tentacles, bioluminescen
 
 &quot;Get to the Shell!&quot; Kai shouts. &quot;Protect it!&quot;
 
-[[Run to the tide-pool|Ten Intimacy And Threat]]</tw-passagedata><tw-passagedata pid="37" name="Town Warning" tags="ten" position="775,400" size="100,100">&lt;img src=&quot;images/33_town_warning.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Run to the tide-pool|Ten Intimacy And Threat]]</tw-passagedata><tw-passagedata pid="37" name="Town Warning" tags="ten" position="775,400" size="100,100">&lt;&lt;passageimage &quot;33_town_warning&quot;&gt;&gt;
 &lt;&lt;set $belonging += 2&gt;&gt;
 
 You run—not away, but toward the town. Toward help.
@@ -982,7 +1156,7 @@ The elder is the first to answer your pounding. He takes one look at your face a
 
 By the time you return to the tide-pool with torches and fishing spears and a group of sleepless townsfolk, the battle is already raging.
 
-[[Join the fight|Ketsu Stand Together]]</tw-passagedata><tw-passagedata pid="38" name="Ten Intimacy And Threat" tags="ten" position="900,400" size="100,100">&lt;img src=&quot;images/34_ten_intimacy_and_threat.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Join the fight|Ketsu Stand Together]]</tw-passagedata><tw-passagedata pid="38" name="Ten Intimacy And Threat" tags="ten" position="900,400" size="100,100">&lt;&lt;passageimage &quot;34_ten_intimacy_and_threat&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_9&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 36&gt;&gt;
 &lt;&lt;set $intimacy += 5&gt;&gt;
@@ -1029,7 +1203,7 @@ You&#39;re still holding each other when his eyes snap open.
 [[Hide the Shell—we can&#39;t let him find it|Hide Shell]]
 [[There has to be another way. Talk to him.|Negotiate Thalos]]
 &lt;&lt;if $loopAttempts[&quot;intimacy_threat&quot;] &lt; 3&gt;&gt;[[Stay here. Protect each other. Let the town fend for itself.|Intimacy Threat Loop]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $intimacy &gt;= 12 and $trust &gt;= 10&gt;&gt;[[&quot;Bond with the Shell together&quot;|Dual Bond]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Intimacy Threat Loop" tags="ten" position="1025,400" size="100,100">&lt;img src=&quot;images/35_intimacy_threat_loop.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;if $intimacy &gt;= 12 and $trust &gt;= 10&gt;&gt;[[&quot;Bond with the Shell together&quot;|Dual Bond]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Intimacy Threat Loop" tags="ten" position="1025,400" size="100,100">&lt;&lt;passageimage &quot;35_intimacy_threat_loop&quot;&gt;&gt;
 &lt;&lt;set $loopAttempts[&quot;intimacy_threat&quot;] += 1&gt;&gt;
 
 &lt;&lt;if $loopAttempts[&quot;intimacy_threat&quot;] == 1&gt;&gt;
@@ -1051,7 +1225,7 @@ The Shell flickers. Somewhere above, glass breaks.
 &lt;&lt;else&gt;&gt;
 [[Face him together|Ketsu Stand Together]]
 [[Stay|Intimacy Threat Loop]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Hide Shell" tags="ten" position="1150,400" size="100,100">&lt;img src=&quot;images/36_hide_shell.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Hide Shell" tags="ten" position="1150,400" size="100,100">&lt;&lt;passageimage &quot;36_hide_shell&quot;&gt;&gt;
 &lt;&lt;set $sanctuary += 1&gt;&gt;
 
 &quot;Help me move it,&quot; Kai says.
@@ -1060,7 +1234,7 @@ Together, you lift the Lunar Shell—lighter than it looks, warm in your hands�
 
 &quot;He&#39;ll sense it&#39;s gone,&quot; Kai warns. &quot;But it buys us time.&quot;
 
-[[Return to face Thalos|Ketsu Stand Together]]</tw-passagedata><tw-passagedata pid="41" name="Negotiate Thalos" tags="ten" position="25,525" size="100,100">&lt;img src=&quot;images/37_negotiate_thalos.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Return to face Thalos|Ketsu Stand Together]]</tw-passagedata><tw-passagedata pid="41" name="Negotiate Thalos" tags="ten" position="25,525" size="100,100">&lt;&lt;passageimage &quot;37_negotiate_thalos&quot;&gt;&gt;
 &lt;&lt;set $trust += 1&gt;&gt;
 
 &quot;What if we talked to him? Made a deal?&quot;
@@ -1069,7 +1243,7 @@ Kai looks at you like you&#39;ve grown a second head. Then, slowly, something sh
 
 &quot;Thalos doesn&#39;t bargain. But—&quot; He hesitates. &quot;—maybe a human would be unexpected enough to buy us time.&quot;
 
-[[Try to negotiate|Ketsu Stand Together]]</tw-passagedata><tw-passagedata pid="42" name="Dual Bond" tags="ten" position="150,525" size="100,100">&lt;img src=&quot;images/38_dual_bond.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Try to negotiate|Ketsu Stand Together]]</tw-passagedata><tw-passagedata pid="42" name="Dual Bond" tags="ten" position="150,525" size="100,100">&lt;&lt;passageimage &quot;38_dual_bond&quot;&gt;&gt;
 &lt;&lt;set $sanctuary += 3&gt;&gt;
 &lt;&lt;set $revelation += 2&gt;&gt;
 
@@ -1085,7 +1259,7 @@ His eyes widen. &quot;Freddy—&quot;
 
 What happens next changes everything.
 
-[[Face Thalos as one|Ketsu Stand Together]]</tw-passagedata><tw-passagedata pid="43" name="Ketsu Stand Together" tags="ketsu" position="275,525" size="100,100">&lt;img src=&quot;images/39_ketsu_stand_together.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Face Thalos as one|Ketsu Stand Together]]</tw-passagedata><tw-passagedata pid="43" name="Ketsu Stand Together" tags="ketsu" position="275,525" size="100,100">&lt;&lt;passageimage &quot;39_ketsu_stand_together&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_10&quot;&gt;&gt;
 &lt;&lt;set $currentAct to &quot;Ketsu&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 42&gt;&gt;
@@ -1113,7 +1287,7 @@ And you—
 [[Call out to Kai—distract Thalos at the critical moment|Ketsu Thalos Defeated Distract]]
 [[Find a weapon—anything to help|Freddy Fights]]
 &lt;&lt;if $loopAttempts[&quot;stand_together&quot;] &lt; 3&gt;&gt;[[Freeze—the violence is too much|Stand Together Loop]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $belonging &gt;= 10&gt;&gt;[[Rally the town—they&#39;re already coming|Town Arrives]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Stand Together Loop" tags="ketsu" position="400,525" size="100,100">&lt;img src=&quot;images/40_stand_together_loop.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;if $belonging &gt;= 10&gt;&gt;[[Rally the town—they&#39;re already coming|Town Arrives]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Stand Together Loop" tags="ketsu" position="400,525" size="100,100">&lt;&lt;passageimage &quot;40_stand_together_loop&quot;&gt;&gt;
 &lt;&lt;set $loopAttempts[&quot;stand_together&quot;] += 1&gt;&gt;
 
 &lt;&lt;if $loopAttempts[&quot;stand_together&quot;] == 1&gt;&gt;
@@ -1135,7 +1309,7 @@ And you run—toward them, not away.
 &lt;&lt;else&gt;&gt;
 [[Help the Shell|Ketsu Thalos Defeated]]
 [[Keep watching|Stand Together Loop]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Town Arrives" tags="ketsu" position="525,525" size="100,100">&lt;img src=&quot;images/41_town_arrives.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Town Arrives" tags="ketsu" position="525,525" size="100,100">&lt;&lt;passageimage &quot;41_town_arrives&quot;&gt;&gt;
 &lt;&lt;set $belonging += 3&gt;&gt;
 
 Torches on the boardwalk.
@@ -1150,7 +1324,7 @@ Thalos&#39;s attention fractures. Too many targets. Too much resistance.
 
 And in that moment, Kai strikes.
 
-[[The tide turns|Ketsu Thalos Defeated]]</tw-passagedata><tw-passagedata pid="46" name="Freddy Fights" tags="ketsu" position="650,525" size="100,100">&lt;img src=&quot;images/42_freddy_fights.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[The tide turns|Ketsu Thalos Defeated]]</tw-passagedata><tw-passagedata pid="46" name="Freddy Fights" tags="ketsu" position="650,525" size="100,100">&lt;&lt;passageimage &quot;42_freddy_fights&quot;&gt;&gt;
 &lt;&lt;set $belonging += 1&gt;&gt;
 
 You grab a piece of driftwood. It&#39;s not much, but it&#39;s something.
@@ -1163,7 +1337,7 @@ When Thalos lunges for Kai&#39;s back, you swing. Hard. The wood splinters again
 
 But you&#39;re both still alive.
 
-[[Continue fighting|Ketsu Thalos Defeated]]</tw-passagedata><tw-passagedata pid="47" name="Ketsu Thalos Defeated Distract" tags="ketsu" position="775,525" size="100,100">&lt;img src=&quot;images/43_ketsu_thalos_defeated_distract.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue fighting|Ketsu Thalos Defeated]]</tw-passagedata><tw-passagedata pid="47" name="Ketsu Thalos Defeated Distract" tags="ketsu" position="775,525" size="100,100">&lt;&lt;passageimage &quot;43_ketsu_thalos_defeated_distract&quot;&gt;&gt;
 &lt;&lt;set $trust += 1&gt;&gt;
 
 &quot;KAI! NOW!&quot;
@@ -1172,7 +1346,7 @@ Your voice cuts through the storm. Thalos turns, just for a second.
 
 A second is all Kai needs.
 
-[[The finishing blow|Ketsu Thalos Defeated]]</tw-passagedata><tw-passagedata pid="48" name="Ketsu Thalos Defeated" tags="ketsu" position="900,525" size="100,100">&lt;img src=&quot;images/44_ketsu_thalos_defeated.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[The finishing blow|Ketsu Thalos Defeated]]</tw-passagedata><tw-passagedata pid="48" name="Ketsu Thalos Defeated" tags="ketsu" position="900,525" size="100,100">&lt;&lt;passageimage &quot;44_ketsu_thalos_defeated&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_11&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 45&gt;&gt;
 &lt;&lt;set $threat -= 8&gt;&gt;
@@ -1203,7 +1377,7 @@ You hold him in the shallow water as the storm breaks overhead and the Lunar She
 [[Rest together|Ketsu Community Scene]]
 [[Check the Shell first—make sure it&#39;s safe|Shell Restored]]
 [[Kiss him—words can wait|Post Battle Kiss]]
-[[&quot;What did he mean, this isn&#39;t over?&quot;|Sequel Hook]]</tw-passagedata><tw-passagedata pid="49" name="Shell Restored" tags="ketsu" position="1025,525" size="100,100">&lt;img src=&quot;images/45_shell_restored.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[&quot;What did he mean, this isn&#39;t over?&quot;|Sequel Hook]]</tw-passagedata><tw-passagedata pid="49" name="Shell Restored" tags="ketsu" position="1025,525" size="100,100">&lt;&lt;passageimage &quot;45_shell_restored&quot;&gt;&gt;
 &lt;&lt;set $sanctuary += 1&gt;&gt;
 
 The Lunar Shell pulses with renewed strength. Not just blue now—amber threads run through the light. Something new.
@@ -1214,7 +1388,7 @@ The Lunar Shell pulses with renewed strength. Not just blue now—amber threads 
 
 He almost smiles. &quot;It means the sanctuary has two guardians now.&quot;
 
-[[Continue|Ketsu Community Scene]]</tw-passagedata><tw-passagedata pid="50" name="Post Battle Kiss" tags="ketsu" position="1150,525" size="100,100">&lt;img src=&quot;images/46_post_battle_kiss.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Ketsu Community Scene]]</tw-passagedata><tw-passagedata pid="50" name="Post Battle Kiss" tags="ketsu" position="1150,525" size="100,100">&lt;&lt;passageimage &quot;46_post_battle_kiss&quot;&gt;&gt;
 &lt;&lt;set $intimacy += 2&gt;&gt;
 
 You don&#39;t say anything. You just pull him close and kiss him—salt water and strange warmth and something that tastes like home.
@@ -1227,7 +1401,7 @@ When you finally pull apart, he&#39;s looking at you like you&#39;re the most mi
 
 &quot;Forever.&quot;
 
-[[Continue|Ketsu Community Scene]]</tw-passagedata><tw-passagedata pid="51" name="Sequel Hook" tags="ketsu" position="25,650" size="100,100">&lt;img src=&quot;images/47_sequel_hook.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Ketsu Community Scene]]</tw-passagedata><tw-passagedata pid="51" name="Sequel Hook" tags="ketsu" position="25,650" size="100,100">&lt;&lt;passageimage &quot;47_sequel_hook&quot;&gt;&gt;
 &lt;&lt;set $revelation += 1&gt;&gt;
 
 &quot;There are others like him,&quot; Kai admits. &quot;Out in the deep. Some worse. Some—&quot; He hesitates. &quot;—different.&quot;
@@ -1238,7 +1412,7 @@ When you finally pull apart, he&#39;s looking at you like you&#39;re the most mi
 
 //But you can&#39;t help wondering what else is out there.//
 
-[[Continue|Ketsu Community Scene]]</tw-passagedata><tw-passagedata pid="52" name="Ketsu Community Scene" tags="ketsu" position="150,650" size="100,100">&lt;img src=&quot;images/48_ketsu_community.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Ketsu Community Scene]]</tw-passagedata><tw-passagedata pid="52" name="Ketsu Community Scene" tags="ketsu" position="150,650" size="100,100">&lt;&lt;passageimage &quot;48_ketsu_community&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_12&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 48&gt;&gt;
 &lt;&lt;set $belonging += 4&gt;&gt;
@@ -1268,7 +1442,7 @@ That evening, the boardwalk festival lights twinkle against the dark water. You 
 [[Take Kai&#39;s hand in front of everyone|Epilogue]]
 [[Dance with him at the festival|Festival Dance]]
 [[Thank the elder—ask what he knows|Elder Truth]]
-[[Just watch—soak in belonging for once|Epilogue Watch]]</tw-passagedata><tw-passagedata pid="53" name="Festival Dance" tags="ketsu" position="275,650" size="100,100">&lt;img src=&quot;images/49_ketsu_community_silent.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Just watch—soak in belonging for once|Epilogue Watch]]</tw-passagedata><tw-passagedata pid="53" name="Festival Dance" tags="ketsu" position="275,650" size="100,100">&lt;&lt;passageimage &quot;49_ketsu_community_silent&quot;&gt;&gt;
 &lt;&lt;set $intimacy += 1&gt;&gt;
 
 &quot;Dance with me,&quot; you say.
@@ -1279,7 +1453,7 @@ That evening, the boardwalk festival lights twinkle against the dark water. You 
 
 You pull him into the crowd anyway. What follows is graceless, awkward, and absolutely perfect.
 
-[[Continue|Epilogue]]</tw-passagedata><tw-passagedata pid="54" name="Elder Truth" tags="ketsu" position="400,650" size="100,100">&lt;img src=&quot;images/49_ketsu_community_silent.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Epilogue]]</tw-passagedata><tw-passagedata pid="54" name="Elder Truth" tags="ketsu" position="400,650" size="100,100">&lt;&lt;passageimage &quot;49_ketsu_community_silent&quot;&gt;&gt;
 &lt;&lt;set $revelation += 2&gt;&gt;
 
 The elder finds you by the railing, watching the water.
@@ -1290,7 +1464,7 @@ The elder finds you by the railing, watching the water.
 
 &quot;Some things are better left to legend.&quot; He smiles. &quot;Until the right person comes along to make them real.&quot;
 
-[[Continue|Epilogue]]</tw-passagedata><tw-passagedata pid="55" name="Epilogue Watch" tags="ketsu" position="525,650" size="100,100">&lt;img src=&quot;images/49_ketsu_community_silent.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Epilogue]]</tw-passagedata><tw-passagedata pid="55" name="Epilogue Watch" tags="ketsu" position="525,650" size="100,100">&lt;&lt;passageimage &quot;49_ketsu_community_silent&quot;&gt;&gt;
 
 You find a quiet spot on the boardwalk. Kai sits beside you, close enough to touch.
 
@@ -1298,7 +1472,7 @@ For once, you don&#39;t need words. You just watch the festival lights reflect o
 
 //Belonging,// you realize. //This is what it feels like.//
 
-[[Continue|Epilogue]]</tw-passagedata><tw-passagedata pid="56" name="Epilogue" tags="epilogue" position="650,650" size="100,100">&lt;img src=&quot;images/50_ketsu_epilogue.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[Continue|Epilogue]]</tw-passagedata><tw-passagedata pid="56" name="Epilogue" tags="epilogue" position="650,650" size="100,100">&lt;&lt;passageimage &quot;50_ketsu_epilogue&quot;&gt;&gt;
 &lt;&lt;scenevideo &quot;scene_13&quot;&gt;&gt;
 &lt;&lt;set $currentBeat to 51&gt;&gt;
 &lt;&lt;set $sanctuary to 10&gt;&gt;
@@ -1321,7 +1495,7 @@ He&#39;s quiet for a moment.
 
 [[&quot;This is home now. Ours.&quot;|Ending HEA]]
 [[&quot;What happens next?&quot;|Ending HFN]]
-[[&quot;Show me everything. The whole ocean.&quot;|Ending Adventure]]</tw-passagedata><tw-passagedata pid="57" name="Ending HEA" tags="ending" position="775,650" size="100,100">&lt;img src=&quot;images/51_ending_human.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+[[&quot;Show me everything. The whole ocean.&quot;|Ending Adventure]]</tw-passagedata><tw-passagedata pid="57" name="Ending HEA" tags="ending" position="775,650" size="100,100">&lt;&lt;passageimage &quot;51_ending_human&quot;&gt;&gt;
 
 &quot;This,&quot; Kai says. &quot;Just this. For as long as we want.&quot;
 
@@ -1340,7 +1514,7 @@ Intimacy: $intimacy | Threat: $threat | Sanctuary: $sanctuary
 
 &#39;&#39;Thresholds Reached:&#39;&#39; $thresholdsReached.length
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Ending HFN" tags="ending" position="900,650" size="100,100">&lt;img src=&quot;images/52_ending_merged.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="Ending HFN" tags="ending" position="900,650" size="100,100">&lt;&lt;passageimage &quot;52_ending_merged&quot;&gt;&gt;
 
 Kai&#39;s smile holds secrets—but the good kind now.
 
@@ -1363,7 +1537,7 @@ Intimacy: $intimacy | Threat: $threat | Sanctuary: $sanctuary
 
 &#39;&#39;Thresholds Reached:&#39;&#39; $thresholdsReached.length
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="Ending Adventure" tags="ending" position="1025,650" size="100,100">&lt;img src=&quot;images/53_ending_monster.png&quot; alt=&quot;Scene illustration&quot; style=&quot;width:100%; display:block; margin:0 auto; border-radius:12px; margin-bottom:1.5rem;&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="Ending Adventure" tags="ending" position="1025,650" size="100,100">&lt;&lt;passageimage &quot;53_ending_monster&quot;&gt;&gt;
 
 Kai laughs—and for the first time, he looks truly //free//.
 
