@@ -1416,11 +1416,27 @@ Intimacy: $intimacy | Threat: $threat | Sanctuary: $sanctuary
 
 /* Base Styles */
 body {
-  background: linear-gradient(180deg, #0a1628 0%, #1a2744 50%, #0d1b2a 100%);
+  background: #0a1628 url('https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-background-images/bg_starlight_cove_2_1768178832750.png') center center / cover fixed;
   color: #e8f1f8;
   font-family: 'Georgia', serif;
-  line-height: 1.7;
+  line-height: 1.6;
   min-height: 100vh;
+}
+
+/* Reduce paragraph and line break spacing */
+.passage p {
+  margin: 0 0 0.75rem 0;
+}
+
+.passage br {
+  display: block;
+  content: '';
+  margin-top: 0.4rem;
+}
+
+/* Consecutive br tags - reduce even further */
+.passage br + br {
+  margin-top: 0.2rem;
 }
 
 #story {
@@ -1441,7 +1457,9 @@ body {
    BUTTON-STYLE CHOICES
    ═══════════════════════════════════════════════════════════════ */
 .passage a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #e8f1f8;
   background: linear-gradient(135deg, #1a3a5c 0%, #0d2944 100%);
   border: 1px solid #3d6a8f;
@@ -1451,7 +1469,9 @@ body {
   min-height: 44px;
   min-width: 44px;
   text-decoration: none;
+  text-align: center;
   font-size: 1rem;
+  line-height: 1.3;
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
