@@ -59,10 +59,65 @@ Midnight at Starlight Cove
 <<set $imagePath to "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/">>
 
 :: SceneVideo [widget nobr]
-<<widget "scenevideo">><<set _vid to $args[0]>><<if $videosEnabled and $sceneVideos[_vid]>><<run (function(vid) { $(document).one(':passageend', function(ev) { var container = document.createElement('div'); container.className = 'scene-video-container'; var video = document.createElement('video'); video.className = 'scene-video'; video.autoplay = true; video.muted = true; video.loop = true; video.playsInline = true; video.src = 'https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/' + vid + '.mp4'; container.appendChild(video); var passage = document.getElementById('passage-' + ev.passage.title.replace(/\s+/g, '-')); if (!passage) passage = document.querySelector('.passage'); if (passage) passage.appendChild(container); }); })(_vid); >><<endif>><<endwidget>>
+<<widget "scenevideo">><<set _vid to $args[0]>><<if $videosEnabled and $sceneVideos[_vid]>><<run (function(vid) { $(document).one(':passageend', function(ev) {
+  var carousel = document.querySelector('.media-carousel');
+  if (!carousel) {
+    carousel = document.createElement('details');
+    carousel.className = 'media-carousel';
+    var summary = document.createElement('summary');
+    summary.className = 'media-toggle';
+    summary.innerHTML = '🎬 View Scene Media';
+    carousel.appendChild(summary);
+    var inner = document.createElement('div');
+    inner.className = 'media-carousel-inner';
+    carousel.appendChild(inner);
+    var passage = document.getElementById('passage-' + ev.passage.title.replace(/\s+/g, '-'));
+    if (!passage) passage = document.querySelector('.passage');
+    if (passage) passage.insertBefore(carousel, passage.firstChild);
+  }
+  var inner = carousel.querySelector('.media-carousel-inner');
+  var container = document.createElement('div');
+  container.className = 'scene-video-container media-item';
+  var video = document.createElement('video');
+  video.className = 'scene-video';
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.controls = true;
+  video.preload = 'metadata';
+  video.src = 'https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/' + vid + '.mp4';
+  container.appendChild(video);
+  inner.appendChild(container);
+}); })(_vid); >><<endif>><<endwidget>>
 
 :: PassageImage [widget nobr]
-<<widget "passageimage">><<set _img to $args[0]>><<if $imagesEnabled>><<run (function(img) { $(document).one(':passageend', function(ev) { var container = document.createElement('div'); container.className = 'passage-image-container'; var image = document.createElement('img'); image.className = 'passage-image'; image.src = 'https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/' + img + '.png'; image.alt = 'Scene illustration'; container.appendChild(image); var passage = document.getElementById('passage-' + ev.passage.title.replace(/\s+/g, '-')); if (!passage) passage = document.querySelector('.passage'); if (passage) passage.insertBefore(container, passage.firstChild); }); })(_img); >><<endif>><<endwidget>>
+<<widget "passageimage">><<set _img to $args[0]>><<if $imagesEnabled>><<run (function(img) { $(document).one(':passageend', function(ev) {
+  var carousel = document.querySelector('.media-carousel');
+  if (!carousel) {
+    carousel = document.createElement('details');
+    carousel.className = 'media-carousel';
+    var summary = document.createElement('summary');
+    summary.className = 'media-toggle';
+    summary.innerHTML = '🎬 View Scene Media';
+    carousel.appendChild(summary);
+    var inner = document.createElement('div');
+    inner.className = 'media-carousel-inner';
+    carousel.appendChild(inner);
+    var passage = document.getElementById('passage-' + ev.passage.title.replace(/\s+/g, '-'));
+    if (!passage) passage = document.querySelector('.passage');
+    if (passage) passage.insertBefore(carousel, passage.firstChild);
+  }
+  var inner = carousel.querySelector('.media-carousel-inner');
+  var container = document.createElement('div');
+  container.className = 'passage-image-container media-item';
+  var image = document.createElement('img');
+  image.className = 'passage-image';
+  image.src = 'https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/' + img + '.png';
+  image.alt = 'Scene illustration';
+  image.loading = 'lazy';
+  container.appendChild(image);
+  inner.insertBefore(container, inner.firstChild);
+}); })(_img); >><<endif>><<endwidget>>
 
 :: StoryCaption
 <div class="npe-dashboard">
@@ -1354,49 +1409,184 @@ Intimacy: $intimacy | Threat: $threat | Sanctuary: $sanctuary
 </div>
 
 :: StoryStylesheet [stylesheet]
+/* ═══════════════════════════════════════════════════════════════
+   MIDNIGHT AT STARLIGHT COVE - Responsive Theme
+   Mobile-first, WCAG 3 compliant, Progressive Reveal
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Base Styles */
 body {
   background: linear-gradient(180deg, #0a1628 0%, #1a2744 50%, #0d1b2a 100%);
   color: #e8f1f8;
   font-family: 'Georgia', serif;
   line-height: 1.7;
+  min-height: 100vh;
 }
 
 #story {
-  max-width: 700px;
+  max-width: 42rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
-a {
-  color: #5fa8d3;
+@media (min-width: 480px) {
+  #story { padding: 1.5rem; }
+}
+
+@media (min-width: 720px) {
+  #story { padding: 2rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTON-STYLE CHOICES
+   ═══════════════════════════════════════════════════════════════ */
+.passage a {
+  display: inline-block;
+  color: #e8f1f8;
+  background: linear-gradient(135deg, #1a3a5c 0%, #0d2944 100%);
+  border: 1px solid #3d6a8f;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  min-height: 44px;
+  min-width: 44px;
   text-decoration: none;
-  border-bottom: 1px dotted #5fa8d3;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-a:hover {
+.passage a:hover {
+  background: linear-gradient(135deg, #2a5a8c 0%, #1a4a6c 100%);
+  border-color: #5fa8d3;
   color: #9dd9f3;
-  text-shadow: 0 0 8px rgba(93, 168, 211, 0.5);
+  box-shadow: 0 4px 16px rgba(93, 168, 211, 0.3);
+  transform: translateY(-1px);
 }
 
+.passage a:focus {
+  outline: 2px solid #5fa8d3;
+  outline-offset: 2px;
+}
+
+.passage a:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   COLLAPSIBLE MEDIA CAROUSEL
+   ═══════════════════════════════════════════════════════════════ */
+.media-carousel {
+  background: rgba(13, 27, 42, 0.8);
+  border: 1px solid #2d4a6f;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.media-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  color: #9dd9f3;
+  font-size: 0.95rem;
+  background: rgba(26, 58, 92, 0.5);
+  border-bottom: 1px solid transparent;
+  transition: background 0.2s;
+  list-style: none;
+}
+
+.media-toggle::-webkit-details-marker { display: none; }
+
+.media-toggle::before {
+  content: '▶';
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+
+.media-carousel[open] .media-toggle::before {
+  transform: rotate(90deg);
+}
+
+.media-toggle:hover {
+  background: rgba(45, 74, 111, 0.6);
+}
+
+.media-carousel[open] .media-toggle {
+  border-bottom-color: #2d4a6f;
+}
+
+.media-carousel-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Side-by-side on larger screens */
+@media (min-width: 600px) {
+  .media-carousel-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .media-item {
+    flex: 1 1 280px;
+    max-width: calc(50% - 0.375rem);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MEDIA ITEMS (Image & Video)
+   ═══════════════════════════════════════════════════════════════ */
+.media-item {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.passage-image,
+.scene-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.scene-video {
+  background: #000;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NPE DASHBOARD
+   ═══════════════════════════════════════════════════════════════ */
 .npe-dashboard {
   background: rgba(26, 39, 68, 0.8);
   border: 1px solid #2d4a6f;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   margin-bottom: 1rem;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 .axis-display {
   margin-top: 0.5rem;
-  font-size: 0.85em;
+  font-size: 0.8em;
   color: #9bb8d3;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   ENDINGS & STATS
+   ═══════════════════════════════════════════════════════════════ */
 .ending {
   text-align: center;
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 1.5rem;
   background: rgba(26, 39, 68, 0.6);
   border-radius: 12px;
 }
@@ -1412,61 +1602,45 @@ em, i {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Scene Video Styles
+   ACCESSIBILITY
    ═══════════════════════════════════════════════════════════════ */
-.scene-video-container {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+/* Reduced motion: hide autoplay indication */
+@media (prefers-reduced-motion: reduce) {
+  .scene-video {
+    opacity: 0.8;
+  }
 }
 
-.scene-video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+  .passage a {
+    border-width: 2px;
+    border-color: #fff;
+  }
 }
 
-/* Optional: Add subtle glow effect to match bioluminescent theme */
-.scene-video-container::after {
-  content: '';
+/* Focus visible for keyboard users */
+.passage a:focus-visible {
+  outline: 3px solid #5fa8d3;
+  outline-offset: 3px;
+}
+
+/* Skip link (add to StoryInterface if desired) */
+.skip-link {
   position: absolute;
-  bottom: 0;
+  top: -100px;
   left: 0;
-  right: 0;
-  height: 60px;
-  background: linear-gradient(transparent, rgba(10, 22, 40, 0.8));
-  pointer-events: none;
+  background: #5fa8d3;
+  color: #0a1628;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   Passage Image Styles
-   ═══════════════════════════════════════════════════════════════ */
-.passage-image-container {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.passage-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-
-/* Add glow effect matching video style */
-.passage-image-container::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background: linear-gradient(transparent, rgba(10, 22, 40, 0.8));
-  pointer-events: none;
+.skip-link:focus {
+  top: 0;
 }
