@@ -1,0 +1,319 @@
+# ═══════════════════════════════════════════════════════════════
+# NPE Story Configuration: MIDNIGHT AT STARLIGHT COVE
+# ═══════════════════════════════════════════════════════════════
+# Cozy Monster Romance | MM Pairing | Kishōtenketsu Structure
+# Based on story-bible/Plot_Overview.md and Character_Profiles.md
+
+story:
+  title: "Midnight at Starlight Cove"
+  author: "Your Name"
+  genre: "cozy_monster_romance"
+  format: "sugarcube-2"
+  structure: "kishotenketsu"  # Ki, Shō, Ten, Ketsu (4-act)
+
+# ─────────────────────────────────────────────────────────────────
+# Tension Axes
+# ─────────────────────────────────────────────────────────────────
+
+axes:
+  - name: belonging
+    label: Belonging
+    start: 0
+    min: 0
+    max: 15
+    description: "Freddy feeling seen, safe, and truly accepted in Starlight Cove"
+
+  - name: trust
+    label: Trust
+    start: 0
+    min: -5
+    max: 15
+    description: "Mutual vulnerability between Freddy and Kai"
+
+  - name: revelation
+    label: Revelation
+    start: 0
+    min: 0
+    max: 10
+    description: "How much of Kai's sea-creature nature is exposed"
+
+  - name: intimacy
+    label: Intimacy
+    start: 0
+    min: 0
+    max: 15
+    description: "Emotional and physical closeness (Heat 0→3)"
+
+  - name: threat
+    label: Threat
+    start: 0
+    min: 0
+    max: 12
+    description: "Danger from Thalos and artifact vulnerability"
+
+  - name: sanctuary
+    label: Sanctuary
+    start: 10
+    min: 0
+    max: 10
+    description: "Stability of tide-pool and Lunar Shell artifact"
+
+# ─────────────────────────────────────────────────────────────────
+# Thresholds
+# ─────────────────────────────────────────────────────────────────
+
+thresholds:
+  # Revelation thresholds
+  - name: FIRST_GLIMPSE
+    axis: revelation
+    value: 2
+    direction: ">="
+    unlocks: "First visual sighting of Kai at boardwalk rock outcrop"
+
+  - name: MONSTER_FORM_SEEN
+    axis: revelation
+    value: 5
+    direction: ">="
+    unlocks: "Freddy sees Kai's sea-form (spire-crest, sucker-glow)"
+
+  - name: FULL_REVEAL
+    axis: revelation
+    value: 8
+    direction: ">="
+    unlocks: "Kai's full nature and history revealed"
+
+  # Intimacy thresholds (Heat levels)
+  - name: HEAT_LEVEL_1
+    axis: intimacy
+    value: 4
+    direction: ">="
+    unlocks: "First meaningful intimate connection"
+
+  - name: HEAT_LEVEL_2
+    axis: intimacy
+    value: 8
+    direction: ">="
+    unlocks: "First full intimate scene"
+
+  - name: HEAT_LEVEL_3
+    axis: intimacy
+    value: 12
+    direction: ">="
+    unlocks: "Major intimate scene (Act 3)"
+
+  # Threat thresholds
+  - name: THALOS_ARRIVES
+    axis: threat
+    value: 6
+    direction: ">="
+    unlocks: "Predator emerges, threatens sanctuary"
+
+  - name: CONFRONTATION
+    axis: threat
+    value: 10
+    direction: ">="
+    unlocks: "Direct confrontation in sea-cave"
+
+  # Sanctuary thresholds
+  - name: FADE_WAVE
+    axis: sanctuary
+    value: 5
+    direction: "<="
+    unlocks: "Tide-pool glow fades, omen of threat"
+
+  - name: SANCTUARY_CRISIS
+    axis: sanctuary
+    value: 3
+    direction: "<="
+    unlocks: "Artifact endangered, must act"
+
+  # Belonging thresholds
+  - name: COMMUNITY_ACCEPTS
+    axis: belonging
+    value: 12
+    direction: ">="
+    unlocks: "Town accepts monster/human couple"
+
+# ─────────────────────────────────────────────────────────────────
+# Velocity Targets (Kishōtenketsu Beats)
+# ─────────────────────────────────────────────────────────────────
+
+velocity_targets:
+  # ═══ KI (Introduction) ═══
+  ki_freddy_arrives:
+    beat: 3
+    chapter: 1
+    description: "Freddy's first late-night shift, looking at tide-pool"
+    axes:
+      belonging: 1
+      sanctuary: 10
+
+  ki_first_sighting:
+    beat: 6
+    chapter: 2
+    description: "First glimpse of Kai at boardwalk rock outcrop"
+    axes:
+      revelation: 2
+      trust: 1
+
+  ki_kai_routine:
+    beat: 9
+    chapter: 3
+    description: "Kai observing tide-pool in silence, guardian role"
+    axes:
+      sanctuary: 10
+      revelation: 3
+
+  # ═══ SHŌ (Development) ═══
+  sho_quiet_night:
+    beat: 12
+    chapter: 5
+    description: "Late-night diner, Kai helps unseen"
+    axes:
+      trust: 4
+      belonging: 4
+
+  sho_moonlit_walk:
+    beat: 18
+    chapter: 7
+    description: "Boardwalk conversation, human and guardian"
+    axes:
+      intimacy: 5
+      trust: 6
+      revelation: 5
+
+  sho_sea_cave:
+    beat: 24
+    chapter: 9
+    description: "Freddy explores sea-cave stairway"
+    axes:
+      revelation: 6
+      intimacy: 7
+      belonging: 7
+
+  # ═══ TEN (Twist) ═══
+  ten_fade_wave:
+    beat: 30
+    chapter: 11
+    description: "Tide-pool glow fades, mysterious tracks"
+    axes:
+      sanctuary: 5
+      threat: 5
+
+  ten_thalos_emerges:
+    beat: 33
+    chapter: 12
+    description: "Confrontation in sea-cave"
+    axes:
+      threat: 9
+      sanctuary: 4
+      trust: 4  # Trust strained
+
+  ten_intimacy_and_threat:
+    beat: 36
+    chapter: 13
+    description: "Major intimate scene followed by threat realization"
+    axes:
+      intimacy: 12
+      threat: 10
+      sanctuary: 3
+
+  # ═══ KETSU (Resolution) ═══
+  ketsu_stand_together:
+    beat: 42
+    chapter: 16
+    description: "Freddy and Kai protect home together"
+    axes:
+      trust: 12
+      belonging: 10
+      threat: 11
+
+  ketsu_thalos_defeated:
+    beat: 45
+    chapter: 17
+    description: "Final confrontation, artifact secured"
+    axes:
+      threat: 2
+      sanctuary: 10
+
+  ketsu_community_scene:
+    beat: 48
+    chapter: 18
+    description: "Diner after battle, boardwalk festival"
+    axes:
+      belonging: 14
+      trust: 14
+      intimacy: 14
+
+  epilogue:
+    beat: 51
+    chapter: 19
+    description: "Tide-pool grotto, avenir scene"
+    axes:
+      sanctuary: 10
+      belonging: 15
+      intimacy: 15
+
+# ─────────────────────────────────────────────────────────────────
+# Characters
+# ─────────────────────────────────────────────────────────────────
+
+characters:
+  - id: freddy
+    name: "Freddy Gray"
+    role: "Human protagonist, diner owner"
+    age: 30
+    visual_dna: "5'11\", lean, warm hazel eyes, small scar left temple, dark hair with sea salt, denim apron over flannel"
+    internal_goal: "Feel seen, safe, and truly accepted"
+    external_goal: "Build successful diner, connect to community"
+    arc: "Emotionally closed → opens heart → anchors Kai and town"
+
+  - id: kai
+    name: "Kai (Tide-Pool Guardian)"
+    role: "Monster love interest, sea-creature hybrid"
+    age: "35-40 apparent"
+    visual_dna: "6'3\", teal shimmer on arms in moonlight, spire-crest ridge in sea-form, bioluminescent sucker-glow, navy jacket, always barefoot"
+    internal_goal: "Allow himself to belong, love, trust"
+    external_goal: "Guard tide-pool, protect Lunar Shell artifact"
+    arc: "Solitary watcher → trusts Freddy → embraces dual nature"
+
+  - id: thalos
+    name: "Thalos"
+    role: "Antagonist, predator-kraken hybrid"
+    visual_dna: "Towering, many arms, dark mantle crest, deep red bioluminescence, ocean-scars"
+    external_goal: "Claim Lunar Shell, dominate sanctuary"
+    arc: "Confident predator → defeated by emotional bond"
+
+  - id: elder
+    name: "Town Elder (Myth-Keeper)"
+    role: "Supporting, mentor"
+    visual_dna: "60s, salt-pepper beard, sea-glass pendant"
+
+  - id: cook
+    name: "Café Cook"
+    role: "Supporting, best friend"
+    visual_dna: "28, spiky blond hair, wave-crest tattoo"
+
+# ─────────────────────────────────────────────────────────────────
+# Setting
+# ─────────────────────────────────────────────────────────────────
+
+setting:
+  location: "Starlight Cove"
+  type: "Cozy seaside town"
+  key_locations:
+    - "Starlight Cove Diner (late-night)"
+    - "Tide-pool sanctuary"
+    - "Boardwalk and rock outcrop"
+    - "Sea-cave stairway"
+    - "Tide-pool grotto"
+
+# ─────────────────────────────────────────────────────────────────
+# Debug Settings
+# ─────────────────────────────────────────────────────────────────
+
+debug:
+  enabled: true
+  show_dashboard: true
+  show_velocity_warnings: true
+  export_on_end: true

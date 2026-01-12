@@ -1,0 +1,16 @@
+:: StoryCaption {"position":"400,25","size":"100,100"}
+<div class="npe-dashboard">
+<strong>Act:</strong> $currentAct | <strong>Beat:</strong> $currentBeat
+
+<div class="axis-display">
+<table style="border: none; border-collapse: collapse; margin: 0; padding: 0; width: 100%;">
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Belonging:''</td><td style="border: none; padding: 0;">$belonging/15</td></tr>
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Trust:''</td><td style="border: none; padding: 0;">$trust/15</td></tr>
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Revelation:''</td><td style="border: none; padding: 0;">$revelation/10</td></tr>
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Intimacy:''</td><td style="border: none; padding: 0;">$intimacy/15</td></tr>
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Threat:''</td><td style="border: none; padding: 0;">$threat/12</td></tr>
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Sanctuary:''</td><td style="border: none; padding: 0;">$sanctuary/10</td></tr>
+</table>
+</div>
+</div>
+

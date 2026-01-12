@@ -1,0 +1,6 @@
+:: StoryBanner
+<<if $sidebarVideo and $sceneVideos[$sidebarVideo]>>\
+<video @src="$videoPath + $sidebarVideo + '.mp4'" class="sidebar-video" autoplay muted loop playsinline controls></video>\
+<<elseif $sidebarImage>>\
+<img @src="$imagePath + $sidebarImage + '.png'" class="sidebar-image" alt="Scene visual">\
+<</if>>

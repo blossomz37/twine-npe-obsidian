@@ -1,0 +1,23 @@
+:: StoryScript [script]
+Config.passages.nobr = true;
+
+// Toggle sidebar video mute state
+window.toggleSidebarVideoMute = function(videoId) {
+  const video = document.getElementById(videoId);
+  const btn = video?.parentElement?.querySelector('.sidebar-mute-btn');
+  
+  if (video && btn) {
+    video.muted = !video.muted;
+    
+    const muteIcon = btn.querySelector('.mute-icon');
+    const unmuteIcon = btn.querySelector('.unmute-icon');
+    
+    if (video.muted) {
+      muteIcon.style.display = 'inline';
+      unmuteIcon.style.display = 'none';
+    } else {
+      muteIcon.style.display = 'none';
+      unmuteIcon.style.display = 'inline';
+    }
+  }
+};

@@ -1,0 +1,5 @@
+:: SceneVideo [widget nobr] {"position":"150,25","size":"100,100"}
+<<widget "scenevideo">><<set $sidebarVideo to $args[0]>><</widget>>
+
+:: SidebarImage [widget nobr]
+<<widget "sidebarimg">><<set $sidebarImage to $args[0]>><</widget>>

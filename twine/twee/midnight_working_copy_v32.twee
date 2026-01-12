@@ -1,0 +1,1791 @@
+:: StoryTitle
+midnight_working_copy_v32
+
+
+:: StoryData
+{
+  "ifid": "B2A4C6D8-E0F2-4A6B-8C0D-2E4F6A8B0C2D",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: StoryInit {"position":"25,25","size":"100,100"}
+/* ═══════════════════════════════════════════════════════════════
+   NPE Tension Axes
+   ═══════════════════════════════════════════════════════════════ */
+<<set $belonging to 0>>
+<<set $trust to 0>>
+<<set $revelation to 0>>
+<<set $intimacy to 0>>
+<<set $threat to 0>>
+<<set $sanctuary to 10>>
+
+/* Beat tracking */
+<<set $currentBeat to 0>>
+<<set $currentAct to "Ki">>
+
+/* Loop attempt tracking */
+<<set $loopAttempts to {}>>
+
+/* Threshold tracking */
+<<set $thresholdsReached to []>>
+
+/* ═══════════════════════════════════════════════════════════════
+   Video Support
+   ═══════════════════════════════════════════════════════════════ */
+/* Map of available scene videos - set to true when video exists */
+<<set $sceneVideos to {
+  "scene_1": true,
+  "scene_2": true,
+  "scene_3": true,
+  "scene_4": true,
+  "scene_5": true,
+  "scene_6": true,
+  "scene_7": true,
+  "scene_8": true,
+  "scene_9": true,
+  "scene_10": true,
+  "scene_11": true,
+  "scene_12": true,
+  "scene_13": true
+}>>
+
+/* Video settings */
+<<set $videosEnabled to true>>
+<<set $videoPath to "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/">>
+
+/* Image settings */
+<<set $imagesEnabled to true>>
+<<set $imagePath to "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/">>
+
+
+:: StoryStylesheet [stylesheet]
+/* ═══════════════════════════════════════════════════════════════
+   MIDNIGHT AT STARLIGHT COVE - Responsive Theme
+   Mobile-first, WCAG 3 compliant, Progressive Reveal
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ─── Color Palette ────────────────────────────────────────── */
+  --color-bg-depth:       #0a1628;
+  --color-text-primary:   #e8f1f8;
+  --color-text-secondary: #9bb8d3;
+  --color-text-highlight: #9dd9f3;
+  
+  /* Accents */
+  --color-accent-blue:    #5fa8d3;
+  --color-btn-border:     #3d6a8f;
+  --color-btn-hover:      #5fa8d3;
+  
+  /* Gradients */
+  --grad-btn-default:     linear-gradient(135deg, #1a3a5c 0%, #0d2944 100%);
+  --grad-btn-hover:       linear-gradient(135deg, #2a5a8c 0%, #1a4a6c 100%);
+  
+  /* ─── Glassmorphism Tokens ─────────────────────────────────── */
+  --glass-surface:        rgba(13, 27, 42, 0.75);
+  --glass-surface-light:  rgba(26, 58, 92, 0.5); 
+  --glass-border:         rgba(95, 168, 211, 0.15);
+  --glass-blur:           blur(12px);
+  --glass-shadow:         0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  
+  /* ─── Typography ───────────────────────────────────────────── */
+  --font-primary:         'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:            'JetBrains Mono', monospace; /* Optional for code/tech bits */
+  --line-height-base:     1.6;
+  
+  /* ─── Spacing & Layout ─────────────────────────────────────── */
+  --radius-sm:            4px;
+  --radius-md:            8px;
+  --radius-lg:            12px;
+  --space-unit:           0.25rem;
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  background: var(--color-bg-depth) url('https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-background-images/bg_starlight_cove_2_1768178832750.png') center center / cover fixed;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  line-height: var(--line-height-base);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased; /* Crisper text for sci-fi feel */
+}
+
+/* Center column only */
+#story {
+  margin-left: 21em !important; /* Clears the default sidebar width */
+  width: auto;
+  max-width: 900px;
+  padding: 0;
+}
+
+#story-title {
+  margin: 0;
+  overflow-wrap: break-word; /* Forces long words/titles to wrap */
+  word-wrap: break-word;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+#passages {
+  max-width: 100%;
+}
+
+/* Main reading gutters */
+.passage {
+  padding-inline: clamp(12px, 4vw, 28px);
+  padding-block: clamp(12px, 3vw, 22px);
+}
+
+/* Prose rhythm */
+.passage p {
+  margin: 0 0 clamp(0.5rem, 1.5vh, 0.75rem) 0;
+  letter-spacing: 0.01em; /* Slight breathing room for Inter */
+}
+.passage p:first-child { margin-top: 0; }
+.passage p:last-child { margin-bottom: 0; }
+
+.passage br {
+  display: block;
+  margin-top: 0.25rem;
+}
+.passage br + br {
+  margin-top: 0.15rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTON-STYLE CHOICES
+   ═══════════════════════════════════════════════════════════════ */
+.passage a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  background: var(--grad-btn-default);
+  border: 1px solid var(--color-btn-border);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  min-height: auto;
+  min-width: 44px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.3;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Snappier easing */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.05); /* Added inner highlight */
+}
+
+.passage a:hover {
+  background: var(--grad-btn-hover);
+  border-color: var(--color-btn-hover);
+  color: var(--color-text-highlight);
+  box-shadow: 0 4px 16px rgba(93, 168, 211, 0.25), inset 0 1px 0 rgba(255,255,255,0.1);
+  transform: translateY(-1px);
+  text-shadow: 0 0 8px rgba(157, 217, 243, 0.4); /* Slight glow on text */
+}
+
+.passage a:focus {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 2px;
+}
+
+.passage a:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NPE DASHBOARD
+   ═══════════════════════════════════════════════════════════════ */
+.npe-dashboard {
+  background: var(--glass-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85em;
+  box-shadow: var(--glass-shadow);
+}
+
+.axis-display {
+  margin-top: 0.5rem;
+  font-size: 0.8em;
+  color: var(--color-text-secondary);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SIDEBAR IMAGE & VIDEO
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Dynamic image at top of sidebar - single image display */
+.sidebar-image {
+  width: 250px !important;
+  height: 250px !important;
+  max-width: 250px !important;
+  max-height: 250px !important;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  box-shadow: var(--glass-shadow);
+  display: block;
+  border: 1px solid var(--glass-border);
+}
+
+/* Container for sidebar video with button overlay */
+.sidebar-media-container {
+  position: relative;
+  width: 250px;
+  margin-bottom: 1rem;
+}
+
+/* Dynamic video at top of sidebar - plays when available */
+.sidebar-video {
+  width: 250px !important;
+  height: 250px !important;
+  max-width: 250px !important;
+  max-height: 250px !important;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: var(--glass-shadow);
+  display: block;
+  border: 1px solid var(--glass-border);
+  background: #000;
+}
+
+/* Mute/unmute button overlay */
+.sidebar-mute-btn {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: var(--glass-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.sidebar-mute-btn:hover {
+  opacity: 1;
+  background: var(--glass-surface-light);
+  transform: scale(1.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ENDINGS & STATS
+   ═══════════════════════════════════════════════════════════════ */
+.ending {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--glass-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+}
+
+.stats {
+  margin-top: 1.5rem;
+  font-size: 0.8em;
+  color: var(--color-text-secondary);
+}
+
+em, i {
+  color: var(--color-text-highlight);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACCESSIBILITY
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scene-video { opacity: 0.8; }
+  .passage a { transition: none; }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --color-bg-depth: #000;
+    --color-text-primary: #fff;
+    --glass-surface: #000;
+    --glass-border: #fff;
+  }
+  .passage a {
+    border-width: 2px;
+    border-color: #fff;
+    background: #000;
+  }
+}
+
+/* Focus visible */
+.passage a:focus-visible {
+  outline: 3px solid var(--color-accent-blue);
+  outline-offset: 3px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--color-accent-blue);
+  color: var(--color-bg-depth);
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+:: StoryBanner
+<<if $sidebarVideo and $sceneVideos[$sidebarVideo]>>\
+<div class="sidebar-media-container">
+<video @id="'sidebar-video-' + $sidebarVideo" @src="$videoPath + $sidebarVideo + '.mp4'" class="sidebar-video" autoplay muted loop playsinline></video>
+<button @onclick="'toggleSidebarVideoMute(\"sidebar-video-' + $sidebarVideo + '\")'" class="sidebar-mute-btn" title="Toggle sound">
+<span class="mute-icon">🔇</span>
+<span class="unmute-icon" style="display: none;">🔊</span>
+</button>
+</div>
+<<elseif $sidebarImage>>\
+<img @src="$imagePath + $sidebarImage + '.png'" class="sidebar-image" alt="Scene visual">\
+<</if>>
+
+:: StoryCaption {"position":"400,25","size":"100,100"}
+<div class="npe-dashboard">
+<strong>Act:</strong> $currentAct | <strong>Beat:</strong> $currentBeat
+
+<div class="axis-display">
+<table style="border: none; border-collapse: collapse; margin: 0; padding: 0; width: 100%;">
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Belonging:''</td><td style="border: none; padding: 0;">$belonging/15</td></tr>
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Trust:''</td><td style="border: none; padding: 0;">$trust/15</td></tr>
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Revelation:''</td><td style="border: none; padding: 0;">$revelation/10</td></tr>
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Intimacy:''</td><td style="border: none; padding: 0;">$intimacy/15</td></tr>
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Threat:''</td><td style="border: none; padding: 0;">$threat/12</td></tr>
+  <tr style="border: none;"><td style="border: none; padding: 0 5px 0 0;">''Sanctuary:''</td><td style="border: none; padding: 0;">$sanctuary/10</td></tr>
+</table>
+</div>
+</div>
+
+
+:: StoryScript [script]
+Config.passages.nobr = true;
+
+// Toggle sidebar video mute state
+window.toggleSidebarVideoMute = function(videoId) {
+  const video = document.getElementById(videoId);
+  const btn = video?.parentElement?.querySelector('.sidebar-mute-btn');
+  
+  if (video && btn) {
+    video.muted = !video.muted;
+    
+    const muteIcon = btn.querySelector('.mute-icon');
+    const unmuteIcon = btn.querySelector('.unmute-icon');
+    
+    if (video.muted) {
+      muteIcon.style.display = 'inline';
+      unmuteIcon.style.display = 'none';
+    } else {
+      muteIcon.style.display = 'none';
+      unmuteIcon.style.display = 'inline';
+    }
+  }
+};
+
+:: SceneVideo [widget nobr] {"position":"150,25","size":"100,100"}
+<<widget "scenevideo">><<set $sidebarVideo to $args[0]>><</widget>>
+
+:: SidebarImage [widget nobr]
+<<widget "sidebarimg">><<set $sidebarImage to $args[0]>><</widget>>
+
+:: Start {"position":"525,25","size":"100,100"}
+<<sidebarimg "01_start">>
+<<set $currentBeat to 1>>
+<<set $currentAct to "Ki">>
+<p>The salt air hits you as you step out of your car.</p>
+<p>Starlight Cove. Your fresh start. Your escape from everything the city burned out of you.</p>
+<p>The diner sits at the edge of the boardwalk, its windows glowing amber against the dark water. Through the glass, you can see the counter you'll be working behind, the stools that will hold strangers who might become neighbors.</p>
+<p>And beyond it all—the tide-pool. Even from here, you swear you see it glow.
+</p>
+<p>[[Enter the diner|Ki Freddy Arrives]]</p>
+
+
+
+:: Ki Freddy Arrives [ki] {"position":"650,25","size":"100,100"}
+<<sidebarimg "02_ki_freddy_arrives">>
+<<scenevideo "scene_1">>
+<<set $currentBeat to 3>>
+<<set $belonging += 1>>
+<p>The bell above the door chimes as you push inside. Salt-heavy air mingles with the smell of coffee grounds and something sweet—cinnamon, maybe, or brown sugar.</p>
+<p>"You must be Freddy."</p>
+<p>The cook is already sliding a mug toward you. Spiky blond hair, a wave-crest tattoo peeking from his sleeve. His smile is easy, welcoming.</p>
+<p>"First late-night shift is always the weirdest," he says. "Town goes quiet after eleven. Just you, the coffee, and—" He gestures toward the window. "—whatever's out there."</p>
+<p>You follow his gaze. The tide-pool glimmers beyond the glass, impossibly bright for this hour. And on the rocks past the boardwalk, you could swear there's a figure. Tall. Still. Watching.</p>
+<<if not $loopAttempts["ki_doubt"]>>
+	<<set $loopAttempts["ki_doubt"] to 0>>
+<</if>>
+<p>[[Step outside to look at the tide-pool|Ki First Sighting]]
+[[Focus on learning the diner routine|Diner Settling]]</p>
+<<if $loopAttempts["ki_doubt"] < 3>>[[This was a mistake—call someone back home|Ki Doubt Loop]]<</if>>
+
+
+
+:: Ki Doubt Loop [ki] {"position":"775,25","size":"100,100"}
+<<sidebarimg "03_ki_doubt_loop">>
+<<set $loopAttempts["ki_doubt"] += 1>>
+<<set $belonging -= 1>>
+
+<<if $loopAttempts["ki_doubt"] == 1>>
+<p>The phone rings twice before you hang up. What would you even say? You're here now. The cook glances over with understanding eyes.</p>
+
+<p>"First nights are the hardest," he says.</p>
+<<elseif $loopAttempts["ki_doubt"] == 2>>
+<p>Your thumb hovers over the call button. The cook slides a cup of coffee toward you. "Give it a chance," he says softly. "Most of us came here running from something."</p>
+
+<p>The tide-pool catches the moonlight. Almost beckoning.</p>
+<<else>>
+<p>You pocket the phone. There's nothing back there for you anymore. The cook nods, like he knows.</p>
+
+<p>"Welcome to Starlight Cove," he says. "For real this time."</p>
+<</if>>
+
+<<if $loopAttempts["ki_doubt"] >= 3>>
+<p>[[Look at the tide-pool|Ki First Sighting]]</p>
+<<else>>
+<p>[[Step outside to look at the tide-pool|Ki First Sighting]]</p>
+<p>[[Focus on learning the diner routine|Diner Settling]]</p>
+<p>[[Try calling again|Ki Doubt Loop]]</p>
+<</if>>
+
+
+
+:: Diner Settling [ki] {"position":"900,25","size":"100,100"}
+<<sidebarimg "04_diner_settling">>
+<<set $belonging += 1>>
+<<set $currentBeat to 4>>
+
+<p>You spend the next hour learning the rhythms of the place. Where the extra napkins are stored. How the ancient espresso machine only works if you thump it twice on the left side. The way the cook—Marcus, you learn—hums old sea shanties while he scrubs the grill.</p>
+
+<p>It's quiet. It's simple. It's exactly what you needed.</p>
+
+<p>But your eyes keep drifting to the window. To the tide-pool's glow. To the empty rocks where that figure stood.</p>
+
+<p>[[Step outside when the shift ends|Ki First Sighting]]</p>
+
+
+
+:: Ki First Sighting [ki] {"position":"1025,25","size":"100,100"}
+<<sidebarimg "05_ki_first_sighting">>
+<<scenevideo "scene_2">>
+<<set $currentBeat to 6>>
+<<set $revelation += 2>>
+<<set $trust += 1>>
+
+<<if $thresholdsReached.indexOf("FIRST_GLIMPSE") == -1>>
+	<<set $thresholdsReached.push("FIRST_GLIMPSE")>>
+<</if>>
+
+<p>The boardwalk creaks under your boots. The tide-pool is brighter than any natural thing should be—blues and greens pulsing like a heartbeat.</p>
+
+<p>And there he is.</p>
+
+<p>On the rock outcrop, a tall figure stands barefoot, watching the water. Dark navy jacket. Hands curled gently at his sides, like he's feeling something you can't see.</p>
+
+<p>The moonlight catches his arms, and for a moment—</p>
+
+<p>You blink. There's a shimmer there. Teal, luminescent. Wrong for human skin.</p>
+
+<p>He turns. Your eyes meet. His are dark, fathomless, patient. He doesn't smile. Doesn't frown. Just... sees you.</p>
+
+<p>Then he turns back to the water and walks toward the tide-pool with a grace that doesn't quite match human joints.</p>
+
+<<if not $loopAttempts["first_sighting"]>>
+	<<set $loopAttempts["first_sighting"] to 0>>
+<</if>>
+
+<p>[[Follow him to the tide-pool|Ki Kai Routine]]</p>
+<p>[[Watch from the boardwalk, let him go|Ki Kai Routine Distant]]</p>
+<<if $loopAttempts["first_sighting"] < 3>>[[Convince yourself it was nothing—go home|First Sighting Denial]]<</if>>
+
+
+
+:: First Sighting Denial [ki] {"position":"1150,25","size":"100,100"}
+<<sidebarimg "06_first_sighting_denial">>
+<<set $loopAttempts["first_sighting"] += 1>>
+
+<<if $loopAttempts["first_sighting"] == 1>>
+<p>You shake your head. Trick of the light. You walk toward your car, but glance back—</p>
+
+<p>He's still there, waiting. The shimmer pulses once.</p>
+<<elseif $loopAttempts["first_sighting"] == 2>>
+<p>Just exhaustion. First week nerves. You turn away, but your feet don't move.</p>
+
+<p>The shimmer pulses again, like a heartbeat. Like an invitation.</p>
+<<else>>
+<p>Your keys are in your hand. But the tide-pool glows brighter, and you realize:</p>
+
+<p>You didn't come here to look away.</p>
+<</if>>
+
+<<if $loopAttempts["first_sighting"] >= 3>>
+<p>[[Approach the tide-pool|Ki Kai Routine]]</p>
+<<else>>
+<p>[[Follow him to the tide-pool|Ki Kai Routine]]</p>
+<p>[[Watch from the boardwalk|Ki Kai Routine Distant]]</p>
+<p>[[Walk to your car|First Sighting Denial]]</p>
+<</if>>
+
+
+
+:: Ki Kai Routine Distant [ki] {"position":"25,150","size":"100,100"}
+<<sidebarimg "07_ki_kai_routine_distant">>
+<<set $trust += 1>>
+<<set $currentBeat to 8>>
+
+<p>You stay on the boardwalk, giving him space. Watching.</p>
+
+<p>He kneels at the edge of the tide-pool, one hand disappearing into the glowing water. His shoulders relax, like coming home. Minutes pass. He doesn't move.</p>
+
+<p>Then, without looking back, he inclines his head. The smallest acknowledgment.</p>
+
+//He knows you're there. He doesn't mind.//
+
+<p>As he slides into the water with impossible smoothness, you could swear you see his outline change—something larger, something other.</p>
+
+<p>[[Return to the diner, thinking|Sho Quiet Night]]</p>
+
+
+
+:: Ki Kai Routine [ki] {"position":"150,150","size":"100,100"}
+<<sidebarimg "08_ki_kai_routine">>
+<<scenevideo "scene_3">>
+<<set $currentBeat to 9>>
+<<set $sanctuary to 10>>
+<<set $revelation += 1>>
+
+<p>You follow at a distance as he approaches the tide-pool.</p>
+
+<p>He kneels at the water's edge, one hand slipping beneath the surface. The glow intensifies around his fingers—responding to him.</p>
+
+<p>You stop ten feet away. Close enough to see the tension leave his shoulders. The way his breathing slows to match the rhythm of the tide.</p>
+
+<p>He speaks without turning. His voice is low, steady, like waves against a breakwater.</p>
+
+<p>"You didn't run."</p>
+
+<p>It's not a question.</p>
+
+<<if not $loopAttempts["kai_confront"]>>
+	<<set $loopAttempts["kai_confront"] to 0>>
+<</if>>
+
+<p>[["Should I have?"|Sho Quiet Night]]</p>
+<p>[[Say nothing—just watch|Sho Quiet Night Watch]]</p>
+<<if $revelation >= 3>>[["Show me what you really are"|First Reveal]]<</if>>
+<<if $loopAttempts["kai_confront"] < 3>>[[Step back—you're not ready for this|Kai Routine Loop]]<</if>>
+
+
+
+:: Kai Routine Loop [ki] {"position":"275,150","size":"100,100"}
+<<sidebarimg "09_kai_routine_loop">>
+<<set $loopAttempts["kai_confront"] += 1>>
+
+<<if $loopAttempts["kai_confront"] == 1>>
+<p>You take a step back. He doesn't move, but something in the air shifts.</p>
+
+<p>"Take your time," he says. "I've waited centuries. A few more minutes won't matter."</p>
+<<elseif $loopAttempts["kai_confront"] == 2>>
+<p>Another step. The tide-pool's glow dims slightly, like disappointment.</p>
+
+<p>"Most people run," he says quietly. "I thought you might be different."</p>
+<<else>>
+<p>You stop retreating. Because he's right. You didn't come here to run.</p>
+
+<p>"I'm still here," you say.</p>
+
+<p>"Yes." And for the first time, something like warmth enters his voice. "You are."</p>
+<</if>>
+
+<<if $loopAttempts["kai_confront"] >= 3>>
+<p>[[Stay and talk|Sho Quiet Night]]</p>
+<<else>>
+<p>[["Should I have run?"|Sho Quiet Night]]</p>
+<p>[[Say nothing—just watch|Sho Quiet Night Watch]]</p>
+<p>[[Step back again|Kai Routine Loop]]</p>
+<</if>>
+
+
+
+:: First Reveal [ki revelation] {"position":"400,150","size":"100,100"}
+<<sidebarimg "10_first_reveal">>
+<<set $revelation += 2>>
+<<set $trust += 2>>
+<<set $intimacy += 1>>
+
+<<if $thresholdsReached.indexOf("MONSTER_FORM_SEEN") == -1>>
+	<<set $thresholdsReached.push("MONSTER_FORM_SEEN")>>
+<</if>>
+
+<p>He turns to face you fully. In the moonlight, the shimmer on his arms intensifies—spreads.</p>
+
+<p>"You're sure?"</p>
+
+<p>You nod.</p>
+
+<p>He closes his eyes. And //changes//.</p>
+
+<p>The transformation is beautiful. Terrifying. His shoulders broaden, a ridge rising along his spine—a spire-crest of something like coral and bone. His arms shift, split, sucker-glow blooming along their length.</p>
+
+<p>When he opens his eyes again, they're the same. Patient. Watching. Waiting for you to run.</p>
+
+<p>You don't.</p>
+
+<p>"Kai," you say. "That's your name, right?"</p>
+
+<p>"Yes." His voice is deeper now, resonant with the tide. "And you're Freddy. The one who doesn't look away."</p>
+
+<p>[[Continue|Sho Quiet Night]]</p>
+
+
+
+:: Sho Quiet Night Watch [sho] {"position":"525,150","size":"100,100"}
+<<sidebarimg "11_sho_quiet_night_watch">>
+<<set $trust += 1>>
+<<set $currentAct to "Shō">>
+<<set $currentBeat to 11>>
+
+<p>You say nothing. Just stand there as he tends to the water.</p>
+
+<p>Eventually, he rises. Turns. Meets your eyes.</p>
+
+<p>"Tomorrow," he says. "Same time. If you want to understand."</p>
+
+<p>Then he's gone—slipping into the water without a splash, his outline blurring into something larger, something with too many limbs.</p>
+
+<p>You stand there for a long time after.</p>
+
+<p>[[Return to the diner|Sho Quiet Night]]</p>
+
+
+
+:: Sho Quiet Night [sho] {"position":"650,150","size":"100,100"}
+<<sidebarimg "12_sho_quiet_night">>
+<<scenevideo "scene_4">>
+<<set $currentAct to "Shō">>
+<<set $currentBeat to 12>>
+<<set $trust += 3>>
+<<set $belonging += 1>>
+
+<p>A week passes.</p>
+
+<p>You work the late shift. You learn the regulars—a handful of insomniacs, a trucker passing through, the elder who drinks sea-glass tea and watches the water like he's waiting for something.</p>
+
+<p>And every night, strange things happen.</p>
+
+<p>A door swings shut just before your fingers would have been caught. A mug slides across the counter to exactly where you're reaching. The coffee pot refills itself when you're not looking.</p>
+
+<p>He's here. Helping. Unseen.</p>
+
+<p>On the seventh night, you brew an extra coffee and leave it on the back step, facing the tide-pool.</p>
+
+<<if not $loopAttempts["quiet_night"]>>
+	<<set $loopAttempts["quiet_night"] to 0>>
+<</if>>
+
+<p>[[Say "thank you" aloud to the empty air|Sho Moonlit Walk]]</p>
+<p>[[Leave the coffee silently—let him come to you|Sho Moonlit Walk Silent]]</p>
+<<if $loopAttempts["quiet_night"] < 3>>[[Pretend you didn't notice|Quiet Night Loop]]<</if>>
+<<if $trust < 2>>[[Call Marcus to stay late with you|Cook Night]]<</if>>
+
+
+
+:: Quiet Night Loop [sho] {"position":"775,150","size":"100,100"}
+<<sidebarimg "13_quiet_night_loop">>
+<<set $loopAttempts["quiet_night"] += 1>>
+
+<<if $loopAttempts["quiet_night"] == 1>>
+<p>You wipe down the counter again. The salt shaker slides another inch toward you.</p>
+
+<p>He's patient.</p>
+<<elseif $loopAttempts["quiet_night"] == 2>>
+<p>You check the locks twice. When you turn, the coffee pot is already on.</p>
+
+<p>He's still here.</p>
+<<else>>
+<p>You stand at the back door. The tide-pool glows.</p>
+
+<p>Okay. Fine.</p>
+
+<p>You set down the coffee.</p>
+<</if>>
+
+<<if $loopAttempts["quiet_night"] >= 3>>
+<p>[[Wait for him|Sho Moonlit Walk Silent]]</p>
+<<else>>
+<p>[[Say "thank you" aloud|Sho Moonlit Walk]]</p>
+<p>[[Leave the coffee silently|Sho Moonlit Walk Silent]]</p>
+<p>[[Keep pretending|Quiet Night Loop]]</p>
+<</if>>
+
+
+
+:: Cook Night [sho] {"position":"900,150","size":"100,100"}
+<<sidebarimg "14_cook_night">>
+<<set $belonging += 1>>
+
+<p>You call Marcus. He shows up twenty minutes later with a six-pack of local beer and a bag of late-night tacos.</p>
+
+<p>"Weird vibes?" he asks, settling onto a stool.</p>
+
+<p>"Something like that."</p>
+
+<p>You don't tell him about the sliding mugs. The doors. The figure at the tide-pool. But he stays until closing anyway, cracking jokes about sea monsters and local legends.</p>
+
+<p>When he leaves, he pauses at the door. "Whatever's out there—it's not bad. Just different. Town's full of different."</p>
+
+<p>[[Consider his words|Sho Moonlit Walk Silent]]</p>
+
+
+
+:: Sho Moonlit Walk [sho] {"position":"1025,150","size":"100,100"}
+<<sidebarimg "15_sho_moonlit_walk">>
+<<scenevideo "scene_5">>
+<<set $currentBeat to 18>>
+<<set $intimacy += 5>>
+<<set $trust += 2>>
+<<set $revelation += 2>>
+
+<<if $thresholdsReached.indexOf("HEAT_LEVEL_1") == -1 and $intimacy >= 4>>
+	<<set $thresholdsReached.push("HEAT_LEVEL_1")>>
+<</if>>
+
+<p>"Thank you," you say to the darkness.</p>
+
+<p>For a long moment, nothing. Then footsteps on the boardwalk—bare feet on weathered wood.</p>
+
+<p>He appears from the shadows. Kai. In human form now, mostly—the teal shimmer still visible on his arms in the moonlight.</p>
+
+<p>"You're welcome."</p>
+
+<p>You walk together. Not touching, but close. The waves keep rhythm with your steps.</p>
+
+<p>"The others are gone," he says eventually. "There used to be more of us. Guardians. But after the breach..."</p>
+
+<p>He trails off. You don't push.</p>
+
+<p>"I stayed," he continues. "Someone has to watch."</p>
+
+<p>"The tide-pool?"</p>
+
+<p>"And what's beneath it."</p>
+
+<p>His hand brushes yours—accidental, or not. Your skin where he touched glows faintly, then fades.</p>
+
+<p>"Sorry," he murmurs. "I forget. Human skin reacts."</p>
+
+<p>[[Ask about the shimmer on his arms|Sho Sea Cave]]</p>
+<p>[[Let the silence speak—walk beside him without questions|Sho Sea Cave Silent]]</p>
+<p>[[Reach for his hand deliberately|Almost Touch]]</p>
+<p>[[Tell him about your own past—the city, the breakdown|Freddy Opens]]</p>
+<<if not $loopAttempts["moonlit_walk"]>><<set $loopAttempts["moonlit_walk"] to 0>><</if>>
+<<if $loopAttempts["moonlit_walk"] < 3>>[[Make an excuse to leave—this is too fast|Moonlit Walk Loop]]<</if>>
+
+
+
+:: Sho Moonlit Walk Silent [sho] {"position":"1150,150","size":"100,100"}
+<<sidebarimg "16_sho_moonlit_walk_silent">>
+<<set $currentBeat to 18>>
+<<set $intimacy += 4>>
+<<set $trust += 2>>
+
+<<if $thresholdsReached.indexOf("HEAT_LEVEL_1") == -1 and $intimacy >= 4>>
+	<<set $thresholdsReached.push("HEAT_LEVEL_1")>>
+<</if>>
+
+<p>You say nothing. Just wait.</p>
+
+<p>The next night, he's there when you step onto the back porch. Sitting on the railing, coffee cup empty beside him.</p>
+
+<p>"You're patient," he says.</p>
+
+<p>"I've got time."</p>
+
+<p>Something shifts in his expression—not quite a smile, but close.</p>
+
+<p>You walk together in silence. The waves keep rhythm with your steps. His hand brushes yours. You don't pull away.</p>
+
+<p>[[Continue walking|Sho Sea Cave Silent]]</p>
+
+
+
+:: Moonlit Walk Loop [sho] {"position":"25,275","size":"100,100"}
+<<sidebarimg "17_moonlit_walk_loop">>
+<<set $loopAttempts["moonlit_walk"] += 1>>
+
+<<if $loopAttempts["moonlit_walk"] == 1>>
+<p>You stammer something about early morning. He nods, but his eyes hold yours.</p>
+
+<p>You don't move.</p>
+<<elseif $loopAttempts["moonlit_walk"] == 2>>
+<p>You turn to go. Two steps. Three.</p>
+
+<p>The tide-pool pulses behind you. You stop.</p>
+<<else>>
+<p>Your feet won't carry you away.</p>
+
+<p>"Tomorrow," he says softly.</p>
+
+<p>You nod. You'll be here.</p>
+<</if>>
+
+<<if $loopAttempts["moonlit_walk"] >= 3>>
+<p>[[Tomorrow comes|Sho Sea Cave Silent]]</p>
+<<else>>
+<p>[[Stay a little longer|Sho Sea Cave Silent]]</p>
+<p>[[Make an excuse|Moonlit Walk Loop]]</p>
+<</if>>
+
+
+
+:: Almost Touch [sho] {"position":"150,275","size":"100,100"}
+<<sidebarimg "18_almost_touch">>
+<<set $intimacy += 2>>
+<<set $trust += 1>>
+
+<p>You reach for his hand deliberately. Your fingers intertwine with his—warm, slightly damp, with a texture that's not quite skin.</p>
+
+<p>He freezes. Looks down at your joined hands. Then at you.</p>
+
+<p>"You're sure?" His voice is rough.</p>
+
+<p>I'm sure.</p>
+
+<p>For a moment, he holds on. Then, gently, he pulls away.</p>
+
+<p>"Not yet," he says. "When you know everything. Then—if you still want to—"
+
+<p>He doesn't finish. But when he walks you back to the diner, he stays closer than before.</p>
+
+<p>[[Continue|Sho Sea Cave]]</p>
+
+
+
+:: Freddy Opens [sho] {"position":"275,275","size":"100,100"}
+<<sidebarimg "19_freddy_opens">>
+<<set $trust += 2>>
+<<set $belonging += 1>>
+
+<p>"I had a breakdown," you hear yourself say. "In the city. Burned out at a job that was eating me alive. Stopped sleeping. Stopped eating right. One day I just... couldn't get out of bed."</p>
+
+<p>He listens without interrupting.</p>
+
+<p>"I came here to start over. To find something simpler. Something real."</p>
+
+<p>"Did you find it?"</p>
+
+<p>You look at him—this impossible creature who guards a glowing tide-pool at midnight.</p>
+
+<p>"I think I'm starting to."</p>
+
+<p>His expression softens. "Then we have something in common. I came here to hide. But I think—" He glances at you. "—I might be finding something else."</p>
+
+<p>[[Continue walking together|Sho Sea Cave]]</p>
+
+
+
+:: Sho Sea Cave [sho] {"position":"400,275","size":"100,100"}
+<<sidebarimg "20_sho_sea_cave">>
+<<scenevideo "scene_6">>
+<<set $currentBeat to 24>>
+<<set $revelation += 1>>
+<<set $intimacy += 2>>
+<<set $belonging += 3>>
+
+<p>"There's something I want you to see," he says.</p>
+
+<p>He leads you past the tide-pool, to a section of rock you'd never noticed—a hidden stairway, worn smooth by centuries of use.</p>
+
+<p>Down you go. Into the earth. Into his world.</p>
+
+<p>The sea-cave walls glow with bioluminescent life—blues and greens and soft purples, pulsing like breathing. The air is salt and something sweeter. Ancient.</p>
+
+<p>At the bottom, a passage opens into darkness. Kai stops.</p>
+
+<p>"This is where I live," he says quietly. "Where I guard. But you're not ready—and neither am I."</p>
+
+<p>He doesn't have to say: //not yet.//</p>
+
+<p>You climb back up together. Side by side. His hand finds yours on the stairs.</p>
+
+<<if not $loopAttempts["sea_cave"]>><<set $loopAttempts["sea_cave"] to 0>><</if>>
+
+<p>[[Accept his pace—you'll wait until he's ready|Ten Fade Wave]]</p>
+<p>[[Ask what he's guarding—press gently|Artifact Hint]]</p>
+<p>[[Take his hand as you climb the stairs|Stair Intimacy]]</p>
+<<if $loopAttempts["sea_cave"] < 3>>[[Try to go deeper without permission|Sea Cave Loop]]<</if>>
+<<if $revelation >= 5>>[["Show me what you really are"|Full Form Reveal]]<</if>>
+
+
+
+:: Sho Sea Cave Silent [sho] {"position":"525,275","size":"100,100"}
+<<sidebarimg "21_sho_sea_cave_silent">>
+<<set $currentBeat to 24>>
+<<set $revelation += 1>>
+<<set $intimacy += 2>>
+<<set $belonging += 2>>
+
+<p>The nights blur together. Walks on the boardwalk. Silences that say more than words. His world opening to you, piece by piece.</p>
+
+<p>One night, he takes you to the sea-cave stairway.</p>
+
+<p>"Not all the way down," he says. "Not yet. But I want you to see."</p>
+
+<p>The walls glow. Your breath catches.</p>
+
+<p>[[Continue|Ten Fade Wave]]</p>
+
+
+
+:: Sea Cave Loop [sho] {"position":"650,275","size":"100,100"}
+<<sidebarimg "22_sea_cave_loop">>
+<<set $loopAttempts["sea_cave"] += 1>>
+
+<<if $loopAttempts["sea_cave"] == 1>>
+<p>You take a step past him. He doesn't stop you—but his shoulders tense.</p>
+
+<p>You hesitate.</p>
+<<elseif $loopAttempts["sea_cave"] == 2>>
+<p>Another step. The cave grows colder. Kai's eyes flash with something old.</p>
+
+<p>"Please," he says.</p>
+<<else>>
+<p>You stop. Whatever's down there, it's not yours to take.</p>
+
+<p>"I'll wait," you say.</p>
+
+<p>He exhales. Something in him relaxes.</p>
+
+<p>"Thank you."</p>
+<</if>>
+
+<<if $loopAttempts["sea_cave"] >= 3>>
+<p>[[Climb back up together|Ten Fade Wave]]</p>
+<<else>>
+<p>[[Accept his pace|Ten Fade Wave]]</p>
+<p>[[Push deeper|Sea Cave Loop]]</p>
+<</if>>
+
+
+
+:: Artifact Hint [sho] {"position":"775,275","size":"100,100"}
+<<sidebarimg "23_artifact_hint">>
+<<set $revelation += 2>>
+
+<p>"What are you guarding?" you ask softly.</p>
+
+<p>He's quiet for a long moment.</p>
+
+<p>"A shell," he says finally. "The Lunar Shell. It keeps this place... stable. Connected. Without it, the sanctuary would fade. And I would fade with it."</p>
+
+<p>"Connected to what?"</p>
+
+<p>He looks at you, decision in his eyes.</p>
+
+<p>"To everywhere the tide touches. To the old world beneath this one. To—" He hesitates. "—things that would rather not stay connected."</p>
+
+<p>"Like what attacked your people?"</p>
+
+<p>His jaw tightens. "Yes. Like him."</p>
+
+<p>[[Continue|Ten Fade Wave]]</p>
+
+
+
+:: Stair Intimacy [sho] {"position":"900,275","size":"100,100"}
+<<sidebarimg "24_stair_intimacy">>
+<<set $intimacy += 2>>
+
+<p>You take his hand as you climb. His fingers tighten around yours—not quite human grip, but gentle.</p>
+
+<p>Neither of you speaks. The bioluminescent walls pulse around you like a second heartbeat.</p>
+
+<p>At the top, in the open air, he doesn't let go.</p>
+
+<p>"Tomorrow?" you ask.</p>
+
+<p>"Tomorrow."</p>
+
+<p>[[Continue|Ten Fade Wave]]</p>
+
+
+
+:: Full Form Reveal [sho revelation] {"position":"1025,275","size":"100,100"}
+<<sidebarimg "25_full_form_reveal">>
+<<set $revelation += 3>>
+<<set $intimacy += 2>>
+<<set $trust += 2>>
+
+<<if $thresholdsReached.indexOf("FULL_REVEAL") == -1>>
+	<<set $thresholdsReached.push("FULL_REVEAL")>>
+<</if>>
+
+<p>"Show me," you say. "All of it."</p>
+
+<p>He turns to face you in the glowing dark of the cave.</p>
+
+<p>"It's not beautiful. By human standards."</p>
+
+<p>"Show me anyway."</p>
+
+<p>The transformation unfolds like a flower blooming in reverse—into something older, stranger. The spire-crest rises from his spine. His arms split and multiply, sucker-glow pulsing along their length. His eyes go deeper, darker, lit from within.</p>
+
+<p>When it's done, he towers above you. Alien. Ancient.</p>
+
+//Beautiful.//
+
+<p>"Still here?" His voice echoes strangely now.</p>
+
+<p>"Still here."</p>
+
+<p>He makes a sound that might be a laugh.</p>
+
+<p>[[Continue|Ten Fade Wave]]</p>
+
+
+
+:: Ten Fade Wave [ten] {"position":"1150,275","size":"100,100"}
+<<sidebarimg "26_ten_fade_wave">>
+<<scenevideo "scene_7">>
+<<set $currentAct to "Ten">>
+<<set $currentBeat to 30>>
+<<set $sanctuary -= 5>>
+<<set $threat += 5>>
+
+<<if $thresholdsReached.indexOf("FADE_WAVE") == -1>>
+	<<set $thresholdsReached.push("FADE_WAVE")>>
+<</if>>
+
+<p>Something is wrong.</p>
+
+<p>You feel it before you see it—a wrongness in the air. The tide-pool's glow is dimmer than you've ever seen it. Flickering. Sick.</p>
+
+<p>Kai's already at the water's edge when you arrive, hands submerged, face taut with concentration.</p>
+
+<p>"The Shell," he says without turning. "Something's draining it."</p>
+
+<p>Then you see them: tracks on the rocks. Too large. Too many limbs. Gouges in the stone that look like claw-marks.</p>
+
+<p>Kai goes very still.</p>
+
+<p>"He found me."</p>
+
+<<if not $loopAttempts["fade_wave"]>><<set $loopAttempts["fade_wave"] to 0>><</if>>
+
+<p>[[Go to him—whatever's coming, you face it together|Ten Thalos Emerges]]</p>
+<p>[[Ask who found him|Ten Thalos Emerges]]</p>
+<<if $loopAttempts["fade_wave"] < 3>>[[Strengthen the wards first—delay the confrontation|Fade Wave Loop]]<</if>>
+<<if $trust >= 8>>[[Wait—he'll tell you when he's ready|Freddy Finds Kai]]<</if>>
+
+
+
+:: Fade Wave Loop [ten] {"position":"25,400","size":"100,100"}
+<<sidebarimg "27_fade_wave_loop">>
+<<set $loopAttempts["fade_wave"] += 1>>
+
+<<if $loopAttempts["fade_wave"] == 1>>
+<p>Kai presses power into the wards. They flicker brighter, then fade.</p>
+
+<p>"The Shell is too weak," he murmurs.</p>
+<<elseif $loopAttempts["fade_wave"] == 2>>
+<p>He tries again. The tide-pool dims further.</p>
+
+<p>Whatever is coming, it's not stopping for wards.</p>
+<<else>>
+<p>The glow gutters out completely. In the darkness, you hear it:</p>
+
+<p>Waves breaking //wrong//.</p>
+
+<p>"He's here," Kai whispers.</p>
+<</if>>
+
+<<if $loopAttempts["fade_wave"] >= 3>>
+<p>[[Face it together|Ten Thalos Emerges]]</p>
+<<else>>
+<p>[[Try the wards again|Fade Wave Loop]]</p>
+<p>[[Face it now|Ten Thalos Emerges]]</p>
+<</if>>
+
+
+
+:: Freddy Finds Kai [ten] {"position":"150,400","size":"100,100"}
+<<sidebarimg "28_freddy_finds_kai">>
+<<set $trust += 2>>
+<<set $intimacy += 1>>
+
+<p>You don't go to him. You wait.</p>
+
+<p>But he looks up anyway. Sees you standing there. And something in his face—terror, hope, desperation—cracks open.</p>
+
+<p>"You came."</p>
+
+<p>"You knew I would."</p>
+
+<p>He reaches for you. You take his hand.</p>
+
+<p>"Together?" he asks.</p>
+
+<p>"Together."</p>
+
+<p>[[Face what's coming|Ten Thalos Emerges]]</p>
+
+
+
+:: Ten Thalos Emerges [ten] {"position":"275,400","size":"100,100"}
+<<sidebarimg "29_ten_thalos_emerges">>
+<<scenevideo "scene_8">>
+<<set $currentBeat to 33>>
+<<set $threat += 4>>
+<<set $sanctuary -= 1>>
+<<set $trust -= 2>>
+<<set $revelation += 3>>
+
+<<if $thresholdsReached.indexOf("THALOS_ARRIVES") == -1>>
+	<<set $thresholdsReached.push("THALOS_ARRIVES")>>
+<</if>>
+
+<p>The water churns.</p>
+
+<p>Something vast rises from the deep—arms first, a dozen of them, dark against the moonlight. Then the mantle, the crest, the eyes that glow deep red like dying stars.</p>
+
+<p>Thalos.</p>
+
+<p>"Little guardian." The voice is like waves crushing against rock. "You've grown soft. Found yourself a pet."</p>
+
+<p>Kai transforms. It happens in an instant—spire-crest blazing, limbs splitting, bioluminescence flaring to life. He puts himself between you and the predator.</p>
+
+<p>"Run," he says. "If you want to. I won't blame you."</p>
+
+<p>But you see it now. All of it. What he is. What he's fighting for.</p>
+
+<<if not $loopAttempts["thalos_emerges"]>><<set $loopAttempts["thalos_emerges"] to 0>><</if>>
+
+<p>[[Stay. No matter what he looks like, he's still Kai.|Ten Intimacy And Threat]]</p>
+<p>[[Shout a distraction—draw Thalos's attention|Freddy Bait]]</p>
+<p>[[Run to get help from the town|Town Warning]]</p>
+<<if $loopAttempts["thalos_emerges"] < 3>>[[Freeze—you can't process what you're seeing|Thalos Loop]]<</if>>
+<p>[[Run and don't look back|Freddy Abandons]]</p>
+
+
+
+:: Thalos Loop [ten] {"position":"400,400","size":"100,100"}
+<<sidebarimg "30_thalos_loop">>
+<<set $loopAttempts["thalos_emerges"] += 1>>
+
+<<if $loopAttempts["thalos_emerges"] == 1>>
+<p>Your legs won't move. Kai glances back.</p>
+
+<p>"Freddy. Go or stay. But choose."</p>
+<<elseif $loopAttempts["thalos_emerges"] == 2>>
+<p>Thalos laughs, the sound like drowning. Kai steps between you and the predator.</p>
+
+//Choose.//
+<<else>>
+<p>Kai's hand—human-shaped, trembling—reaches back toward you.</p>
+
+<p>You take it.</p>
+<</if>>
+
+<<if $loopAttempts["thalos_emerges"] >= 3>>
+<p>[[Stand with him|Ten Intimacy And Threat]]</p>
+<<else>>
+<p>[[Stay|Ten Intimacy And Threat]]</p>
+<p>[[Keep freezing|Thalos Loop]]</p>
+<p>[[Run|Freddy Abandons]]</p>
+<</if>>
+
+
+
+:: Freddy Abandons [ten ending] {"position":"525,400","size":"100,100"}
+<<sidebarimg "31_freddy_abandons">>
+<<set $trust -= 10>>
+<<set $belonging -= 5>>
+
+<p>You run.</p>
+
+<p>You don't stop until you're in your car, then the highway. Starlight Cove shrinks in your mirror.</p>
+
+<p>You never learn what happened to Kai. Whether he won. Whether he survived.</p>
+
+<p>Some nights, you swear you see a shimmer in tide-pools far from any coast. A glow that might be beckoning.</p>
+
+<p>But you never stop to look.</p>
+
+//THE END - Bad Ending//
+
+<p>[[Start Over|Start]]</p>
+
+
+
+:: Freddy Bait [ten] {"position":"650,400","size":"100,100"}
+<<sidebarimg "32_freddy_bait">>
+<<set $threat += 1>>
+<<set $trust += 2>>
+
+<p>"HEY!" Your voice cracks across the water. "OVER HERE!"</p>
+
+<p>Thalos's attention snaps to you. Those red eyes narrow.</p>
+
+<p>"Brave little pet."</p>
+
+<p>He lunges—and Kai intercepts, tentacles clashing with tentacles, bioluminescence flaring like lightning.</p>
+
+<p>"Get to the Shell!" Kai shouts. "Protect it!"</p>
+
+<p>[[Run to the tide-pool|Ten Intimacy And Threat]]</p>
+
+
+
+:: Town Warning [ten] {"position":"775,400","size":"100,100"}
+<<sidebarimg "33_town_warning">>
+<<set $belonging += 2>>
+
+<p>You run—not away, but toward the town. Toward help.</p>
+
+<p>The elder is the first to answer your pounding. He takes one look at your face and nods.</p>
+
+<p>"Finally," he says. "I wondered when he'd show."</p>
+
+<p>By the time you return to the tide-pool with torches and fishing spears and a group of sleepless townsfolk, the battle is already raging.</p>
+
+<p>[[Join the fight|Ketsu Stand Together]]</p>
+
+
+
+:: Ten Intimacy And Threat [ten] {"position":"900,400","size":"100,100"}
+<<sidebarimg "34_ten_intimacy_and_threat">>
+<<scenevideo "scene_9">>
+<<set $currentBeat to 36>>
+<<set $intimacy += 5>>
+<<set $threat += 1>>
+<<set $sanctuary -= 1>>
+
+<<if $thresholdsReached.indexOf("HEAT_LEVEL_3") == -1 and $intimacy >= 12>>
+	<<set $thresholdsReached.push("HEAT_LEVEL_3")>>
+<</if>>
+
+<<if $thresholdsReached.indexOf("SANCTUARY_CRISIS") == -1 and $sanctuary <= 3>>
+	<<set $thresholdsReached.push("SANCTUARY_CRISIS")>>
+<</if>>
+
+<<if $thresholdsReached.indexOf("CONFRONTATION") == -1 and $threat >= 10>>
+	<<set $thresholdsReached.push("CONFRONTATION")>>
+<</if>>
+
+<p>The battle drives Thalos back—temporarily. He retreats into the deep, wounded, promising return.</p>
+
+<p>Kai leads you to the inner grotto. The place he's never shown anyone.</p>
+
+<p>He's bleeding—whatever monsters bleed. You tear strips from your shirt and try to tend the wounds. His skin is strange under your hands, but warm. Alive.</p>
+
+<p>"The Shell," he gasps. He points to the center of the grotto, where something pulses with weak, flickering light.</p>
+
+<p>The Lunar Shell. Beautiful. Dying.</p>
+
+<p>"If he takes this, the cove dies. And I die with it."</p>
+
+<p>You pull him close. His arms—too many, then two again—wrap around you.</p>
+
+<p>What happens next is tender. Desperate. Real.</p>
+
+//Afterward://
+
+<p>You're still holding each other when his eyes snap open.</p>
+
+<p>"He's coming back," Kai whispers. "Now."</p>
+
+<<if not $loopAttempts["intimacy_threat"]>><<set $loopAttempts["intimacy_threat"] to 0>><</if>>
+
+<p>[[We face him together. Now.|Ketsu Stand Together]]</p>
+<p>[[Hide the Shell—we can't let him find it|Hide Shell]]</p>
+<p>[[There has to be another way. Talk to him.|Negotiate Thalos]]</p>
+<<if $loopAttempts["intimacy_threat"] < 3>>[[Stay here. Protect each other. Let the town fend for itself.|Intimacy Threat Loop]]<</if>>
+<<if $intimacy >= 12 and $trust >= 10>>[["Bond with the Shell together"|Dual Bond]]<</if>>
+
+
+
+:: Intimacy Threat Loop [ten] {"position":"1025,400","size":"100,100"}
+<<sidebarimg "35_intimacy_threat_loop">>
+<<set $loopAttempts["intimacy_threat"] += 1>>
+
+<<if $loopAttempts["intimacy_threat"] == 1>>
+<p>Kai holds you closer.</p>
+
+<p>"The diner. Marcus. The elder." He doesn't have to finish.</p>
+<<elseif $loopAttempts["intimacy_threat"] == 2>>
+<p>The Shell flickers. Somewhere above, glass breaks.</p>
+
+//The diner.//
+<<else>>
+<p>"I can't lose you," you say.</p>
+
+<p>"You won't," he answers. "But we have to go. Now."</p>
+<</if>>
+
+<<if $loopAttempts["intimacy_threat"] >= 3>>
+<p>[[Go|Ketsu Stand Together]]</p>
+<<else>>
+<p>[[Face him together|Ketsu Stand Together]]</p>
+<p>[[Stay|Intimacy Threat Loop]]</p>
+<</if>>
+
+
+
+:: Hide Shell [ten] {"position":"1150,400","size":"100,100"}
+<<sidebarimg "36_hide_shell">>
+<<set $sanctuary += 1>>
+
+<p>"Help me move it," Kai says.</p>
+
+<p>Together, you lift the Lunar Shell—lighter than it looks, warm in your hands—and carry it deeper into the grotto. Into a hidden alcove even Kai rarely visits.</p>
+
+<p>"He'll sense it's gone," Kai warns. "But it buys us time."</p>
+
+<p>[[Return to face Thalos|Ketsu Stand Together]]</p>
+
+
+
+:: Negotiate Thalos [ten] {"position":"25,525","size":"100,100"}
+<<sidebarimg "37_negotiate_thalos">>
+<<set $trust += 1>>
+
+<p>"What if we talked to him? Made a deal?"</p>
+
+<p>Kai looks at you like you've grown a second head. Then, slowly, something shifts in his expression.</p>
+
+<p>"Thalos doesn't bargain. But—" He hesitates. "—maybe a human would be unexpected enough to buy us time."</p>
+
+<p>[[Try to negotiate|Ketsu Stand Together]]</p>
+
+
+
+:: Dual Bond [ten] {"position":"150,525","size":"100,100"}
+<<sidebarimg "38_dual_bond">>
+<<set $sanctuary += 3>>
+<<set $revelation += 2>>
+
+<p>"There's one way to make it stronger," Kai says quietly. "But you'd be bound. To this place. To me. Forever."</p>
+
+<p>He doesn't say: //to the monster world. To everything I am.//</p>
+
+<p>"Do it."</p>
+
+<p>His eyes widen. "Freddy—"</p>
+
+<p>"Do it."</p>
+
+<p>What happens next changes everything.</p>
+
+<p>[[Face Thalos as one|Ketsu Stand Together]]</p>
+
+
+
+:: Ketsu Stand Together [ketsu] {"position":"275,525","size":"100,100"}
+<<sidebarimg "39_ketsu_stand_together">>
+<<scenevideo "scene_10">>
+<<set $currentAct to "Ketsu">>
+<<set $currentBeat to 42>>
+<<set $trust += 2>>
+<<set $belonging += 3>>
+<<set $threat += 2>>
+
+<p>The storm breaks as you emerge from the grotto.</p>
+
+<p>Thalos is waiting. Larger now, angrier. His tentacles churn the water, and his voice shakes the rocks.</p>
+
+<p>"You think a human makes you strong, little guardian? You're weaker than ever."</p>
+
+<p>Kai transforms. Fully. Terrifyingly. Beautiful.</p>
+
+<p>"I fight for home."</p>
+
+<p>The battle is violent, desperate, real. Kai moves like liquid death, tentacles against tentacles, bioluminescence clashing in the dark.</p>
+
+<p>And you—</p>
+
+<<if not $loopAttempts["stand_together"]>><<set $loopAttempts["stand_together"] to 0>><</if>>
+
+<p>[[Pour everything into the Shell—strengthen it|Ketsu Thalos Defeated]]</p>
+<p>[[Call out to Kai—distract Thalos at the critical moment|Ketsu Thalos Defeated Distract]]</p>
+<p>[[Find a weapon—anything to help|Freddy Fights]]</p>
+<<if $loopAttempts["stand_together"] < 3>>[[Freeze—the violence is too much|Stand Together Loop]]<</if>>
+<<if $belonging >= 10>>[[Rally the town—they're already coming|Town Arrives]]<</if>>
+
+
+
+:: Stand Together Loop [ketsu] {"position":"400,525","size":"100,100"}
+<<sidebarimg "40_stand_together_loop">>
+<<set $loopAttempts["stand_together"] += 1>>
+
+<<if $loopAttempts["stand_together"] == 1>>
+<p>Blood in the water—Kai's. He's still fighting.</p>
+
+//Move.//
+<<elseif $loopAttempts["stand_together"] == 2>>
+<p>Thalos wraps a limb around Kai's throat.</p>
+
+<p>Your legs unlock.</p>
+<<else>>
+<p>You scream his name. The Shell blazes.</p>
+
+<p>And you run—toward them, not away.</p>
+<</if>>
+
+<<if $loopAttempts["stand_together"] >= 3>>
+<p>[[Help him|Ketsu Thalos Defeated]]</p>
+<<else>>
+<p>[[Help the Shell|Ketsu Thalos Defeated]]</p>
+<p>[[Keep watching|Stand Together Loop]]</p>
+<</if>>
+
+
+
+:: Town Arrives [ketsu] {"position":"525,525","size":"100,100"}
+<<sidebarimg "41_town_arrives">>
+<<set $belonging += 3>>
+
+<p>Torches on the boardwalk.</p>
+
+<p>Marcus. The elder. The teen with the sketchbook. Others you barely know—fishermen, insomniacs, the woman who runs the bait shop.</p>
+
+<p>They came.</p>
+
+<p>"Told you," Marcus shouts over the wind. "Different isn't bad!"</p>
+
+<p>Thalos's attention fractures. Too many targets. Too much resistance.</p>
+
+<p>And in that moment, Kai strikes.</p>
+
+<p>[[The tide turns|Ketsu Thalos Defeated]]</p>
+
+
+
+:: Freddy Fights [ketsu] {"position":"650,525","size":"100,100"}
+<<sidebarimg "42_freddy_fights">>
+<<set $belonging += 1>>
+
+<p>You grab a piece of driftwood. It's not much, but it's something.</p>
+
+<p>When Thalos lunges for Kai's back, you swing. Hard. The wood splinters against ancient hide, but it's enough—enough to distract. Enough for Kai to counter.</p>
+
+<p>"Freddy!"</p>
+
+<p>"I know! I know, it was stupid!"</p>
+
+<p>But you're both still alive.</p>
+
+<p>[[Continue fighting|Ketsu Thalos Defeated]]</p>
+
+
+
+:: Ketsu Thalos Defeated Distract [ketsu] {"position":"775,525","size":"100,100"}
+<<sidebarimg "43_ketsu_thalos_defeated_distract">>
+<<set $trust += 1>>
+
+<p>"KAI! NOW!"</p>
+
+<p>Your voice cuts through the storm. Thalos turns, just for a second.</p>
+
+<p>A second is all Kai needs.</p>
+
+<p>[[The finishing blow|Ketsu Thalos Defeated]]</p>
+
+
+
+:: Ketsu Thalos Defeated [ketsu] {"position":"900,525","size":"100,100"}
+<<sidebarimg "44_ketsu_thalos_defeated">>
+<<scenevideo "scene_11">>
+<<set $currentBeat to 45>>
+<<set $threat -= 8>>
+<<set $sanctuary += 7>>
+<<set $trust += 2>>
+<<set $intimacy += 2>>
+
+<p>The Shell blazes.</p>
+
+<p>Not with Kai's power alone—with something else. Something warmer. The bond between you, feeding into the light.</p>
+
+<p>Thalos feels it. You can see it in his eyes—recognition. Fear.</p>
+
+<p>"This isn't over, little guardian." His voice is smaller now. Weaker.</p>
+
+<p>"Yes," Kai says. "It is."</p>
+
+<p>Thalos sinks into the depths. Retreating. Beaten.</p>
+
+<p>Kai's transformation recedes. He stumbles, and you catch him.</p>
+
+<p>"You stayed," he whispers.</p>
+
+<p>"Of course I stayed."</p>
+
+<p>You hold him in the shallow water as the storm breaks overhead and the Lunar Shell pulses steady and bright.</p>
+
+<p>[[Rest together|Ketsu Community Scene]]</p>
+<p>[[Check the Shell first—make sure it's safe|Shell Restored]]</p>
+<p>[[Kiss him—words can wait|Post Battle Kiss]]</p>
+<p>[["What did he mean, this isn't over?"|Sequel Hook]]</p>
+
+
+
+:: Shell Restored [ketsu] {"position":"1025,525","size":"100,100"}
+<<sidebarimg "45_shell_restored">>
+<<set $sanctuary += 1>>
+
+<p>The Lunar Shell pulses with renewed strength. Not just blue now—amber threads run through the light. Something new.</p>
+
+<p>"It recognized you," Kai says softly. "When you touched it during the fight. It knows you now."</p>
+
+<p>"What does that mean?"</p>
+
+<p>He almost smiles. "It means the sanctuary has two guardians now."</p>
+
+<p>[[Continue|Ketsu Community Scene]]</p>
+
+
+
+:: Post Battle Kiss [ketsu] {"position":"1150,525","size":"100,100"}
+<<sidebarimg "46_post_battle_kiss">>
+<<set $intimacy += 2>>
+
+<p>You don't say anything. You just pull him close and kiss him—salt water and strange warmth and something that tastes like home.</p>
+
+<p>He makes a sound against your mouth. Surprise, maybe. Or relief.</p>
+
+<p>When you finally pull apart, he's looking at you like you're the most miraculous thing in the ocean.</p>
+
+<p>"Stay?" he asks.</p>
+
+<p>"Forever."</p>
+
+<p>[[Continue|Ketsu Community Scene]]</p>
+
+
+
+:: Sequel Hook [ketsu] {"position":"25,650","size":"100,100"}
+<<sidebarimg "47_sequel_hook">>
+<<set $revelation += 1>>
+
+<p>"There are others like him," Kai admits. "Out in the deep. Some worse. Some—" He hesitates. "—different."</p>
+
+<p>"Will they come?"</p>
+
+<p>"Eventually. But not tonight." He pulls you closer. "Tonight, we rest."</p>
+
+//But you can't help wondering what else is out there.//
+
+<p>[[Continue|Ketsu Community Scene]]</p>
+
+
+
+:: Ketsu Community Scene [ketsu] {"position":"150,650","size":"100,100"}
+<<sidebarimg "48_ketsu_community">>
+<<scenevideo "scene_12">>
+<<set $currentBeat to 48>>
+<<set $belonging += 4>>
+<<set $trust += 2>>
+<<set $intimacy += 2>>
+
+<<if $thresholdsReached.indexOf("COMMUNITY_ACCEPTS") == -1 and $belonging >= 12>>
+	<<set $thresholdsReached.push("COMMUNITY_ACCEPTS")>>
+<</if>>
+
+<p>The day after the storm, the diner is packed.</p>
+
+<p>Everyone checking on everyone. Stories being shared—exaggerated, probably, but not by much. The elder raises a glass of sea-glass tea.</p>
+
+<p>"To guardians," he says. "All kinds."</p>
+
+<p>Eyes turn to Kai, sitting in the back booth, still looking like he might bolt. Then Marcus slides an extra piece of pie in front of him.</p>
+
+<p>"On the house. For, you know. Saving the town."</p>
+
+<p>The teen with the sketchbook shows you a drawing: the tide-pool, two figures standing in the glow.</p>
+
+//Home,// you think. //This is home.//
+
+<p>That evening, the boardwalk festival lights twinkle against the dark water. You and Kai walk together through the crowd. People nod. Smile. Accept.</p>
+
+<p>[[Take Kai's hand in front of everyone|Epilogue]]</p>
+<p>[[Dance with him at the festival|Festival Dance]]</p>
+<p>[[Thank the elder—ask what he knows|Elder Truth]]</p>
+<p>[[Just watch—soak in belonging for once|Epilogue Watch]]</p>
+
+
+
+:: Elder Truth [ketsu] {"position":"400,650","size":"100,100"}
+<<sidebarimg "49_ketsu_community_silent">>
+<<set $revelation += 2>>
+
+<p>The elder finds you by the railing, watching the water.</p>
+
+<p>"I've known about them for fifty years," he says without preamble. "The guardians. Kai's not the first I've met. Won't be the last."</p>
+
+<p>"Why didn't you tell anyone?"</p>
+
+<p>"Some things are better left to legend." He smiles. "Until the right person comes along to make them real."</p>
+
+<p>[[Continue|Epilogue]]</p>
+
+
+
+:: Epilogue Watch [ketsu] {"position":"525,650","size":"100,100"}
+<<sidebarimg "49_ketsu_community_silent">>
+
+<p>You find a quiet spot on the boardwalk. Kai sits beside you, close enough to touch.</p>
+
+<p>For once, you don't need words. You just watch the festival lights reflect on the water, the Shell's glow pulsing in the distance.</p>
+
+//Belonging,// you realize. //This is what it feels like.//
+
+<p>[[Continue|Epilogue]]</p>
+
+
+
+:: Festival Dance [ketsu] {"position":"275,650","size":"100,100"}
+<<sidebarimg "49_ketsu_community_silent">>
+<<set $intimacy += 1>>
+
+<p>"Dance with me," you say.</p>
+
+<p>"I don't—" He hesitates. "I don't know how. Not... human dances."</p>
+
+<p>"Neither do I."</p>
+
+<p>You pull him into the crowd anyway. What follows is graceless, awkward, and absolutely perfect.</p>
+
+<p>[[Continue|Epilogue]]</p>
+
+
+
+:: Epilogue [epilogue] {"position":"650,650","size":"100,100"}
+<<sidebarimg "50_ketsu_epilogue">>
+<<scenevideo "scene_13">>
+<<set $currentBeat to 51>>
+<<set $sanctuary to 10>>
+<<set $belonging to 15>>
+<<set $intimacy to 15>>
+
+//A season later.//
+
+<p>The grotto is different now. Brighter. Warmer. Alive in ways it wasn't before.</p>
+
+<p>Kai leads you down the stairs—your stairs now, worn smooth by your footsteps as much as his. The Shell pulses at the center of the chamber, threads of amber woven through the blue.</p>
+
+<p>"It changed when you touched it," he says. "It recognized you."</p>
+
+<p>He pulls you down beside the water, and for a long time you just sit there together. Listening to the tide. Watching the light.</p>
+
+<p>"What happens next?" you ask.</p>
+
+<p>He's quiet for a moment.</p>
+
+<p>[["This is home now. Ours."|Ending HEA]]</p>
+<p>[["What happens next?"|Ending HFN]]</p>
+<p>[["Show me everything. The whole ocean."|Ending Adventure]]</p>
+
+
+
+:: Ending HEA [ending] {"position":"775,650","size":"100,100"}
+<<sidebarimg "51_ending_human">>
+
+<p>"This," Kai says. "Just this. For as long as we want."</p>
+
+//The tide rises and falls. The diner opens at midnight. The guardian watches the water, and his human watches him.//
+
+//Starlight Cove has two protectors now. And in the grotto, the Shell glows with the color of love found and kept.//
+
+<div class="ending">
+<p>''THE END''</p>
+//Happily Ever After//
+
+<div class="stats">
+<p>''Final Axes:''</p>
+<p>Belonging: $belonging | Trust: $trust | Revelation: $revelation</p>
+<p>Intimacy: $intimacy | Threat: $threat | Sanctuary: $sanctuary</p>
+
+<p>''Thresholds Reached:'' $thresholdsReached.length</p>
+</div>
+</div>
+
+
+
+:: Ending HFN [ending] {"position":"900,650","size":"100,100"}
+<<sidebarimg "52_ending_merged">>
+
+<p>Kai's smile holds secrets—but the good kind now.</p>
+
+<p>"We'll see," he says. "There's always more to discover."</p>
+
+<p>The Shell pulses. Out in the deep, something stirs. But tonight, the tide is quiet.</p>
+
+<p>Tonight, you rest.</p>
+
+//Whatever comes, you'll face it together.//
+
+<div class="ending">
+<p>''THE END''</p>
+//Happy For Now//
+
+<div class="stats">
+<p>''Final Axes:''</p>
+<p>Belonging: $belonging | Trust: $trust | Revelation: $revelation</p>
+<p>Intimacy: $intimacy | Threat: $threat | Sanctuary: $sanctuary</p>
+
+<p>''Thresholds Reached:'' $thresholdsReached.length</p>
+</div>
+</div>
+
+
+
+:: Ending Adventure [ending] {"position":"1025,650","size":"100,100"}
+<<sidebarimg "53_ending_monster">>
+
+<p>Kai laughs—and for the first time, he looks truly //free//.</p>
+
+<p>"Everything," he promises.</p>
+
+<p>He takes your hand. Together, you slip into the water.</p>
+
+<p>The grotto fades behind you. Ahead: the deep, the unknown, the creatures waiting to meet the guardian's human.</p>
+
+//The adventure is just beginning.//
+
+<div class="ending">
+<p>''THE END''</p>
+//...or is it?//
+
+<div class="stats">
+<p>''Final Axes:''</p>
+<p>Belonging: $belonging | Trust: $trust | Revelation: $revelation</p>
+<p>Intimacy: $intimacy | Threat: $threat | Sanctuary: $sanctuary</p>
+
+<p>''Thresholds Reached:'' $thresholdsReached.length</p>
+</div>
+</div>
+
+
+

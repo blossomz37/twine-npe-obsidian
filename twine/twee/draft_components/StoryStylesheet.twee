@@ -1,0 +1,260 @@
+:: StoryStylesheet [stylesheet]
+/* ═══════════════════════════════════════════════════════════════
+   MIDNIGHT AT STARLIGHT COVE - Responsive Theme
+   Mobile-first, WCAG 3 compliant, Progressive Reveal
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ─── Color Palette ────────────────────────────────────────── */
+  --color-bg-depth:       #0a1628;
+  --color-text-primary:   #e8f1f8;
+  --color-text-secondary: #9bb8d3;
+  --color-text-highlight: #9dd9f3;
+  
+  /* Accents */
+  --color-accent-blue:    #5fa8d3;
+  --color-btn-border:     #3d6a8f;
+  --color-btn-hover:      #5fa8d3;
+  
+  /* Gradients */
+  --grad-btn-default:     linear-gradient(135deg, #1a3a5c 0%, #0d2944 100%);
+  --grad-btn-hover:       linear-gradient(135deg, #2a5a8c 0%, #1a4a6c 100%);
+  
+  /* ─── Glassmorphism Tokens ─────────────────────────────────── */
+  --glass-surface:        rgba(13, 27, 42, 0.75);
+  --glass-surface-light:  rgba(26, 58, 92, 0.5); 
+  --glass-border:         rgba(95, 168, 211, 0.15);
+  --glass-blur:           blur(12px);
+  --glass-shadow:         0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  
+  /* ─── Typography ───────────────────────────────────────────── */
+  --font-primary:         'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:            'JetBrains Mono', monospace; /* Optional for code/tech bits */
+  --line-height-base:     1.6;
+  
+  /* ─── Spacing & Layout ─────────────────────────────────────── */
+  --radius-sm:            4px;
+  --radius-md:            8px;
+  --radius-lg:            12px;
+  --space-unit:           0.25rem;
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  background: var(--color-bg-depth) url('https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-background-images/bg_starlight_cove_2_1768178832750.png') center center / cover fixed;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  line-height: var(--line-height-base);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased; /* Crisper text for sci-fi feel */
+}
+
+/* Center column only */
+#story {
+  margin-left: 21em !important; /* Clears the default sidebar width */
+  width: auto;
+  max-width: 900px;
+  padding: 0;
+}
+
+#story-title {
+  margin: 0;
+  overflow-wrap: break-word; /* Forces long words/titles to wrap */
+  word-wrap: break-word;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+#passages {
+  max-width: 100%;
+}
+
+/* Main reading gutters */
+.passage {
+  padding-inline: clamp(12px, 4vw, 28px);
+  padding-block: clamp(12px, 3vw, 22px);
+}
+
+/* Prose rhythm */
+.passage p {
+  margin: 0 0 clamp(0.5rem, 1.5vh, 0.75rem) 0;
+  letter-spacing: 0.01em; /* Slight breathing room for Inter */
+}
+.passage p:first-child { margin-top: 0; }
+.passage p:last-child { margin-bottom: 0; }
+
+.passage br {
+  display: block;
+  margin-top: 0.25rem;
+}
+.passage br + br {
+  margin-top: 0.15rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTON-STYLE CHOICES
+   ═══════════════════════════════════════════════════════════════ */
+.passage a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  background: var(--grad-btn-default);
+  border: 1px solid var(--color-btn-border);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  min-height: auto;
+  min-width: 44px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.3;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Snappier easing */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.05); /* Added inner highlight */
+}
+
+.passage a:hover {
+  background: var(--grad-btn-hover);
+  border-color: var(--color-btn-hover);
+  color: var(--color-text-highlight);
+  box-shadow: 0 4px 16px rgba(93, 168, 211, 0.25), inset 0 1px 0 rgba(255,255,255,0.1);
+  transform: translateY(-1px);
+  text-shadow: 0 0 8px rgba(157, 217, 243, 0.4); /* Slight glow on text */
+}
+
+.passage a:focus {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 2px;
+}
+
+.passage a:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NPE DASHBOARD
+   ═══════════════════════════════════════════════════════════════ */
+.npe-dashboard {
+  background: var(--glass-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85em;
+  box-shadow: var(--glass-shadow);
+}
+
+.axis-display {
+  margin-top: 0.5rem;
+  font-size: 0.8em;
+  color: var(--color-text-secondary);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SIDEBAR IMAGE & VIDEO
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Dynamic image at top of sidebar - single image display */
+.sidebar-image {
+  width: 250px !important;
+  height: 250px !important;
+  max-width: 250px !important;
+  max-height: 250px !important;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  box-shadow: var(--glass-shadow);
+  display: block;
+  border: 1px solid var(--glass-border);
+}
+
+/* Dynamic video at top of sidebar - plays when available */
+.sidebar-video {
+  width: 250px !important;
+  height: 250px !important;
+  max-width: 250px !important;
+  max-height: 250px !important;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  box-shadow: var(--glass-shadow);
+  display: block;
+  border: 1px solid var(--glass-border);
+  background: #000;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ENDINGS & STATS
+   ═══════════════════════════════════════════════════════════════ */
+.ending {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--glass-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+}
+
+.stats {
+  margin-top: 1.5rem;
+  font-size: 0.8em;
+  color: var(--color-text-secondary);
+}
+
+em, i {
+  color: var(--color-text-highlight);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACCESSIBILITY
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scene-video { opacity: 0.8; }
+  .passage a { transition: none; }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --color-bg-depth: #000;
+    --color-text-primary: #fff;
+    --glass-surface: #000;
+    --glass-border: #fff;
+  }
+  .passage a {
+    border-width: 2px;
+    border-color: #fff;
+    background: #000;
+  }
+}
+
+/* Focus visible */
+.passage a:focus-visible {
+  outline: 3px solid var(--color-accent-blue);
+  outline-offset: 3px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--color-accent-blue);
+  color: var(--color-bg-depth);
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 0;
+}

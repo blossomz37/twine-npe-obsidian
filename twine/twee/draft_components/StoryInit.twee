@@ -1,0 +1,49 @@
+:: StoryInit {"position":"25,25","size":"100,100"}
+/* ═══════════════════════════════════════════════════════════════
+   NPE Tension Axes
+   ═══════════════════════════════════════════════════════════════ */
+<<set $belonging to 0>>
+<<set $trust to 0>>
+<<set $revelation to 0>>
+<<set $intimacy to 0>>
+<<set $threat to 0>>
+<<set $sanctuary to 10>>
+
+/* Beat tracking */
+<<set $currentBeat to 0>>
+<<set $currentAct to "Ki">>
+
+/* Loop attempt tracking */
+<<set $loopAttempts to {}>>
+
+/* Threshold tracking */
+<<set $thresholdsReached to []>>
+
+/* ═══════════════════════════════════════════════════════════════
+   Video Support
+   ═══════════════════════════════════════════════════════════════ */
+/* Map of available scene videos - set to true when video exists */
+<<set $sceneVideos to {
+  "scene_1": true,
+  "scene_2": true,
+  "scene_3": true,
+  "scene_4": true,
+  "scene_5": true,
+  "scene_6": true,
+  "scene_7": true,
+  "scene_8": true,
+  "scene_9": true,
+  "scene_10": true,
+  "scene_11": true,
+  "scene_12": true,
+  "scene_13": true
+}>>
+
+/* Video settings */
+<<set $videosEnabled to true>>
+<<set $videoPath to "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/">>
+
+/* Image settings */
+<<set $imagesEnabled to true>>
+<<set $imagePath to "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/">>
+
