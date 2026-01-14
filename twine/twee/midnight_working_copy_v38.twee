@@ -165,6 +165,8 @@ midnight_working_copy_v36
 </div>
 </div>
 
+<p>❤️ [[Media Gallery]] ❤️ </p>
+
 
 
 
@@ -190,9 +192,7 @@ midnight_working_copy_v36
 </div>
 </div>
 
-❤️
-[[Media Gallery]]
-❤️
+<p>❤️ [[Media Gallery]] ❤️ </p>
 
 
 
@@ -222,6 +222,8 @@ midnight_working_copy_v36
 <p>''Thresholds Reached:'' $thresholdsReached.length</p>
 </div>
 </div>
+
+<p>❤️ [[Media Gallery]] ❤️ </p>
 
 
 
@@ -1007,7 +1009,7 @@ midnight_working_copy_v36
 
 
 :: SceneVideo [widget nobr] {"position":"840,120","size":"100,100"}
-<<widget "scenevideo">><<set $sidebarVideo to $args[0]>><</widget>>
+<<widget "scenevideo">><<set $sidebarVideo to $args[0]>><<set $sidebarImage to "">><</widget>>
 
 
 
@@ -1260,7 +1262,7 @@ midnight_working_copy_v36
 
 
 :: SidebarImage [widget nobr] {"position":"1200,120","size":"100,100"}
-<<widget "sidebarimg">><<set $sidebarImage to $args[0]>><</widget>>
+<<widget "sidebarimg">><<set $sidebarImage to $args[0]>><<set $sidebarVideo to "">><</widget>>
 
 
 
