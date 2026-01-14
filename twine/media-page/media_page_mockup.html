@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Media Carousel Mockup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg-0: #05080f;
+        --bg-1: #0b1320;
+        --bg-2: #111f31;
+        --ink-0: #e9f2ff;
+        --ink-1: #b9c7d9;
+        --accent-1: #2fd0a5;
+        --accent-2: #f6b46a;
+        --accent-3: #2f7bff;
+        --glass: rgba(10, 18, 30, 0.65);
+        --glass-strong: rgba(10, 18, 30, 0.85);
+        --border: rgba(120, 160, 200, 0.2);
+        --shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+        --radius-lg: 24px;
+        --radius-md: 16px;
+        --radius-sm: 10px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Space Grotesk", system-ui, sans-serif;
+        color: var(--ink-0);
+        background:
+          radial-gradient(circle at 15% 20%, rgba(47, 123, 255, 0.18), transparent 45%),
+          radial-gradient(circle at 85% 15%, rgba(47, 208, 165, 0.12), transparent 35%),
+          radial-gradient(circle at 10% 85%, rgba(246, 180, 106, 0.15), transparent 40%),
+          linear-gradient(160deg, var(--bg-0) 10%, var(--bg-1) 40%, var(--bg-2) 100%);
+        background-attachment: fixed;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          radial-gradient(2px 2px at 12% 20%, rgba(255, 255, 255, 0.4) 0, transparent 60%),
+          radial-gradient(1px 1px at 80% 30%, rgba(255, 255, 255, 0.35) 0, transparent 60%),
+          radial-gradient(1px 1px at 60% 70%, rgba(255, 255, 255, 0.3) 0, transparent 60%),
+          radial-gradient(1px 1px at 30% 80%, rgba(255, 255, 255, 0.2) 0, transparent 60%);
+        opacity: 0.45;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 12% 8% auto auto;
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(47, 123, 255, 0.2), transparent 65%);
+        filter: blur(10px);
+        opacity: 0.8;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .page {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 48px 20px 72px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
+        gap: 28px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 0.75rem;
+        color: var(--accent-2);
+        margin: 0 0 12px;
+      }
+
+      h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.6rem, 4vw, 4.2rem);
+        margin: 0 0 12px;
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--ink-1);
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .hero-card {
+        background: var(--glass);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 20px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px);
+      }
+
+      .legend {
+        display: grid;
+        gap: 12px;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        color: var(--ink-1);
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .dot.image {
+        background: var(--accent-1);
+      }
+
+      .dot.video {
+        background: var(--accent-3);
+      }
+
+      .dot.order {
+        background: var(--accent-2);
+      }
+
+      .carousel {
+        background: var(--glass);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 20px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px);
+      }
+
+      .stage-shell {
+        position: relative;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        border: 1px solid rgba(120, 160, 200, 0.25);
+        background: rgba(5, 10, 18, 0.75);
+      }
+
+      .stage {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+      }
+
+      #stageMedia {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .stage-media {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+      }
+
+      .stage-media.is-active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .stage img,
+      .stage video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .stage-image {
+        transform-origin: 50% 50%;
+        transform: scale(1);
+        object-position: 50% 50%;
+        animation: imageZoomUp 12s ease-in-out infinite alternate;
+        will-change: transform;
+      }
+
+      .stage-overlay {
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        background: var(--glass-strong);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 12px 16px;
+        display: grid;
+        gap: 6px;
+        min-width: 220px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #0b1c1e;
+        background: var(--accent-1);
+        padding: 4px 10px;
+        border-radius: 999px;
+        width: fit-content;
+      }
+
+      .stage-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .stage-meta {
+        font-size: 0.85rem;
+        color: var(--ink-1);
+      }
+
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 16px;
+      }
+
+      .control-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .btn {
+        border: 1px solid rgba(120, 160, 200, 0.4);
+        background: rgba(6, 14, 28, 0.8);
+        color: var(--ink-0);
+        padding: 10px 14px;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: transform 0.2s ease, border 0.2s ease, background 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+        border-color: rgba(47, 208, 165, 0.6);
+        background: rgba(12, 24, 40, 0.9);
+      }
+
+      .select {
+        background: rgba(6, 14, 28, 0.8);
+        color: var(--ink-0);
+        border: 1px solid rgba(120, 160, 200, 0.4);
+        border-radius: 999px;
+        padding: 10px 36px 10px 14px;
+        font-size: 0.9rem;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23b9c7d9' stroke-width='1.6' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 12px) 50%;
+        background-size: 12px 8px;
+      }
+
+      .toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        color: var(--ink-1);
+      }
+
+      .toggle input {
+        appearance: none;
+        width: 46px;
+        height: 24px;
+        border-radius: 999px;
+        background: rgba(120, 160, 200, 0.3);
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        transition: background 0.2s ease;
+      }
+
+      .toggle input::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--ink-0);
+        transition: transform 0.2s ease;
+      }
+
+      .toggle input:checked {
+        background: rgba(47, 208, 165, 0.8);
+      }
+
+      .toggle input:checked::after {
+        transform: translateX(20px);
+      }
+
+      .progress {
+        margin-top: 12px;
+        background: rgba(120, 160, 200, 0.2);
+        height: 4px;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+
+      .progress span {
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+        width: 0;
+        transition: width 0.3s ease;
+      }
+
+      .thumb-section {
+        margin-top: 24px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .thumb-title {
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-1);
+      }
+
+      .thumb-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 12px;
+      }
+
+      .thumb {
+        border: 1px solid rgba(120, 160, 200, 0.25);
+        border-radius: 14px;
+        overflow: hidden;
+        background: rgba(6, 12, 22, 0.85);
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.2s ease, border 0.2s ease;
+        padding: 0;
+        text-align: left;
+        font-family: inherit;
+      }
+
+      .thumb:hover {
+        transform: translateY(-2px);
+        border-color: rgba(47, 208, 165, 0.5);
+      }
+
+      .thumb.is-active {
+        border-color: rgba(246, 180, 106, 0.8);
+        box-shadow: 0 0 0 1px rgba(246, 180, 106, 0.4);
+      }
+
+      .thumb img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        aspect-ratio: 4 / 3;
+      }
+
+      .thumb.video {
+        display: grid;
+        place-items: center;
+        aspect-ratio: 4 / 3;
+        background: linear-gradient(140deg, rgba(47, 123, 255, 0.4), rgba(6, 18, 40, 0.9));
+        color: var(--ink-0);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .thumb-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 6px 8px;
+        font-size: 0.7rem;
+        background: linear-gradient(180deg, rgba(5, 10, 18, 0), rgba(5, 10, 18, 0.85));
+        color: var(--ink-0);
+      }
+
+      .thumb-type {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: rgba(6, 12, 22, 0.85);
+        border: 1px solid rgba(120, 160, 200, 0.35);
+        border-radius: 999px;
+        font-size: 0.65rem;
+        padding: 2px 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .fade-up {
+        animation: rise 0.6s ease forwards;
+      }
+
+      .thumb {
+        opacity: 0;
+        animation: thumbIn 0.5s ease forwards;
+        animation-delay: var(--delay, 0ms);
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes thumbIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @keyframes imageZoomUp {
+        from {
+          transform: scale(1);
+          object-position: 50% 50%;
+        }
+        to {
+          transform: scale(1.12);
+          object-position: 50% 0%;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .controls {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *:not(.stage-image) {
+          animation-duration: 0s !important;
+          transition-duration: 0s !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero fade-up">
+        <div>
+          <p class="eyebrow">Midnight at Starlight Cove</p>
+          <h1>Media Carousel Mockup</h1>
+          <p class="subtitle">Images and videos are ordered by their numeric prefix. PNG comes first, MP4 follows for the same scene number.</p>
+        </div>
+        <div class="hero-card">
+          <div class="legend">
+            <div class="legend-item"><span class="dot order"></span>Order: 01, 02, 03 and so on</div>
+            <div class="legend-item"><span class="dot image"></span>Images: 01_start.png</div>
+            <div class="legend-item"><span class="dot video"></span>Videos: scene_1.mp4</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="carousel fade-up">
+        <div class="stage-shell">
+          <div class="stage" id="stage">
+            <div id="stageMedia"></div>
+            <div class="stage-overlay">
+              <div class="badge" id="stageBadge">Scene 01</div>
+              <div class="stage-title" id="stageTitle">Start</div>
+              <div class="stage-meta" id="stageMeta">PNG | 1 / 1</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="control-group">
+            <button class="btn" id="prevBtn" type="button">Prev</button>
+            <button class="btn" id="nextBtn" type="button">Next</button>
+            <select class="select" id="jumpSelect"></select>
+          </div>
+          <label class="toggle">
+            <input id="autoplayToggle" type="checkbox" />
+            Auto-play
+          </label>
+        </div>
+
+        <div class="progress"><span id="progressBar"></span></div>
+
+        <div class="thumb-section">
+          <div class="thumb-title">Thumbnail Rows</div>
+          <div class="thumb-grid" id="thumbGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const IMAGE_BASE = "../web/images/";
+      const VIDEO_BASE = "../web/videos/";
+
+      const imageFiles = [
+  "01_start.png",
+  "02_ki_freddy_arrives.png",
+  "03_ki_doubt_loop.png",
+  "04_diner_settling.png",
+  "05_ki_first_sighting.png",
+  "06_first_sighting_denial.png",
+  "07_ki_kai_routine_distant.png",
+  "08_ki_kai_routine.png",
+  "09_kai_routine_loop.png",
+  "10_first_reveal.png",
+  "11_sho_quiet_night_watch.png",
+  "12_sho_quiet_night.png",
+  "13_quiet_night_loop.png",
+  "14_cook_night.png",
+  "15_sho_moonlit_walk.png",
+  "16_sho_moonlit_walk_silent.png",
+  "17_moonlit_walk_loop.png",
+  "18_almost_touch.png",
+  "19_freddy_opens.png",
+  "20_sho_sea_cave.png",
+  "21_sho_sea_cave_silent.png",
+  "22_sea_cave_loop.png",
+  "23_artifact_hint.png",
+  "24_stair_intimacy.png",
+  "25_full_form_reveal.png",
+  "26_ten_fade_wave.png",
+  "27_fade_wave_loop.png",
+  "28_freddy_finds_kai.png",
+  "29_ten_thalos_emerges.png",
+  "30_thalos_loop.png",
+  "31_freddy_abandons.png",
+  "32_freddy_bait.png",
+  "33_town_warning.png",
+  "34_ten_intimacy_and_threat.png",
+  "35_intimacy_threat_loop.png",
+  "36_hide_shell.png",
+  "37_negotiate_thalos.png",
+  "38_dual_bond.png",
+  "39_ketsu_stand_together.png",
+  "40_stand_together_loop.png",
+  "41_town_arrives.png",
+  "42_freddy_fights.png",
+  "43_ketsu_thalos_defeated_distract.png",
+  "44_ketsu_thalos_defeated.png",
+  "45_shell_restored.png",
+  "46_post_battle_kiss.png",
+  "47_sequel_hook.png",
+  "48_ketsu_community.png",
+  "49_ketsu_community_silent.png",
+  "50_ketsu_epilogue.png",
+  "51_ending_human.png",
+  "52_ending_merged.png",
+  "53_ending_monster.png",
+  "54_ending_best.png",
+  "55_ending_best_alt.png"
+];
+      const videoFiles = [
+  "scene_1.mp4",
+  "scene_10.mp4",
+  "scene_11.mp4",
+  "scene_12.mp4",
+  "scene_13.mp4",
+  "scene_2.mp4",
+  "scene_3.mp4",
+  "scene_4.mp4",
+  "scene_5.mp4",
+  "scene_6.mp4",
+  "scene_7.mp4",
+  "scene_8.mp4",
+  "scene_9.mp4"
+];
+
+      const pad = (value) => String(value).padStart(2, "0");
+
+      const toTitle = (name) =>
+        name
+          .replace(/\.(png|jpg|jpeg|gif|webp)$/i, "")
+          .replace(/^[0-9]+_/, "")
+          .replace(/_/g, " ")
+          .replace(/\b\w/g, (match) => match.toUpperCase());
+
+      const parseImage = (filename) => {
+        const [numberPart] = filename.split("_");
+        const number = Number.parseInt(numberPart, 10);
+        return {
+          number,
+          type: "image",
+          filename,
+          src: `${IMAGE_BASE}${filename}`,
+          title: toTitle(filename),
+          sceneLabel: `Scene ${pad(number)}`,
+        };
+      };
+
+      const parseVideo = (filename) => {
+        const match = filename.match(/scene_(\d+)/);
+        const number = match ? Number.parseInt(match[1], 10) : 0;
+        return {
+          number,
+          type: "video",
+          filename,
+          src: `${VIDEO_BASE}${filename}`,
+          title: `Scene ${pad(number)} Video`,
+          sceneLabel: `Scene ${pad(number)}`,
+        };
+      };
+
+      const buildMediaItems = () => {
+        const groups = new Map();
+
+        imageFiles.forEach((file) => {
+          const item = parseImage(file);
+          if (!groups.has(item.number)) groups.set(item.number, { images: [], video: null });
+          groups.get(item.number).images.push(item);
+        });
+
+        videoFiles.forEach((file) => {
+          const item = parseVideo(file);
+          if (!groups.has(item.number)) groups.set(item.number, { images: [], video: null });
+          groups.get(item.number).video = item;
+        });
+
+        const orderedNumbers = Array.from(groups.keys()).sort((a, b) => a - b);
+        const result = [];
+
+        orderedNumbers.forEach((number) => {
+          const group = groups.get(number);
+          const images = group.images.sort((a, b) => a.filename.localeCompare(b.filename));
+          images.forEach((image) => result.push(image));
+          if (group.video) result.push(group.video);
+        });
+
+        return result;
+      };
+
+      const mediaItems = buildMediaItems();
+      let currentIndex = 0;
+      let autoplayTimer = null;
+      let transitionTimer = null;
+      const FADE_DURATION = 500;
+
+      const stageMedia = document.getElementById("stageMedia");
+      const stageBadge = document.getElementById("stageBadge");
+      const stageTitle = document.getElementById("stageTitle");
+      const stageMeta = document.getElementById("stageMeta");
+      const progressBar = document.getElementById("progressBar");
+      const jumpSelect = document.getElementById("jumpSelect");
+      const thumbGrid = document.getElementById("thumbGrid");
+      const autoplayToggle = document.getElementById("autoplayToggle");
+
+      const renderSlide = (index) => {
+        const item = mediaItems[index];
+        if (!item) return;
+
+        currentIndex = index;
+        const activeItems = stageMedia.querySelectorAll(".stage-media.is-active");
+        activeItems.forEach((el) => {
+          el.classList.remove("is-active");
+          el.classList.add("is-exiting");
+          if (el.tagName === "VIDEO") {
+            el.pause();
+          }
+        });
+
+        let mediaEl;
+        if (item.type === "image") {
+          mediaEl = document.createElement("img");
+          mediaEl.src = item.src;
+          mediaEl.alt = item.title;
+          mediaEl.className = "stage-media stage-image";
+        } else {
+          mediaEl = document.createElement("video");
+          mediaEl.src = item.src;
+          mediaEl.controls = true;
+          mediaEl.loop = true;
+          mediaEl.muted = true;
+          mediaEl.playsInline = true;
+          mediaEl.autoplay = true;
+          mediaEl.preload = "metadata";
+          mediaEl.className = "stage-media";
+        }
+
+        stageMedia.appendChild(mediaEl);
+        requestAnimationFrame(() => {
+          mediaEl.classList.add("is-active");
+        });
+
+        stageBadge.textContent = item.sceneLabel;
+        stageTitle.textContent = item.title;
+        stageMeta.textContent = `${item.type.toUpperCase()} | ${index + 1} / ${mediaItems.length}`;
+        progressBar.style.width = `${((index + 1) / mediaItems.length) * 100}%`;
+
+        jumpSelect.value = String(index);
+        updateThumbs();
+
+        window.clearTimeout(transitionTimer);
+        transitionTimer = window.setTimeout(() => {
+          stageMedia.querySelectorAll(".stage-media.is-exiting").forEach((el) => el.remove());
+        }, FADE_DURATION);
+      };
+
+      const updateThumbs = () => {
+        const active = thumbGrid.querySelector(".is-active");
+        if (active) active.classList.remove("is-active");
+        const newActive = thumbGrid.querySelector(`[data-index="${currentIndex}"]`);
+        if (newActive) newActive.classList.add("is-active");
+      };
+
+      const buildThumbs = () => {
+        thumbGrid.innerHTML = "";
+        mediaItems.forEach((item, index) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = `thumb ${item.type}`;
+          button.dataset.index = String(index);
+          button.style.setProperty("--delay", `${index * 12}ms`);
+
+          if (item.type === "image") {
+            const img = document.createElement("img");
+            img.src = item.src;
+            img.alt = item.title;
+            img.loading = "lazy";
+            button.appendChild(img);
+          } else {
+            const label = document.createElement("div");
+            label.textContent = "MP4";
+            button.appendChild(label);
+          }
+
+          const type = document.createElement("div");
+          type.className = "thumb-type";
+          type.textContent = item.type === "image" ? "PNG" : "MP4";
+          button.appendChild(type);
+
+          const text = document.createElement("div");
+          text.className = "thumb-label";
+          text.textContent = `${item.sceneLabel} - ${item.title}`;
+          button.appendChild(text);
+
+          button.addEventListener("click", () => renderSlide(index));
+          thumbGrid.appendChild(button);
+        });
+      };
+
+      const buildSelect = () => {
+        jumpSelect.innerHTML = "";
+        mediaItems.forEach((item, index) => {
+          const option = document.createElement("option");
+          option.value = String(index);
+          option.textContent = `${item.sceneLabel} - ${item.type.toUpperCase()} - ${item.title}`;
+          jumpSelect.appendChild(option);
+        });
+      };
+
+      const nextSlide = () => {
+        const nextIndex = (currentIndex + 1) % mediaItems.length;
+        renderSlide(nextIndex);
+      };
+
+      const prevSlide = () => {
+        const prevIndex = (currentIndex - 1 + mediaItems.length) % mediaItems.length;
+        renderSlide(prevIndex);
+      };
+
+      const startAutoplay = () => {
+        clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(nextSlide, 6000);
+      };
+
+      const stopAutoplay = () => {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      };
+
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        nextSlide();
+        if (autoplayToggle.checked) startAutoplay();
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        prevSlide();
+        if (autoplayToggle.checked) startAutoplay();
+      });
+
+      jumpSelect.addEventListener("change", (event) => {
+        renderSlide(Number(event.target.value));
+        if (autoplayToggle.checked) startAutoplay();
+      });
+
+      autoplayToggle.addEventListener("change", (event) => {
+        if (event.target.checked) {
+          startAutoplay();
+        } else {
+          stopAutoplay();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight") nextSlide();
+        if (event.key === "ArrowLeft") prevSlide();
+      });
+
+      buildSelect();
+      buildThumbs();
+      renderSlide(0);
+    </script>
+  </body>
+</html>

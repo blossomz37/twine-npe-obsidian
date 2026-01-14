@@ -1,0 +1,559 @@
+{
+  "source_file": "midnight_working_copy_v35.twee",
+  "base_urls": {
+    "videos": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/",
+    "images": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/"
+  },
+  "templates": [
+    {
+      "type": "video_src",
+      "template": "$videoPath + $sidebarVideo + '.mp4'",
+      "line": 1165
+    },
+    {
+      "type": "image_src",
+      "template": "$imagePath + $sidebarImage + '.png'",
+      "line": 1167
+    }
+  ],
+  "videos": [
+    {
+      "name": "scene_13",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_13.mp4",
+      "lines": [
+        205
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_12",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_12.mp4",
+      "lines": [
+        545
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_10",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_10.mp4",
+      "lines": [
+        579
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_11",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_11.mp4",
+      "lines": [
+        611
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_2",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_2.mp4",
+      "lines": [
+        687
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_1",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_1.mp4",
+      "lines": [
+        721
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_3",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_3.mp4",
+      "lines": [
+        739
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_5",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_5.mp4",
+      "lines": [
+        937
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_4",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_4.mp4",
+      "lines": [
+        1006
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_6",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_6.mp4",
+      "lines": [
+        1055
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_7",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_7.mp4",
+      "lines": [
+        1240
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_9",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_9.mp4",
+      "lines": [
+        1274
+      ],
+      "source": "scenevideo"
+    },
+    {
+      "name": "scene_8",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-videos/scene_8.mp4",
+      "lines": [
+        1325
+      ],
+      "source": "scenevideo"
+    }
+  ],
+  "images": [
+    {
+      "name": "18_almost_touch",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/18_almost_touch.png",
+      "lines": [
+        16
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "23_artifact_hint",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/23_artifact_hint.png",
+      "lines": [
+        38
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "14_cook_night",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/14_cook_night.png",
+      "lines": [
+        61
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "04_diner_settling",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/04_diner_settling.png",
+      "lines": [
+        78
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "38_dual_bond",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/38_dual_bond.png",
+      "lines": [
+        92
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "49_ketsu_community_silent",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/49_ketsu_community_silent.png",
+      "lines": [
+        112,
+        231,
+        271
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "53_ending_monster",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/53_ending_monster.png",
+      "lines": [
+        127
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "51_ending_human",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/51_ending_human.png",
+      "lines": [
+        154
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "52_ending_merged",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/52_ending_merged.png",
+      "lines": [
+        177
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "50_ketsu_epilogue",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/50_ketsu_epilogue.png",
+      "lines": [
+        204
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "27_fade_wave_loop",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/27_fade_wave_loop.png",
+      "lines": [
+        243
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "10_first_reveal",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/10_first_reveal.png",
+      "lines": [
+        286
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "06_first_sighting_denial",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/06_first_sighting_denial.png",
+      "lines": [
+        317
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "31_freddy_abandons",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/31_freddy_abandons.png",
+      "lines": [
+        344
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "32_freddy_bait",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/32_freddy_bait.png",
+      "lines": [
+        364
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "42_freddy_fights",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/42_freddy_fights.png",
+      "lines": [
+        382
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "28_freddy_finds_kai",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/28_freddy_finds_kai.png",
+      "lines": [
+        399
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "19_freddy_opens",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/19_freddy_opens.png",
+      "lines": [
+        421
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "25_full_form_reveal",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/25_full_form_reveal.png",
+      "lines": [
+        443
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "36_hide_shell",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/36_hide_shell.png",
+      "lines": [
+        476
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "35_intimacy_threat_loop",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/35_intimacy_threat_loop.png",
+      "lines": [
+        489
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "09_kai_routine_loop",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/09_kai_routine_loop.png",
+      "lines": [
+        515
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "48_ketsu_community",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/48_ketsu_community.png",
+      "lines": [
+        544
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "39_ketsu_stand_together",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/39_ketsu_stand_together.png",
+      "lines": [
+        578
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "44_ketsu_thalos_defeated",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/44_ketsu_thalos_defeated.png",
+      "lines": [
+        610
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "43_ketsu_thalos_defeated_distract",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/43_ketsu_thalos_defeated_distract.png",
+      "lines": [
+        645
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "03_ki_doubt_loop",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/03_ki_doubt_loop.png",
+      "lines": [
+        658
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "05_ki_first_sighting",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/05_ki_first_sighting.png",
+      "lines": [
+        686
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "02_ki_freddy_arrives",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/02_ki_freddy_arrives.png",
+      "lines": [
+        720
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "08_ki_kai_routine",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/08_ki_kai_routine.png",
+      "lines": [
+        738
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "07_ki_kai_routine_distant",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/07_ki_kai_routine_distant.png",
+      "lines": [
+        767
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "17_moonlit_walk_loop",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/17_moonlit_walk_loop.png",
+      "lines": [
+        785
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "37_negotiate_thalos",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/37_negotiate_thalos.png",
+      "lines": [
+        813
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "46_post_battle_kiss",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/46_post_battle_kiss.png",
+      "lines": [
+        826
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "13_quiet_night_loop",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/13_quiet_night_loop.png",
+      "lines": [
+        843
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "22_sea_cave_loop",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/22_sea_cave_loop.png",
+      "lines": [
+        876
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "47_sequel_hook",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/47_sequel_hook.png",
+      "lines": [
+        906
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "45_shell_restored",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/45_shell_restored.png",
+      "lines": [
+        921
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "15_sho_moonlit_walk",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/15_sho_moonlit_walk.png",
+      "lines": [
+        936
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "16_sho_moonlit_walk_silent",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/16_sho_moonlit_walk_silent.png",
+      "lines": [
+        980
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "12_sho_quiet_night",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/12_sho_quiet_night.png",
+      "lines": [
+        1005
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "11_sho_quiet_night_watch",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/11_sho_quiet_night_watch.png",
+      "lines": [
+        1035
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "20_sho_sea_cave",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/20_sho_sea_cave.png",
+      "lines": [
+        1054
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "21_sho_sea_cave_silent",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/21_sho_sea_cave_silent.png",
+      "lines": [
+        1087
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "24_stair_intimacy",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/24_stair_intimacy.png",
+      "lines": [
+        1109
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "40_stand_together_loop",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/40_stand_together_loop.png",
+      "lines": [
+        1126
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "01_start",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/01_start.png",
+      "lines": [
+        1152
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "26_ten_fade_wave",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/26_ten_fade_wave.png",
+      "lines": [
+        1239
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "34_ten_intimacy_and_threat",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/34_ten_intimacy_and_threat.png",
+      "lines": [
+        1273
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "29_ten_thalos_emerges",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/29_ten_thalos_emerges.png",
+      "lines": [
+        1324
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "30_thalos_loop",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/30_thalos_loop.png",
+      "lines": [
+        1360
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "41_town_arrives",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/41_town_arrives.png",
+      "lines": [
+        1387
+      ],
+      "source": "sidebarimg"
+    },
+    {
+      "name": "33_town_warning",
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-images/33_town_warning.png",
+      "lines": [
+        1406
+      ],
+      "source": "sidebarimg"
+    }
+  ],
+  "absolute_urls": [
+    {
+      "url": "https://xierykaufosmdkcxzfex.supabase.co/storage/v1/object/public/midnight-background-images/bg_starlight_cove_2_1768178832750.png",
+      "line": 1488
+    }
+  ]
+}
